@@ -3,7 +3,7 @@ import confetti from 'canvas-confetti';
 import { curriculumData } from './data/curriculumData';
 import { Navbar } from './components/Navbar';
 import { Header } from './components/Header';
-import { Sidebar } from './components/Sidebar';
+import { TopFilterBar } from './components/TopFilterBar';
 import { DayCard } from './components/DayCard';
 import { PatternLab } from './components/PatternLab';
 import { Footer } from './components/Footer';
@@ -188,32 +188,28 @@ export const App: React.FC = () => {
         onReset={handleResetProgress}
       />
 
-      {/* Main Container: Full Screen Fluid Dashboard */}
-      <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 flex-1 flex flex-col gap-6">
+      {/* Main Container: Full Width Clean Layout */}
+      <div className="w-full max-w-5xl mx-auto px-3 sm:px-6 py-5 sm:py-8 flex-1 flex flex-col gap-6">
         {currentView === 'patterns' ? (
           <PatternLab onBackToCurriculum={() => handleChangeView('curriculum')} />
         ) : (
-          <div className="lg:grid lg:grid-cols-12 gap-8 items-start">
-            {/* Left Sticky Sidebar on Desktop / Compact Controls on Mobile */}
-            <div className="lg:col-span-4 xl:col-span-4 2xl:col-span-3">
-              <Sidebar
-                solvedMap={solvedMap}
-                totalProblems={TOTAL_PROBLEMS}
-                search={search}
-                onSearchChange={setSearch}
-                moduleFilter={moduleFilter}
-                onModuleChange={setModuleFilter}
-                platformFilter={platformFilter}
-                onPlatformChange={setPlatformFilter}
-                statusFilter={statusFilter}
-                onStatusChange={setStatusFilter}
-                onNavigateToPatterns={() => handleChangeView('patterns')}
-              />
-            </div>
+          <main className="flex flex-col gap-6" aria-label="Curriculum content">
+            <Header />
 
-            {/* Right Main Content Area */}
-            <main className="lg:col-span-8 xl:col-span-8 2xl:col-span-9 flex flex-col gap-6" aria-label="Curriculum content">
-              <Header />
+            {/* Clean Top Filter & Progress Controls */}
+            <TopFilterBar
+              solvedMap={solvedMap}
+              totalProblems={TOTAL_PROBLEMS}
+              search={search}
+              onSearchChange={setSearch}
+              moduleFilter={moduleFilter}
+              onModuleChange={setModuleFilter}
+              platformFilter={platformFilter}
+              onPlatformChange={setPlatformFilter}
+              statusFilter={statusFilter}
+              onStatusChange={setStatusFilter}
+              onNavigateToPatterns={() => handleChangeView('patterns')}
+            />
 
               {/* Active Filter Pill Bar */}
               {(moduleFilter !== 'all' || platformFilter !== 'all' || statusFilter !== 'all' || search) && (
@@ -313,7 +309,6 @@ export const App: React.FC = () => {
                 })
               )}
             </main>
-          </div>
         )}
 
         {/* Global Footer */}
