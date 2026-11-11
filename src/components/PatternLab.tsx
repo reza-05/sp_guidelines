@@ -86,9 +86,9 @@ export const PatternLab: React.FC<PatternLabProps> = ({ onBackToCurriculum }) =>
       </div>
 
       {/* Glowing Instruction Callout: Solve only after completing Nested Loops */}
-      <div className="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-2xl bg-amber-500/10 dark:bg-amber-500/15 border border-amber-400/60 text-amber-900 dark:text-amber-200 text-xs sm:text-sm font-bold shadow-[0_0_20px_rgba(245,158,11,0.25)] animate-pulse">
+      <div className="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-2xl bg-amber-500/10 dark:bg-amber-500/15 border border-amber-400/60 text-amber-900 dark:text-amber-200 text-xs sm:text-sm font-bold shadow-[0_0_20px_rgba(245,158,11,0.25)]">
         <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] shrink-0" />
-        <span>গুরুত্বপূর্ণ: নেস্টেড লুপ (Module 3) শেষ হওয়ার পরেই কেবল এই প্যাটার্ন প্রবলেমগুলো সমাধান করবে!</span>
+        <span>Important Prerequisite: Practice these pattern problems only after completing Nested Loops (Module 3)!</span>
       </div>
 
       {/* Header Banner - Clean, Modern & Consistent */}

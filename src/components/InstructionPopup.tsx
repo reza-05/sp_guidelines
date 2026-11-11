@@ -72,13 +72,13 @@ export const InstructionPopup: React.FC<InstructionPopupProps> = ({
                   New Here?
                 </span>
                 <h4 className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
-                  প্রবলেম সলভিং শুরুর আগে নির্দেশনা পড়ুন!
+                  Read our guidelines before solving problems!
                 </h4>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed font-medium">
-              সঠিকভাবে শেখার উপায়, AI ব্যবহারের নিষেধাজ্ঞা, সিনিয়রদের মেন্টর পরামর্শ এবং ক্লাস ফলো করার নিয়মাবলি পড়ে নেওয়া অত্যন্ত জরুরি।
+              Review our learning strategy, strict no-AI policy, and mentor advice to build strong C programming fundamentals.
             </p>
 
             {/* Action Buttons */}
@@ -87,7 +87,7 @@ export const InstructionPopup: React.FC<InstructionPopupProps> = ({
                 onClick={handleRead}
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 active:scale-95 text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow transition-all cursor-pointer"
               >
-                <span>নির্দেশনাগুলো পড়ুন (Read Guidelines)</span>
+                <span>Read Guidelines</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </button>
 
@@ -95,7 +95,7 @@ export const InstructionPopup: React.FC<InstructionPopupProps> = ({
                 onClick={handleDismiss}
                 className="px-3 py-2 rounded-xl text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors cursor-pointer"
               >
-                পরে দেখব (Dismiss)
+                Dismiss
               </button>
             </div>
           </div>

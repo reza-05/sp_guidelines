@@ -195,8 +195,8 @@ export const DayCard: React.FC<DayCardProps> = ({
                 <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-extrabold border border-emerald-300 dark:border-emerald-800 tabular-nums">
                   26 Problems
                 </span>
-                <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-700 dark:text-amber-300 font-bold border border-amber-500/30 shadow-[0_0_8px_rgba(245,158,11,0.25)] animate-pulse">
-                  নেস্টেড লুপের পরে প্র্যাকটিস করবে
+                <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-700 dark:text-amber-300 font-bold border border-amber-500/30 shadow-[0_0_8px_rgba(245,158,11,0.25)]">
+                  Solve after completing Module 3
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed font-medium">

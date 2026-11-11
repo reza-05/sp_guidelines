@@ -80,11 +80,11 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
           </div>
         </div>
 
-        {/* Pattern Problems Button with Glowing Notice */}
-        <div className="flex flex-col items-start lg:items-end gap-1.5 shrink-0 self-start lg:self-center">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-400/50 text-[11px] sm:text-xs font-bold shadow-[0_0_16px_rgba(245,158,11,0.25)] animate-pulse">
+        {/* Pattern Problems Button with Notice */}
+        <div className="flex flex-col items-start sm:items-end gap-1.5 shrink-0 self-start sm:self-center">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-400/40 text-[11px] sm:text-xs font-bold shadow-[0_0_12px_rgba(245,158,11,0.2)]">
             <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_6px_#f59e0b] shrink-0" />
-            <span>নেস্টেড লুপ (Module 3) শেষ হলে কেবল এগুলো করবে</span>
+            <span>Solve pattern problems after completing Nested Loops (Module 3)</span>
           </div>
 
           <button
