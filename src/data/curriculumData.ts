@@ -754,8 +754,8 @@ export const curriculumData: DayCurriculum[] = [
     "day": 11,
     "module": 2,
     "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics",
-    "title": "Day 11 — Loop Control Flow: break, continue & Early Exits",
-    "tagline": "Skipping iterations, loop early termination, sentinel value patterns, and search halts.",
+    "title": "Day 11 — Loop Revision & Control Flow: break, continue & Early Exits",
+    "tagline": "Reviewing loop iterations with Apna College (watch loops section only), followed by break, continue, early loop exits, and sentinel patterns.",
     "theme": "theme-d11",
     "bct": [
       {
@@ -764,7 +764,14 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/UQVM-empou4"
       }
     ],
-    "ac": [],
+    "ac": [
+      {
+        "id": "qR9U6bKxJ7g",
+        "title": "Lec 3: Loops in C (Complete Loops Revision)",
+        "url": "https://youtu.be/qR9U6bKxJ7g?t=1723",
+        "note": "Watch only the Loops section (starts at 28:43) — skip the earlier conditionals section."
+      }
+    ],
     "problems": [
       {
         "id": "p_11_1",
@@ -821,7 +828,8 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/282/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "videoOrder": "ac-first"
   },
   {
     "day": 12,

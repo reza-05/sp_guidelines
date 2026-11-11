@@ -2,6 +2,7 @@ export interface VideoLecture {
   id: string;
   title: string;
   url: string;
+  note?: string;
 }
 
 export interface Problem {
@@ -25,5 +26,6 @@ export interface DayCurriculum {
   theme: string;
   bct: VideoLecture[];
   ac: VideoLecture[];
+  videoOrder?: 'ac-first' | 'bct-first';
   problems: Problem[];
 }

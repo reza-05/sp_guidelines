@@ -21,19 +21,32 @@ export const DayCard: React.FC<DayCardProps> = ({
   const dayNumStr = String(dayData.day).padStart(2, '0');
   const isNestedLoopDay = dayData.module === 3;
   
-  // Build serial tutorial video list in optimal learning order (Bangla theory first, then deep-dive practice)
-  const allTutorials = [
-    ...(dayData.bct || []).map(v => ({
-      ...v,
-      source: 'Bangla Coding Tutor' as const,
-      color: 'rose',
-    })),
-    ...(dayData.ac || []).map(v => ({
-      ...v,
-      source: 'Apna College' as const,
-      color: 'purple',
-    })),
-  ];
+  // Build serial tutorial video list in optimal learning order (Bangla theory first, or AC first if specified)
+  const allTutorials = dayData.videoOrder === 'ac-first'
+    ? [
+        ...(dayData.ac || []).map(v => ({
+          ...v,
+          source: 'Apna College' as const,
+          color: 'purple',
+        })),
+        ...(dayData.bct || []).map(v => ({
+          ...v,
+          source: 'Bangla Coding Tutor' as const,
+          color: 'rose',
+        })),
+      ]
+    : [
+        ...(dayData.bct || []).map(v => ({
+          ...v,
+          source: 'Bangla Coding Tutor' as const,
+          color: 'rose',
+        })),
+        ...(dayData.ac || []).map(v => ({
+          ...v,
+          source: 'Apna College' as const,
+          color: 'purple',
+        })),
+      ];
   const hasVideos = allTutorials.length > 0;
 
   // Day Solved Progress
@@ -160,10 +173,18 @@ export const DayCard: React.FC<DayCardProps> = ({
                         </span>
                       </div>
 
-                      {/* Video Title */}
+                      {/* Video Title & Guidance Note */}
                       <span className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-slate-100 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors truncate mt-1">
                         {v.title}
                       </span>
+                      {'note' in v && v.note && (
+                        <span className="text-[11px] sm:text-xs font-bold text-amber-700 dark:text-amber-300 mt-1 flex items-center gap-1.5 flex-wrap">
+                          <span className="px-1.5 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-[10px] font-black uppercase tracking-wider">
+                            Watch Guide
+                          </span>
+                          <span>{v.note}</span>
+                        </span>
+                      )}
                     </div>
                   </div>
 
