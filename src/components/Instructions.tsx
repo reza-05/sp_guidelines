@@ -72,7 +72,17 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
             </div>
           </div>
           <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed pl-1">
-            These curated tutorials and problem sets are specifically designed for beginners who are taking their first steps in C programming, preparing for the Structured Programming (SP) Lab, or building problem-solving intuition from scratch. If you already have a strong grasp of fundamentals and active competitive programming experience, feel free to skip this roadmap and focus directly on <span className="font-bold text-slate-900 dark:text-white">Codeforces</span> and <span className="font-bold text-slate-900 dark:text-white">AtCoder</span>.
+            These curated tutorials and problem sets are specifically designed for beginners who are taking their first steps in C programming, preparing for the Structured Programming (SP) Lab, or building problem-solving intuition from scratch. If you already have a strong grasp of fundamentals and active competitive programming experience, feel free to skip this roadmap and focus directly on <span className="font-bold text-slate-900 dark:text-white">Codeforces</span>, <span className="font-bold text-slate-900 dark:text-white">AtCoder</span>, or the{' '}
+            <a
+              href="https://www.tle-eliminators.com/cp-sheet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-sky-600 dark:text-sky-400 hover:text-sky-700 dark:hover:text-sky-300 underline decoration-sky-400/60 underline-offset-4 hover:decoration-sky-600 transition-colors inline-flex items-center gap-1"
+            >
+              <span>CP-31 Sheet by TLE Eliminators</span>
+              <ArrowRight className="w-3.5 h-3.5 inline -rotate-45" />
+            </a>
+            .
           </p>
         </section>
 
