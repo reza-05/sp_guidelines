@@ -188,8 +188,8 @@ export const App: React.FC = () => {
         onReset={handleResetProgress}
       />
 
-      {/* Main Container: Clean, Unified Layout */}
-      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 flex flex-col gap-6">
+      {/* Main Container: Wide, Spacious Layout */}
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 flex flex-col gap-6">
         {currentView === 'patterns' ? (
           <PatternLab onBackToCurriculum={() => handleChangeView('curriculum')} />
         ) : (

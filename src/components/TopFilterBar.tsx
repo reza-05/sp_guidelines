@@ -114,7 +114,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
           )}
         </div>
 
-        <div className="flex items-center gap-2 overflow-x-auto pb-1.5 pt-0.5 no-scrollbar -mx-1 px-1">
+        <div className="flex flex-wrap items-center gap-2 pt-0.5">
           <button
             onClick={() => onModuleChange('all')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-black shrink-0 transition-all ${
