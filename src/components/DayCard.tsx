@@ -30,7 +30,7 @@ export const DayCard: React.FC<DayCardProps> = ({
   return (
     <section
       id={`day${dayData.day}`}
-      className={`day-card bg-white dark:bg-[#0F141F] border border-slate-300 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.08),0_2px_6px_-2px_rgba(15,23,42,0.04)] hover:shadow-md transition-all duration-200 flex flex-col gap-5 relative overflow-hidden ${dayData.theme}`}
+      className={`day-card bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:shadow-md transition-all duration-200 flex flex-col gap-5 relative overflow-hidden ${dayData.theme}`}
     >
       {/* 1. Day Card Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">

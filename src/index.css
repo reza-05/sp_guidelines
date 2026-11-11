@@ -47,18 +47,12 @@ body {
   background: #475569;
 }
 
-/* Subtle Ambient Background Gradients */
+/* Clean Background */
 .ambient-bg {
-  background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(14, 165, 233, 0.08), transparent),
-    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(168, 85, 247, 0.05), transparent),
-    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(16, 185, 129, 0.04), transparent);
+  background-image: none;
 }
 .dark .ambient-bg {
-  background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(14, 165, 233, 0.12), transparent),
-    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(168, 85, 247, 0.08), transparent),
-    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(16, 185, 129, 0.06), transparent);
+  background-image: none;
 }
 
 /* Day Themes Mapping with Top Accent Borders */

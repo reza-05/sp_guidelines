@@ -176,7 +176,7 @@ export const App: React.FC = () => {
   let currentModule = '';
 
   return (
-    <div className="min-h-screen bg-[#F1F5F9] dark:bg-[#07090E] ambient-bg text-slate-900 dark:text-slate-100 transition-colors flex flex-col font-sans antialiased">
+    <div className="min-h-screen bg-white dark:bg-[#07090E] text-slate-900 dark:text-slate-100 transition-colors flex flex-col font-sans antialiased">
       {/* Full-Width Modern Navbar */}
       <Navbar
         currentView={currentView}
@@ -188,8 +188,8 @@ export const App: React.FC = () => {
         onReset={handleResetProgress}
       />
 
-      {/* Main Container: Compact, Centered, High-Contrast Layout */}
-      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex-1 flex flex-col gap-6">
+      {/* Main Container: Clean, Unified Layout */}
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 flex flex-col gap-6">
         {currentView === 'patterns' ? (
           <PatternLab onBackToCurriculum={() => handleChangeView('curriculum')} />
         ) : (

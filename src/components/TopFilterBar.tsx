@@ -53,7 +53,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
   const hasActiveFilters = moduleFilter !== 'all' || platformFilter !== 'all' || statusFilter !== 'all' || search.trim() !== '';
 
   return (
-    <div className="w-full bg-white dark:bg-[#0F141F] border border-slate-300 dark:border-slate-800 rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col gap-4 no-print">
+    <div className="w-full bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-5 shadow-[0_2px_10px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] flex flex-col gap-4 no-print">
       {/* 1. Header Row: Progress, Platform Badges & Pattern Lab CTA */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
         <div className="flex items-center gap-3">
