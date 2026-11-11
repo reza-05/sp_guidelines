@@ -66,7 +66,7 @@ export const DayCard: React.FC<DayCardProps> = ({
         </div>
       </div>
 
-      {/* Video Strip with RED Watch Buttons */}
+      {/* Video Strip with SOLID RED Watch Buttons matching Image 4 */}
       <div className="flex flex-wrap items-center gap-2 bg-slate-50 dark:bg-slate-950/50 p-2.5 border border-slate-200 dark:border-slate-800 rounded-lg">
         {dayData.bct && dayData.bct.length > 0 && (
           <div className="flex flex-wrap items-center gap-1.5">
@@ -79,10 +79,10 @@ export const DayCard: React.FC<DayCardProps> = ({
                 href={v.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="watch-btn"
+                className="watch-btn inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#ff0000] hover:bg-[#cc0000] active:scale-95 text-white font-bold text-xs rounded-md shadow-xs transition-all duration-150 shrink-0 cursor-pointer"
               >
-                <Play className="w-2.5 h-2.5 fill-white stroke-none" />
-                {v.title}
+                <Play className="w-2.5 h-2.5 fill-white text-white shrink-0" />
+                <span>{v.title}</span>
               </a>
             ))}
           </div>
@@ -99,10 +99,10 @@ export const DayCard: React.FC<DayCardProps> = ({
                 href={v.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="watch-btn"
+                className="watch-btn inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#ff0000] hover:bg-[#cc0000] active:scale-95 text-white font-bold text-xs rounded-md shadow-xs transition-all duration-150 shrink-0 cursor-pointer"
               >
-                <Play className="w-2.5 h-2.5 fill-white stroke-none" />
-                {v.title}
+                <Play className="w-2.5 h-2.5 fill-white text-white shrink-0" />
+                <span>{v.title}</span>
               </a>
             ))}
           </div>
