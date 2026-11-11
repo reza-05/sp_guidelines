@@ -7,6 +7,7 @@ import { TopFilterBar } from './components/TopFilterBar';
 import { DayCard } from './components/DayCard';
 import { PatternLab } from './components/PatternLab';
 import { Instructions } from './components/Instructions';
+import { InstructionPopup } from './components/InstructionPopup';
 import { Footer } from './components/Footer';
 import { SearchX } from 'lucide-react';
 
@@ -189,6 +190,12 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#07090E] text-slate-900 dark:text-slate-100 transition-colors flex flex-col font-sans antialiased">
+      {/* First-visit slide-down prompt for instructions */}
+      <InstructionPopup
+        currentView={currentView}
+        onOpenInstructions={() => handleChangeView('instructions')}
+      />
+
       {/* Full-Width Modern Navbar */}
       <Navbar
         currentView={currentView}
