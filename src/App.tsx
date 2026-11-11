@@ -275,30 +275,82 @@ export const App: React.FC = () => {
               ) : (
                 filteredDays.map(({ dayData, visibleProblems }) => {
                   const showModuleBanner = dayData.moduleName !== currentModule;
+                  const isFirstModule = currentModule === '';
                   if (showModuleBanner) {
                     currentModule = dayData.moduleName;
                   }
 
+                  // Module stats for the banner
+                  const moduleDays = curriculumData.filter(d => d.module === dayData.module);
+                  const totalModuleProblems = moduleDays.reduce((acc, d) => acc + d.problems.length, 0);
+                  const solvedModuleProblems = moduleDays.reduce(
+                    (acc, d) => acc + d.problems.filter(p => !!solvedMap[p.id]).length,
+                    0
+                  );
+                  const firstDayOfModule = moduleDays[0]?.day || dayData.day;
+                  const lastDayOfModule = moduleDays[moduleDays.length - 1]?.day || dayData.day;
+                  const dayRangeStr = `Days ${String(firstDayOfModule).padStart(2, '0')}–${String(lastDayOfModule).padStart(2, '0')}`;
+                  const modulePct = totalModuleProblems > 0 ? Math.round((solvedModuleProblems / totalModuleProblems) * 100) : 0;
+
                   return (
                     <React.Fragment key={dayData.day}>
                       {showModuleBanner && (
-                        <div className="bg-slate-900 dark:bg-slate-850 text-white p-4 rounded-2xl shadow-sm border border-slate-800 dark:border-slate-700 flex flex-wrap items-center justify-between gap-3 mt-6 mb-1">
-                          <div className="flex items-center gap-3">
-                            <span className="w-9 h-9 rounded-xl bg-sky-500 text-white flex items-center justify-center font-mono font-black text-xs shadow-xs">
-                              M{dayData.module}
-                            </span>
-                            <div>
-                              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-sky-400 block">
-                                Module {dayData.module}
+                        <div className={`w-full flex flex-col ${isFirstModule ? 'mt-1 mb-2' : 'pt-14 sm:pt-20 mt-6 mb-3'}`}>
+                          {/* Generous spacing & transition divider when a previous module ends */}
+                          {!isFirstModule && (
+                            <div className="w-full flex items-center gap-4 pb-6">
+                              <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1" />
+                              <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-mono font-bold text-slate-500 dark:text-slate-400 shadow-2xs">
+                                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                                <span>Module Milestone</span>
+                                <span className="text-slate-300 dark:text-slate-600">•</span>
+                                <span className="text-slate-800 dark:text-slate-200 font-black">Next Module Begins</span>
+                              </div>
+                              <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1" />
+                            </div>
+                          )}
+
+                          {/* Upgraded Modern Module Banner */}
+                          <div className="bg-slate-900 dark:bg-[#0E131F] text-white p-5 sm:p-6 rounded-3xl shadow-md border border-slate-800 dark:border-slate-700/80 flex flex-wrap items-center justify-between gap-4">
+                            <div className="flex items-center gap-3.5 min-w-0">
+                              <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 text-white flex items-center justify-center font-mono font-black text-base shadow-sm shrink-0">
+                                M{dayData.module}
                               </span>
-                              <h2 className="font-extrabold text-sm sm:text-base tracking-tight text-white">
-                                {dayData.moduleName}
-                              </h2>
+                              <div className="min-w-0">
+                                <div className="flex flex-wrap items-center gap-2">
+                                  <span className="text-xs font-mono font-black uppercase tracking-wider text-sky-400">
+                                    Module {dayData.module}
+                                  </span>
+                                  <span className="text-slate-500">•</span>
+                                  <span className="text-xs font-mono text-slate-300 font-bold">
+                                    {dayRangeStr} ({totalModuleProblems} Problems)
+                                  </span>
+                                </div>
+                                <h2 className="font-black text-base sm:text-lg md:text-xl tracking-tight text-white mt-0.5 truncate">
+                                  {dayData.moduleName}
+                                </h2>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center gap-4 shrink-0 self-start sm:self-center">
+                              <div className="text-right">
+                                <div className="text-xs font-mono font-bold text-slate-300">
+                                  {solvedModuleProblems} / {totalModuleProblems} Solved ({modulePct}%)
+                                </div>
+                                <div className="w-32 sm:w-40 h-2 bg-slate-800 rounded-full mt-1.5 overflow-hidden border border-slate-700/50">
+                                  <div
+                                    className="h-full bg-emerald-500 rounded-full transition-all duration-300"
+                                    style={{ width: `${modulePct}%` }}
+                                  />
+                                </div>
+                              </div>
+                              {modulePct === 100 && (
+                                <span className="hidden sm:inline-flex px-3 py-1 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold font-mono">
+                                  Completed ✓
+                                </span>
+                              )}
                             </div>
                           </div>
-                          <span className="text-xs font-mono font-bold px-3 py-1 rounded-lg bg-white/10 text-slate-200 border border-white/10">
-                            Milestone
-                          </span>
                         </div>
                       )}
 
