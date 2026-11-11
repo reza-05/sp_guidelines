@@ -23,7 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const percentage = Math.round((solvedCount / totalCount) * 100);
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/85 dark:bg-[#07090E]/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors no-print shadow-2xs">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-sky-50/75 dark:bg-[#071324]/85 border-b border-sky-200/70 dark:border-sky-900/50 transition-colors no-print shadow-2xs">
       <div className="max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
         
         {/* Brand Logo & Title */}

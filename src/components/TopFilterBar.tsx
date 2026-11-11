@@ -53,43 +53,43 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
   const hasActiveFilters = moduleFilter !== 'all' || platformFilter !== 'all' || statusFilter !== 'all' || search.trim() !== '';
 
   return (
-    <div className="w-full bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-6 shadow-[0_2px_14px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] flex flex-col gap-5 no-print">
+    <div className="w-full bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-[0_2px_14px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] flex flex-col gap-3.5 sm:gap-4 no-print">
       {/* 1. Header Row: Progress, Platform Badges & Pattern Problems CTA */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
-        <div className="flex items-center gap-3.5">
-          <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-2xs">
-            <CheckCircle2 className="w-6 h-6 stroke-[2.5]" />
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-2xs">
+            <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5]" />
           </div>
           <div>
-            <div className="flex items-baseline gap-2.5">
+            <div className="flex items-baseline gap-2">
               <span className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight tabular-nums">
                 {percentage}%
               </span>
-              <span className="text-sm sm:text-base font-bold text-slate-500 dark:text-slate-400 tabular-nums">
+              <span className="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 tabular-nums">
                 ({solvedCount} / {totalProblems} Solved)
               </span>
             </div>
-            <div className="flex items-center gap-2 mt-1">
-              <span className="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-500/10 px-2.5 py-0.5 rounded-md border border-amber-500/30 tabular-nums">
+            <div className="flex items-center gap-1.5 mt-0.5">
+              <span className="text-[11px] sm:text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-500/10 px-2 py-0.5 rounded-md border border-amber-500/30 tabular-nums">
                 CodeChef: {solvedCC}/{codechefProblems.length}
               </span>
-              <span className="text-xs font-bold text-sky-700 dark:text-sky-300 bg-sky-500/10 px-2.5 py-0.5 rounded-md border border-sky-500/30 tabular-nums">
+              <span className="text-[11px] sm:text-xs font-bold text-sky-700 dark:text-sky-300 bg-sky-500/10 px-2 py-0.5 rounded-md border border-sky-500/30 tabular-nums">
                 Codeforces: {solvedCF}/{codeforcesProblems.length}
               </span>
             </div>
           </div>
         </div>
 
-        {/* Pattern Problems Button with Notice */}
-        <div className="flex flex-col items-start sm:items-end gap-1.5 shrink-0 self-start sm:self-center">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-400/40 text-[11px] sm:text-xs font-bold shadow-[0_0_12px_rgba(245,158,11,0.2)]">
+        {/* Pattern Problems Button with Notice side-by-side */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 shrink-0">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-400/40 text-[11px] sm:text-xs font-bold shadow-[0_0_12px_rgba(245,158,11,0.15)]">
             <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_6px_#f59e0b] shrink-0" />
             <span>Solve pattern problems after completing Nested Loops (Module 3)</span>
           </div>
 
           <button
             onClick={onNavigateToPatterns}
-            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all shrink-0 cursor-pointer"
+            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all shrink-0 cursor-pointer"
           >
             <Terminal className="w-4 h-4" />
             <span>Pattern Problems (26) →</span>
@@ -98,88 +98,85 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
       </div>
 
       {/* Progress Track Bar */}
-      <div className="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+      <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-sky-500 rounded-full transition-all duration-300"
           style={{ width: `${percentage}%` }}
         />
       </div>
 
-      {/* 2. Module Selector Tabs */}
-      <div className="flex flex-col gap-2.5 pt-1">
-        <div className="flex items-center justify-between">
-          <span className="text-xs font-black uppercase tracking-wider text-slate-600 dark:text-slate-300 flex items-center gap-1.5">
-            <SlidersHorizontal className="w-4 h-4 text-slate-500" />
-            <span>Modules:</span>
-          </span>
-          {moduleFilter !== 'all' && (
-            <button
-              onClick={() => onModuleChange('all')}
-              className="text-xs sm:text-sm font-bold text-sky-600 dark:text-sky-400 hover:underline"
-            >
-              Show All Modules
-            </button>
-          )}
-        </div>
+      {/* 2. Module Selector Tabs (Inline & Clean) */}
+      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-0.5">
+        <span className="text-xs font-black uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5 mr-1 shrink-0">
+          <SlidersHorizontal className="w-3.5 h-3.5" />
+          <span>Modules:</span>
+        </span>
 
-        <div className="flex flex-wrap items-center gap-2 pt-0.5">
+        <button
+          onClick={() => onModuleChange('all')}
+          className={`px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold shrink-0 transition-all cursor-pointer ${
+            moduleFilter === 'all'
+              ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-xs'
+              : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700'
+          }`}
+        >
+          All (175)
+        </button>
+
+        {modules.map((m) => {
+          const modDays = curriculumData.filter((d) => String(d.module) === m.num);
+          const modProblems = modDays.flatMap((d) => d.problems);
+          const modSolved = modProblems.filter((p) => !!solvedMap[p.id]).length;
+          const isSelected = moduleFilter === m.num;
+
+          return (
+            <button
+              key={m.num}
+              onClick={() => onModuleChange(m.num)}
+              className={`px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold shrink-0 transition-all flex items-center gap-1.5 cursor-pointer ${
+                isSelected
+                  ? 'bg-sky-600 text-white shadow-xs'
+                  : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700'
+              }`}
+            >
+              <span>{m.short}: {m.name}</span>
+              <span className={`text-[11px] px-1.5 py-0.2 rounded-md font-bold tabular-nums ${
+                isSelected
+                  ? 'bg-sky-700 text-white'
+                  : 'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400'
+              }`}>
+                {modSolved}/{m.count}
+              </span>
+            </button>
+          );
+        })}
+
+        {moduleFilter !== 'all' && (
           <button
             onClick={() => onModuleChange('all')}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-black shrink-0 transition-all ${
-              moduleFilter === 'all'
-                ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-xs'
-                : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700'
-            }`}
+            className="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline ml-1 cursor-pointer"
           >
-            All (175)
+            Show All Modules
           </button>
-
-          {modules.map((m) => {
-            const modDays = curriculumData.filter((d) => String(d.module) === m.num);
-            const modProblems = modDays.flatMap((d) => d.problems);
-            const modSolved = modProblems.filter((p) => !!solvedMap[p.id]).length;
-            const isSelected = moduleFilter === m.num;
-
-            return (
-              <button
-                key={m.num}
-                onClick={() => onModuleChange(m.num)}
-                className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-black shrink-0 transition-all flex items-center gap-2 ${
-                  isSelected
-                    ? 'bg-sky-600 text-white shadow-xs'
-                    : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700'
-                }`}
-              >
-                <span>{m.short}: {m.name}</span>
-                <span className={`text-xs px-2 py-0.5 rounded-md font-bold tabular-nums ${
-                  isSelected
-                    ? 'bg-sky-700 text-white'
-                    : 'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400'
-                }`}>
-                  {modSolved}/{m.count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
+        )}
       </div>
 
       {/* 3. Search & Platform / Status Filters */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 pt-2 border-t border-slate-200 dark:border-slate-800">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pt-2 border-t border-slate-200 dark:border-slate-800">
         {/* Search Input */}
-        <div className="relative flex-1 min-w-[220px]">
+        <div className="relative flex-1 min-w-[200px]">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
             type="text"
             placeholder="Search problems by title or code..."
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            className="w-full pl-9 pr-8 py-2.5 text-xs sm:text-sm rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 font-medium transition"
+            className="w-full pl-9 pr-8 py-2 text-xs sm:text-sm rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 font-medium transition"
           />
           {search && (
             <button
               onClick={() => onSearchChange('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
               aria-label="Clear Search"
             >
               <X className="w-4 h-4" />
@@ -188,7 +185,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
         </div>
 
         {/* Platform & Status Controls */}
-        <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
           {/* Platform Segmented Control */}
           <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-0.5 rounded-xl border border-slate-300 dark:border-slate-700">
             {[
@@ -199,7 +196,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
               <button
                 key={p.id}
                 onClick={() => onPlatformChange(p.id)}
-                className={`text-xs sm:text-sm font-extrabold py-1.5 px-3 rounded-lg transition-all ${
+                className={`text-xs sm:text-sm font-bold py-1.5 px-3 rounded-lg transition-all cursor-pointer ${
                   platformFilter === p.id
                     ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -220,7 +217,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
               <button
                 key={s.id}
                 onClick={() => onStatusChange(s.id)}
-                className={`text-xs sm:text-sm font-extrabold py-1.5 px-3 rounded-lg transition-all capitalize ${
+                className={`text-xs sm:text-sm font-bold py-1.5 px-3 rounded-lg transition-all capitalize cursor-pointer ${
                   statusFilter === s.id
                     ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
