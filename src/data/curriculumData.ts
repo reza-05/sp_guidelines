@@ -746,9 +746,9 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/hTU2AA-lpSU"
       },
       {
-        "id": "U6SfSF-J_4U",
+        "id": "U6SfSl3Nf-g",
         "title": "Ep 13: do-while Loop",
-        "url": "https://youtu.be/U6SfSF-J_4U"
+        "url": "https://youtu.be/U6SfSl3Nf-g"
       }
     ],
     "ac": [
@@ -1060,12 +1060,18 @@ export const curriculumData: DayCurriculum[] = [
     "title": "Day 14 \u2014 Nested Loops Part 1: Grid Coordinates & Row-Column Iterations",
     "tagline": "Outer loop controls rows (i), inner loop controls columns (j), coordinate iteration, and grid math.",
     "theme": "theme-d2",
-    "bct": [],
+    "bct": [
+      {
+        "id": "AY7GOmY9a8Y",
+        "title": "Ep 14: Nested Loop",
+        "url": "https://youtu.be/AY7GOmY9a8Y"
+      }
+    ],
     "ac": [
       {
-        "id": "gR2n_tQy2y0",
+        "id": "rga_q2N7vU8",
         "title": "Lec 4: Patterns Part 1",
-        "url": "https://youtu.be/gR2n_tQy2y0"
+        "url": "https://youtu.be/rga_q2N7vU8"
       }
     ],
     "problems": [
@@ -1136,9 +1142,9 @@ export const curriculumData: DayCurriculum[] = [
     "bct": [],
     "ac": [
       {
-        "id": "gR2n_tQy2y0",
+        "id": "rga_q2N7vU8",
         "title": "Lec 4: Patterns Part 2",
-        "url": "https://youtu.be/gR2n_tQy2y0"
+        "url": "https://youtu.be/rga_q2N7vU8"
       }
     ],
     "problems": [
@@ -1209,9 +1215,9 @@ export const curriculumData: DayCurriculum[] = [
     "bct": [],
     "ac": [
       {
-        "id": "gR2n_tQy2y0",
+        "id": "rga_q2N7vU8",
         "title": "Lec 4: Advanced Patterns",
-        "url": "https://youtu.be/gR2n_tQy2y0"
+        "url": "https://youtu.be/rga_q2N7vU8"
       }
     ],
     "problems": [
@@ -1282,9 +1288,9 @@ export const curriculumData: DayCurriculum[] = [
     "bct": [],
     "ac": [
       {
-        "id": "gR2n_tQy2y0",
+        "id": "rga_q2N7vU8",
         "title": "Lec 4: Pattern Practice",
-        "url": "https://youtu.be/gR2n_tQy2y0"
+        "url": "https://youtu.be/rga_q2N7vU8"
       }
     ],
     "problems": [
@@ -1438,16 +1444,16 @@ export const curriculumData: DayCurriculum[] = [
     "theme": "theme-d7",
     "bct": [
       {
-        "id": "5Y3U95d3jUo",
+        "id": "iGenyxwahTw",
         "title": "Ep 17: 1D Array Intro",
-        "url": "https://youtu.be/5Y3U95d3jUo"
+        "url": "https://youtu.be/iGenyxwahTw"
       }
     ],
     "ac": [
       {
-        "id": "gV-S_J3E55E",
+        "id": "8wmn7k1TTcI",
         "title": "Lec 6: Arrays Part 1",
-        "url": "https://youtu.be/gV-S_J3E55E"
+        "url": "https://youtu.be/8wmn7k1TTcI"
       }
     ],
     "problems": [
@@ -1517,16 +1523,16 @@ export const curriculumData: DayCurriculum[] = [
     "theme": "theme-d8",
     "bct": [
       {
-        "id": "5nJ4Nq2Gg28",
+        "id": "cLl2BRl0oeI",
         "title": "Ep 18: Array Traversal",
-        "url": "https://youtu.be/5nJ4Nq2Gg28"
+        "url": "https://youtu.be/cLl2BRl0oeI"
       }
     ],
     "ac": [
       {
-        "id": "gV-S_J3E55E",
+        "id": "8wmn7k1TTcI",
         "title": "Lec 6: Min-Max in Arrays",
-        "url": "https://youtu.be/gV-S_J3E55E"
+        "url": "https://youtu.be/8wmn7k1TTcI"
       }
     ],
     "problems": [
@@ -1596,16 +1602,16 @@ export const curriculumData: DayCurriculum[] = [
     "theme": "theme-d9",
     "bct": [
       {
-        "id": "5nJ4Nq2Gg28",
+        "id": "cLl2BRl0oeI",
         "title": "Ep 18: Array Practice",
-        "url": "https://youtu.be/5nJ4Nq2Gg28"
+        "url": "https://youtu.be/cLl2BRl0oeI"
       }
     ],
     "ac": [
       {
-        "id": "gV-S_J3E55E",
+        "id": "8wmn7k1TTcI",
         "title": "Lec 6: Reverse an Array",
-        "url": "https://youtu.be/gV-S_J3E55E"
+        "url": "https://youtu.be/8wmn7k1TTcI"
       }
     ],
     "problems": [
@@ -1676,9 +1682,9 @@ export const curriculumData: DayCurriculum[] = [
     "bct": [],
     "ac": [
       {
-        "id": "gV-S_J3E55E",
+        "id": "8wmn7k1TTcI",
         "title": "Lec 6: Prefix Sums Intro",
-        "url": "https://youtu.be/gV-S_J3E55E"
+        "url": "https://youtu.be/8wmn7k1TTcI"
       }
     ],
     "problems": [
@@ -1749,9 +1755,9 @@ export const curriculumData: DayCurriculum[] = [
     "bct": [],
     "ac": [
       {
-        "id": "gV-S_J3E55E",
+        "id": "8wmn7k1TTcI",
         "title": "Lec 6: Frequency Counting",
-        "url": "https://youtu.be/gV-S_J3E55E"
+        "url": "https://youtu.be/8wmn7k1TTcI"
       }
     ],
     "problems": [
@@ -1822,9 +1828,9 @@ export const curriculumData: DayCurriculum[] = [
     "bct": [],
     "ac": [
       {
-        "id": "gV-S_J3E55E",
+        "id": "8wmn7k1TTcI",
         "title": "Lec 6: Subarray Basics",
-        "url": "https://youtu.be/gV-S_J3E55E"
+        "url": "https://youtu.be/8wmn7k1TTcI"
       }
     ],
     "problems": [
