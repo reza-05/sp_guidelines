@@ -54,39 +54,47 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
 
   return (
     <div className="w-full bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-6 shadow-[0_2px_14px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] flex flex-col gap-5 no-print">
-      {/* 1. Header Row: Progress, Platform Badges & Pattern Lab CTA */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+      {/* 1. Header Row: Progress, Platform Badges & Pattern Problems CTA */}
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
         <div className="flex items-center gap-3.5">
           <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-2xs">
             <CheckCircle2 className="w-6 h-6 stroke-[2.5]" />
           </div>
           <div>
             <div className="flex items-baseline gap-2.5">
-              <span className="text-2xl sm:text-3xl font-black font-mono text-slate-900 dark:text-white tracking-tight">
+              <span className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight tabular-nums">
                 {percentage}%
               </span>
-              <span className="text-sm sm:text-base font-extrabold text-slate-500 dark:text-slate-400 font-mono">
+              <span className="text-sm sm:text-base font-bold text-slate-500 dark:text-slate-400 tabular-nums">
                 ({solvedCount} / {totalProblems} Solved)
               </span>
             </div>
             <div className="flex items-center gap-2 mt-1">
-              <span className="text-xs font-mono font-bold text-amber-700 dark:text-amber-300 bg-amber-500/10 px-2.5 py-0.5 rounded-md border border-amber-500/30">
+              <span className="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-500/10 px-2.5 py-0.5 rounded-md border border-amber-500/30 tabular-nums">
                 CodeChef: {solvedCC}/{codechefProblems.length}
               </span>
-              <span className="text-xs font-mono font-bold text-sky-700 dark:text-sky-300 bg-sky-500/10 px-2.5 py-0.5 rounded-md border border-sky-500/30">
+              <span className="text-xs font-bold text-sky-700 dark:text-sky-300 bg-sky-500/10 px-2.5 py-0.5 rounded-md border border-sky-500/30 tabular-nums">
                 Codeforces: {solvedCF}/{codeforcesProblems.length}
               </span>
             </div>
           </div>
         </div>
 
-        <button
-          onClick={onNavigateToPatterns}
-          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs sm:text-sm font-extrabold shadow-xs hover:shadow transition-all shrink-0 self-start sm:self-center"
-        >
-          <Terminal className="w-4 h-4" />
-          <span>Pattern Programs (26) →</span>
-        </button>
+        {/* Pattern Problems Button with Glowing Notice */}
+        <div className="flex flex-col items-start lg:items-end gap-1.5 shrink-0 self-start lg:self-center">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-400/50 text-[11px] sm:text-xs font-bold shadow-[0_0_16px_rgba(245,158,11,0.25)] animate-pulse">
+            <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_6px_#f59e0b] shrink-0" />
+            <span>নেস্টেড লুপ (Module 3) শেষ হলে কেবল এগুলো করবে</span>
+          </div>
+
+          <button
+            onClick={onNavigateToPatterns}
+            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all shrink-0 cursor-pointer"
+          >
+            <Terminal className="w-4 h-4" />
+            <span>Pattern Problems (26) →</span>
+          </button>
+        </div>
       </div>
 
       {/* Progress Track Bar */}
@@ -143,7 +151,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
                 }`}
               >
                 <span>{m.short}: {m.name}</span>
-                <span className={`font-mono text-xs px-2 py-0.5 rounded-md font-bold ${
+                <span className={`text-xs px-2 py-0.5 rounded-md font-bold tabular-nums ${
                   isSelected
                     ? 'bg-sky-700 text-white'
                     : 'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400'

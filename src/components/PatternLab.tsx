@@ -85,21 +85,27 @@ export const PatternLab: React.FC<PatternLabProps> = ({ onBackToCurriculum }) =>
         </a>
       </div>
 
+      {/* Glowing Instruction Callout: Solve only after completing Nested Loops */}
+      <div className="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-2xl bg-amber-500/10 dark:bg-amber-500/15 border border-amber-400/60 text-amber-900 dark:text-amber-200 text-xs sm:text-sm font-bold shadow-[0_0_20px_rgba(245,158,11,0.25)] animate-pulse">
+        <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b] shrink-0" />
+        <span>গুরুত্বপূর্ণ: নেস্টেড লুপ (Module 3) শেষ হওয়ার পরেই কেবল এই প্যাটার্ন প্রবলেমগুলো সমাধান করবে!</span>
+      </div>
+
       {/* Header Banner - Clean, Modern & Consistent */}
       <div className="rounded-2xl p-6 sm:p-7 bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 shadow-[0_2px_12px_rgba(0,0,0,0.06)] flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 inline-flex items-center gap-1.5">
-            Nested Loops Reference
+            Nested Loops Practice
           </span>
           <span className="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
             26 Patterns
           </span>
         </div>
         <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-          C Pattern Programs
+          C Pattern Problems
         </h2>
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed font-medium">
-          Standard star, number, alphabet, and hollow pattern programs in C with complete row-column logic breakdown and tested C solutions.
+          Standard star, number, alphabet, and hollow pattern problems in C with complete row-column logic breakdown and tested C solutions.
         </p>
 
         <div className="flex flex-wrap items-center gap-2 pt-2 text-xs sm:text-sm font-bold">

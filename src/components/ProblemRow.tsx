@@ -46,7 +46,7 @@ export const ProblemRow: React.FC<ProblemRowProps> = ({
         </button>
 
         {/* Problem Num ID */}
-        <span className="font-mono text-xs sm:text-sm font-bold text-slate-400 dark:text-slate-500 shrink-0 w-8 sm:w-10 pt-0.5 sm:pt-0">
+        <span className="text-xs sm:text-sm font-extrabold text-slate-400 dark:text-slate-500 shrink-0 w-8 sm:w-10 pt-0.5 sm:pt-0 tabular-nums">
           {problem.numId}
         </span>
 
@@ -63,9 +63,9 @@ export const ProblemRow: React.FC<ProblemRowProps> = ({
               {problem.title}
             </span>
 
-            {/* Rating Monospace Pill */}
+            {/* Rating Pill */}
             <span
-              className={`font-mono text-xs font-bold px-2.5 py-0.5 rounded-md border shrink-0 tracking-tight transition-colors ${
+              className={`text-xs font-bold px-2.5 py-0.5 rounded-md border shrink-0 tracking-tight transition-colors tabular-nums ${
                 isCodeChef
                   ? 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30'
                   : 'bg-sky-500/10 text-sky-700 dark:text-sky-300 border-sky-500/30'

@@ -49,7 +49,7 @@ export const DayCard: React.FC<DayCardProps> = ({
       {/* 1. Day Card Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
         <div className="flex items-center gap-4 min-w-0">
-          <div className="day-badge w-14 h-14 rounded-2xl flex items-center justify-center font-mono text-xl font-black text-white shrink-0 shadow-md ring-4 ring-white/20">
+          <div className="day-badge w-14 h-14 rounded-2xl flex items-center justify-center text-xl font-black tabular-nums text-white shrink-0 shadow-md ring-4 ring-white/20">
             {dayNumStr}
           </div>
           <div className="min-w-0">
@@ -89,7 +89,7 @@ export const DayCard: React.FC<DayCardProps> = ({
                 <span>Completed (5/5)</span>
               </>
             ) : (
-              <span className="font-mono">{solvedInThisDay} / {totalDayProblems} Solved</span>
+              <span className="font-bold tabular-nums">{solvedInThisDay} / {totalDayProblems} Solved</span>
             )}
           </div>
         </div>
@@ -106,7 +106,7 @@ export const DayCard: React.FC<DayCardProps> = ({
               </span>
               <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1" />
             </div>
-            <span className="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 shrink-0">
+            <span className="text-xs font-bold tabular-nums text-slate-500 dark:text-slate-400 shrink-0">
               {allTutorials.length} Videos
             </span>
           </div>
@@ -188,14 +188,19 @@ export const DayCard: React.FC<DayCardProps> = ({
               <Terminal className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-base font-extrabold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                Pattern Programs Guide
-                <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-extrabold border border-emerald-300 dark:border-emerald-800">
-                  26 Patterns
+              <div className="flex flex-wrap items-center gap-2">
+                <h4 className="text-base font-extrabold text-slate-900 dark:text-slate-100">
+                  Pattern Problems
+                </h4>
+                <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-extrabold border border-emerald-300 dark:border-emerald-800 tabular-nums">
+                  26 Problems
                 </span>
-              </h4>
+                <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-700 dark:text-amber-300 font-bold border border-amber-500/30 shadow-[0_0_8px_rgba(245,158,11,0.25)] animate-pulse">
+                  নেস্টেড লুপের পরে প্র্যাকটিস করবে
+                </span>
+              </div>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed font-medium">
-                Practice nested loops with 26 star, number, alphabet, and hollow patterns with logic and C source code.
+                Practice nested loops with 26 star, number, alphabet, and hollow pattern problems with logic and C source code.
               </p>
             </div>
           </div>
@@ -203,7 +208,7 @@ export const DayCard: React.FC<DayCardProps> = ({
             onClick={onNavigateToPatterns}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white rounded-xl text-xs sm:text-sm font-extrabold shrink-0 shadow-sm transition-all cursor-pointer"
           >
-            <span>Open Pattern Lab</span>
+            <span>Solve Pattern Problems</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
