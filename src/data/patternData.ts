@@ -14,7 +14,7 @@ export const patternData: PatternItem[] = [
       "Print newline at the end of each row."
     ],
     "outputPreview": "* \n* * \n* * * \n* * * * \n* * * * * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Outer loop for rows\n    for (int i = 1; i <= n; i++) {\n        // Inner loop for stars in row i\n        for (int j = 1; j <= i; j++) {\n            printf(\"* \");\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Outer loop for rows\n    for (int i = 1; i <= n; i++) {\n        // Inner loop for stars in row i\n        for (int j = 1; j <= i; j++) {\n            printf(\"* \");\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "left-half-pyramid",
@@ -30,7 +30,7 @@ export const patternData: PatternItem[] = [
       "Print newline after each row."
     ],
     "outputPreview": "        * \n      * * \n    * * * \n  * * * * \n* * * * * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Print leading spaces\n        for (int j = 1; j <= 2 * (n - i); j++) {\n            printf(\" \");\n        }\n        // Print stars\n        for (int k = 1; k <= i; k++) {\n            printf(\"* \");\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Print leading spaces\n        for (int j = 1; j <= 2 * (n - i); j++) {\n            printf(\" \");\n        }\n        // Print stars\n        for (int k = 1; k <= i; k++) {\n            printf(\"* \");\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "inverted-right-half-pyramid",
@@ -45,7 +45,7 @@ export const patternData: PatternItem[] = [
       "Print newline after each row."
     ],
     "outputPreview": "* * * * * \n* * * * \n* * * \n* * \n* ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Outer loop runs backwards from n to 1\n    for (int i = n; i >= 1; i--) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"* \");\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Outer loop runs backwards from n to 1\n    for (int i = n; i >= 1; i--) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"* \");\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "inverted-left-half-pyramid",
@@ -61,7 +61,7 @@ export const patternData: PatternItem[] = [
       "Print newline after each row."
     ],
     "outputPreview": "* * * * * \n  * * * * \n    * * * \n      * * \n        * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        // Leading spaces increase as i decreases\n        for (int j = 1; j <= 2 * (n - i); j++) {\n            printf(\" \");\n        }\n        // Print stars\n        for (int k = 1; k <= i; k++) {\n            printf(\"* \");\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        // Leading spaces increase as i decreases\n        for (int j = 1; j <= 2 * (n - i); j++) {\n            printf(\" \");\n        }\n        // Print stars\n        for (int k = 1; k <= i; k++) {\n            printf(\"* \");\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "full-pyramid",
@@ -77,7 +77,7 @@ export const patternData: PatternItem[] = [
       "Print newline after each row."
     ],
     "outputPreview": "    * \n   * * \n  * * * \n * * * * \n* * * * * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Print single spaces for centering\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Print \"* \" (star + space)\n        for (int k = 1; k <= i; k++) {\n            printf(\"* \");\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Print single spaces for centering\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Print \"* \" (star + space)\n        for (int k = 1; k <= i; k++) {\n            printf(\"* \");\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "inverted-full-pyramid",
@@ -93,7 +93,7 @@ export const patternData: PatternItem[] = [
       "Print newline after each row."
     ],
     "outputPreview": "* * * * * \n * * * * \n  * * * \n   * * \n    * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        // Increasing spaces\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Decreasing stars\n        for (int k = 1; k <= i; k++) {\n            printf(\"* \");\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        // Increasing spaces\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Decreasing stars\n        for (int k = 1; k <= i; k++) {\n            printf(\"* \");\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "rhombus-pattern",
@@ -109,7 +109,7 @@ export const patternData: PatternItem[] = [
       "Print newline after each row."
     ],
     "outputPreview": "    * * * * * \n   * * * * * \n  * * * * * \n * * * * * \n* * * * * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Slanting spaces\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Constant n stars per row\n        for (int k = 1; k <= n; k++) {\n            printf(\"* \");\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Slanting spaces\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Constant n stars per row\n        for (int k = 1; k <= n; k++) {\n            printf(\"* \");\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "diamond-pattern",
@@ -124,7 +124,7 @@ export const patternData: PatternItem[] = [
       "Creates a symmetric 2n - 1 row diamond shape."
     ],
     "outputPreview": "    * \n   * * \n  * * * \n * * * * \n* * * * * \n * * * * \n  * * * \n   * * \n    * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Upper Half of Diamond\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= i; k++) printf(\"* \");\n        printf(\"\n\");\n    }\n\n    // Lower Half of Diamond\n    for (int i = n - 1; i >= 1; i--) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= i; k++) printf(\"* \");\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Upper Half of Diamond\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= i; k++) printf(\"* \");\n        printf(\"\\n\");\n    }\n\n    // Lower Half of Diamond\n    for (int i = n - 1; i >= 1; i--) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= i; k++) printf(\"* \");\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "hourglass-pattern",
@@ -139,7 +139,7 @@ export const patternData: PatternItem[] = [
       "Notice lower starts from i = 2 to avoid duplicating the central vertex."
     ],
     "outputPreview": "* * * * * \n * * * * \n  * * * \n   * * \n    * \n   * * \n  * * * \n * * * * \n* * * * * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Upper inverted pyramid\n    for (int i = n; i >= 1; i--) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= i; k++) printf(\"* \");\n        printf(\"\n\");\n    }\n\n    // Lower upright pyramid (starts from 2)\n    for (int i = 2; i <= n; i++) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= i; k++) printf(\"* \");\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Upper inverted pyramid\n    for (int i = n; i >= 1; i--) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= i; k++) printf(\"* \");\n        printf(\"\\n\");\n    }\n\n    // Lower upright pyramid (starts from 2)\n    for (int i = 2; i <= n; i++) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= i; k++) printf(\"* \");\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "hollow-square",
@@ -155,7 +155,7 @@ export const patternData: PatternItem[] = [
       "Otherwise -> print two spaces (\"  \")."
     ],
     "outputPreview": "* * * * * \n*       * \n*       * \n*       * \n* * * * * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            // Boundary condition\n            if (i == 1 || i == n || j == 1 || j == n) {\n                printf(\"* \");\n            } else {\n                printf(\"  \");\n            }\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n; j++) {\n            // Boundary condition\n            if (i == 1 || i == n || j == 1 || j == n) {\n                printf(\"* \");\n            } else {\n                printf(\"  \");\n            }\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "hollow-full-pyramid",
@@ -171,7 +171,7 @@ export const patternData: PatternItem[] = [
       "Else print a single space."
     ],
     "outputPreview": "    * \n   * * \n  *   * \n *     * \n* * * * * * * * * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Leading spaces\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Hollow star condition\n        for (int k = 1; k <= 2 * i - 1; k++) {\n            if (k == 1 || k == 2 * i - 1 || i == n) {\n                printf(\"*\");\n            } else {\n                printf(\" \");\n            }\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Leading spaces\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Hollow star condition\n        for (int k = 1; k <= 2 * i - 1; k++) {\n            if (k == 1 || k == 2 * i - 1 || i == n) {\n                printf(\"*\");\n            } else {\n                printf(\" \");\n            }\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "hollow-diamond",
@@ -186,7 +186,7 @@ export const patternData: PatternItem[] = [
       "Creates a crisp diamond contour."
     ],
     "outputPreview": "    * \n   * * \n  *   * \n *     * \n*       * \n *     * \n  *   * \n   * * \n    * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Upper hollow half\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= 2 * i - 1; k++) {\n            if (k == 1 || k == 2 * i - 1) printf(\"*\");\n            else printf(\" \");\n        }\n        printf(\"\n\");\n    }\n\n    // Lower hollow half\n    for (int i = n - 1; i >= 1; i--) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= 2 * i - 1; k++) {\n            if (k == 1 || k == 2 * i - 1) printf(\"*\");\n            else printf(\" \");\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Upper hollow half\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= 2 * i - 1; k++) {\n            if (k == 1 || k == 2 * i - 1) printf(\"*\");\n            else printf(\" \");\n        }\n        printf(\"\\n\");\n    }\n\n    // Lower hollow half\n    for (int i = n - 1; i >= 1; i--) {\n        for (int j = 1; j <= n - i; j++) printf(\" \");\n        for (int k = 1; k <= 2 * i - 1; k++) {\n            if (k == 1 || k == 2 * i - 1) printf(\"*\");\n            else printf(\" \");\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "simple-number-pyramid",
@@ -201,7 +201,7 @@ export const patternData: PatternItem[] = [
       "Print j followed by a space in each iteration."
     ],
     "outputPreview": "1 \n1 2 \n1 2 3 \n1 2 3 4 \n1 2 3 4 5 ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", j);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", j);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "inverted-number-pyramid",
@@ -216,7 +216,7 @@ export const patternData: PatternItem[] = [
       "Print j on each iteration."
     ],
     "outputPreview": "1 2 3 4 5 \n1 2 3 4 \n1 2 3 \n1 2 \n1 ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", j);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", j);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "same-row-number-pyramid",
@@ -231,7 +231,7 @@ export const patternData: PatternItem[] = [
       "Print i (the row number) instead of column j."
     ],
     "outputPreview": "1 \n2 2 \n3 3 3 \n4 4 4 4 \n5 5 5 5 5 ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", i);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", i);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "floyds-triangle",
@@ -246,7 +246,7 @@ export const patternData: PatternItem[] = [
       "Inner loop j runs from 1 to i, printing counter++."
     ],
     "outputPreview": "1 \n2 3 \n4 5 6 \n7 8 9 10 \n11 12 13 14 15 ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n    int num = 1; // Continuous counter\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", num);\n            num++;\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n    int num = 1; // Continuous counter\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", num);\n            num++;\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "binary-triangle",
@@ -261,7 +261,7 @@ export const patternData: PatternItem[] = [
       "Guarantees alternating binary values in all directions."
     ],
     "outputPreview": "1 \n0 1 \n1 0 1 \n0 1 0 1 \n1 0 1 0 1 ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            // Even sum gives 1, odd sum gives 0\n            if ((i + j) % 2 == 0) {\n                printf(\"1 \");\n            } else {\n                printf(\"0 \");\n            }\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            // Even sum gives 1, odd sum gives 0\n            if ((i + j) % 2 == 0) {\n                printf(\"1 \");\n            } else {\n                printf(\"0 \");\n            }\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "palindromic-number-pyramid",
@@ -276,7 +276,7 @@ export const patternData: PatternItem[] = [
       "Descending loop: j runs from i - 1 down to 1, printing j."
     ],
     "outputPreview": "        1 \n      1 2 1 \n    1 2 3 2 1 \n  1 2 3 4 3 2 1 \n1 2 3 4 5 4 3 2 1 ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Leading spaces\n        for (int j = 1; j <= 2 * (n - i); j++) {\n            printf(\" \");\n        }\n        // Ascending part: 1 to i\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", j);\n        }\n        // Descending part: i-1 down to 1\n        for (int j = i - 1; j >= 1; j--) {\n            printf(\"%d \", j);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Leading spaces\n        for (int j = 1; j <= 2 * (n - i); j++) {\n            printf(\" \");\n        }\n        // Ascending part: 1 to i\n        for (int j = 1; j <= i; j++) {\n            printf(\"%d \", j);\n        }\n        // Descending part: i-1 down to 1\n        for (int j = i - 1; j >= 1; j--) {\n            printf(\"%d \", j);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "pascals-triangle",
@@ -292,7 +292,7 @@ export const patternData: PatternItem[] = [
       "Inner loop j from 0 to i: print coef, then update coef = coef * (i - j) / (j + 1)."
     ],
     "outputPreview": "    1 \n   1 1 \n  1 2 1 \n 1 3 3 1 \n1 4 6 4 1 ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 0; i < n; i++) {\n        // Spaces for centering\n        for (int space = 1; space <= n - i; space++) {\n            printf(\" \");\n        }\n\n        int coef = 1;\n        for (int j = 0; j <= i; j++) {\n            printf(\"%d \", coef);\n            // Formula for nCr: C(i, j+1) = C(i, j) * (i - j) / (j + 1)\n            coef = coef * (i - j) / (j + 1);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 0; i < n; i++) {\n        // Spaces for centering\n        for (int space = 1; space <= n - i; space++) {\n            printf(\" \");\n        }\n\n        int coef = 1;\n        for (int j = 0; j <= i; j++) {\n            printf(\"%d \", coef);\n            // Formula for nCr: C(i, j+1) = C(i, j) * (i - j) / (j + 1)\n            coef = coef * (i - j) / (j + 1);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "simple-alphabet-triangle",
@@ -307,7 +307,7 @@ export const patternData: PatternItem[] = [
       "Print character using expression 'A' + j - 1."
     ],
     "outputPreview": "A \nA B \nA B C \nA B C D \nA B C D E ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%c \", 'A' + j - 1);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%c \", 'A' + j - 1);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "same-char-in-row",
@@ -322,7 +322,7 @@ export const patternData: PatternItem[] = [
       "Print constant character 'A' + i - 1 for the whole row."
     ],
     "outputPreview": "A \nB B \nC C C \nD D D D \nE E E E E ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%c \", 'A' + i - 1);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%c \", 'A' + i - 1);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "continuous-alphabet-triangle",
@@ -337,7 +337,7 @@ export const patternData: PatternItem[] = [
       "Print ch++ in each inner iteration."
     ],
     "outputPreview": "A \nB C \nD E F \nG H I J \nK L M N O ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n    char ch = 'A'; // Running character\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%c \", ch++);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n    char ch = 'A'; // Running character\n\n    for (int i = 1; i <= n; i++) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%c \", ch++);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "palindromic-alphabet-pyramid",
@@ -352,7 +352,7 @@ export const patternData: PatternItem[] = [
       "Descending loop: j from i - 2 down to 0, print 'A' + j."
     ],
     "outputPreview": "        A \n      A B A \n    A B C B A \n  A B C D C B A \nA B C D E D C B A ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Leading spaces\n        for (int j = 1; j <= 2 * (n - i); j++) {\n            printf(\" \");\n        }\n        // Ascending characters: A to A + i - 1\n        for (int j = 0; j < i; j++) {\n            printf(\"%c \", 'A' + j);\n        }\n        // Descending characters\n        for (int j = i - 2; j >= 0; j--) {\n            printf(\"%c \", 'A' + j);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = 1; i <= n; i++) {\n        // Leading spaces\n        for (int j = 1; j <= 2 * (n - i); j++) {\n            printf(\" \");\n        }\n        // Ascending characters: A to A + i - 1\n        for (int j = 0; j < i; j++) {\n            printf(\"%c \", 'A' + j);\n        }\n        // Descending characters\n        for (int j = i - 2; j >= 0; j--) {\n            printf(\"%c \", 'A' + j);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "inverted-alphabet-triangle",
@@ -367,7 +367,7 @@ export const patternData: PatternItem[] = [
       "Print 'A' + j - 1."
     ],
     "outputPreview": "A B C D E \nA B C D \nA B C \nA B \nA ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%c \", 'A' + j - 1);\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        for (int j = 1; j <= i; j++) {\n            printf(\"%c \", 'A' + j - 1);\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "butterfly-pattern",
@@ -382,7 +382,7 @@ export const patternData: PatternItem[] = [
       "Total 2n rows with symmetric star wings."
     ],
     "outputPreview": "*                 * \n* *             * * \n* * *         * * * \n* * * *     * * * * \n* * * * * * * * * * \n* * * * * * * * * * \n* * * *     * * * * \n* * *         * * * \n* *             * * \n*                 * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Upper Half of Butterfly\n    for (int i = 1; i <= n; i++) {\n        // Left wing\n        for (int j = 1; j <= i; j++) printf(\"* \");\n        // Center gap\n        for (int j = 1; j <= 2 * (n - i); j++) printf(\"  \");\n        // Right wing\n        for (int j = 1; j <= i; j++) printf(\"* \");\n        printf(\"\n\");\n    }\n\n    // Lower Half of Butterfly\n    for (int i = n; i >= 1; i--) {\n        // Left wing\n        for (int j = 1; j <= i; j++) printf(\"* \");\n        // Center gap\n        for (int j = 1; j <= 2 * (n - i); j++) printf(\"  \");\n        // Right wing\n        for (int j = 1; j <= i; j++) printf(\"* \");\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    // Upper Half of Butterfly\n    for (int i = 1; i <= n; i++) {\n        // Left wing\n        for (int j = 1; j <= i; j++) printf(\"* \");\n        // Center gap\n        for (int j = 1; j <= 2 * (n - i); j++) printf(\"  \");\n        // Right wing\n        for (int j = 1; j <= i; j++) printf(\"* \");\n        printf(\"\\n\");\n    }\n\n    // Lower Half of Butterfly\n    for (int i = n; i >= 1; i--) {\n        // Left wing\n        for (int j = 1; j <= i; j++) printf(\"* \");\n        // Center gap\n        for (int j = 1; j <= 2 * (n - i); j++) printf(\"  \");\n        // Right wing\n        for (int j = 1; j <= i; j++) printf(\"* \");\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   },
   {
     "id": "hollow-inverted-full-pyramid",
@@ -398,6 +398,6 @@ export const patternData: PatternItem[] = [
       "Else print space."
     ],
     "outputPreview": "* * * * * * * * * \n *     * \n  *   * \n   * * \n    * ",
-    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        // Leading spaces\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Hollow boundary condition\n        for (int k = 1; k <= 2 * i - 1; k++) {\n            if (k == 1 || k == 2 * i - 1 || i == n) {\n                printf(\"*\");\n            } else {\n                printf(\" \");\n            }\n        }\n        printf(\"\n\");\n    }\n\n    return 0;\n}"
+    "code": "#include <stdio.h>\n\nint main() {\n    int n = 5;\n\n    for (int i = n; i >= 1; i--) {\n        // Leading spaces\n        for (int j = 1; j <= n - i; j++) {\n            printf(\" \");\n        }\n        // Hollow boundary condition\n        for (int k = 1; k <= 2 * i - 1; k++) {\n            if (k == 1 || k == 2 * i - 1 || i == n) {\n                printf(\"*\");\n            } else {\n                printf(\" \");\n            }\n        }\n        printf(\"\\n\");\n    }\n\n    return 0;\n}"
   }
 ];
