@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Compass,
+  PlaySquare,
   Keyboard,
   ShieldAlert,
   Video,
@@ -42,7 +43,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
             Orientation & Rules
           </span>
           <span className="text-xs sm:text-sm font-bold px-3.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-            7 Essential Guidelines
+            8 Essential Guidelines
           </span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
@@ -75,7 +76,66 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
           </p>
         </section>
 
-        {/* 2. Build Muscle Memory */}
+        {/* 2. How to Use This Website (Daily Workflow) */}
+        <section className="bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-md transition-all flex flex-col gap-4">
+          <div className="flex items-center gap-3.5">
+            <div className="w-11 h-11 rounded-xl bg-sky-500/10 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+              <PlaySquare className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">
+                Rule 02
+              </span>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 dark:text-white">
+                How to Use This Website (Daily Workflow)
+              </h2>
+            </div>
+          </div>
+
+          <div className="space-y-3.5 pl-1 text-base sm:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+            <div className="flex items-start gap-3">
+              <span className="w-7 h-7 rounded-lg bg-sky-500/15 text-sky-600 dark:text-sky-400 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                01
+              </span>
+              <p>
+                <strong className="text-slate-900 dark:text-white">Watch the Tutorials First:</strong> Start each day by watching the curated video lectures in sequence. I recommend watching them at <span className="font-extrabold text-sky-600 dark:text-sky-400">1.5× speed</span> to stay fully engaged, save study time, and grasp the core logic efficiently.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="w-7 h-7 rounded-lg bg-sky-500/15 text-sky-600 dark:text-sky-400 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                02
+              </span>
+              <p>
+                <strong className="text-slate-900 dark:text-white">Solve the Day's Problem Set:</strong> Immediately after finishing the tutorials, solve that day’s 5 curated problems on CodeChef and Codeforces. Mark them as solved to track your progress on the dashboard.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="w-7 h-7 rounded-lg bg-sky-500/15 text-sky-600 dark:text-sky-400 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                03
+              </span>
+              <p>
+                <strong className="text-slate-900 dark:text-white">Already Familiar with the Topic?</strong> If you already have sufficient knowledge and confidence in the day's concepts, you may skip the tutorials (<em className="text-slate-500 dark:text-slate-400 font-semibold">though not recommended for beginners</em>) and focus solely on solving the problems.
+              </p>
+            </div>
+          </div>
+
+          {/* Consistency Golden Rule Banner */}
+          <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-transparent border border-sky-500/30 dark:border-sky-500/20 text-slate-800 dark:text-slate-200 text-sm sm:text-base font-semibold flex items-start gap-3 shadow-2xs mt-1">
+            <span className="text-xl shrink-0 mt-0.5">💡</span>
+            <div className="space-y-1">
+              <span className="text-sky-700 dark:text-sky-300 font-black uppercase tracking-wider text-xs block">
+                The Golden Rule of Problem Solving
+              </span>
+              <p className="leading-relaxed">
+                Remember: <strong className="font-black text-slate-900 dark:text-white">Consistency is the key to competitive programming.</strong> Solving 5 problems every single day will build far deeper intuition, muscle memory, and resilience than attempting dozens of problems all at once.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Build Muscle Memory */}
         <section className="bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-md transition-all flex flex-col gap-3.5">
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 rounded-xl bg-indigo-500/10 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
@@ -83,7 +143,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-                Rule 02
+                Rule 03
               </span>
               <h2 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 dark:text-white">
                 Build True Muscle Memory (Avoid IDE Autocomplete)
@@ -95,7 +155,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
           </p>
         </section>
 
-        {/* 3. Strict Zero-Tolerance AI Policy (Highlighted) */}
+        {/* 4. Strict Zero-Tolerance AI Policy (Highlighted) */}
         <section className="bg-rose-50/50 dark:bg-rose-950/25 border-2 border-rose-300 dark:border-rose-800/80 rounded-2xl p-6 sm:p-8 shadow-md flex flex-col gap-4 relative overflow-hidden">
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 rounded-xl bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-sm">
@@ -104,7 +164,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400">
-                  Critical Rule 03
+                  Critical Rule 04
                 </span>
                 <span className="text-[11px] font-black px-2.5 py-0.5 rounded-full bg-rose-600 text-white uppercase tracking-wide">
                   Zero Tolerance
@@ -131,7 +191,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
           </div>
         </section>
 
-        {/* 4. Curated Playlists & C Language Rule */}
+        {/* 5. Curated Playlists & C Language Rule */}
         <section className="bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-md transition-all flex flex-col gap-3.5">
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 rounded-xl bg-red-500/10 dark:bg-red-500/20 text-red-600 dark:text-red-400 flex items-center justify-center shrink-0">
@@ -139,7 +199,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400">
-                Rule 04
+                Rule 05
               </span>
               <h2 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 dark:text-white">
                 Curated Video Playlists & C Implementation
@@ -157,7 +217,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
           </div>
         </section>
 
-        {/* 5. Online Learning Resources (GFG, W3Schools, Stack Overflow) */}
+        {/* 6. Online Learning Resources (GFG, W3Schools, Stack Overflow) */}
         <section className="bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-md transition-all flex flex-col gap-3.5">
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
@@ -165,7 +225,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
-                Rule 05
+                Rule 06
               </span>
               <h2 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 dark:text-white">
                 Reliable Online Documentation & Resources
@@ -182,7 +242,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
           </div>
         </section>
 
-        {/* 6. Moniruzzaman Sir's Class Preparation */}
+        {/* 7. Moniruzzaman Sir's Class Preparation */}
         <section className="bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-md transition-all flex flex-col gap-3.5">
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 rounded-xl bg-purple-500/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
@@ -190,7 +250,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
-                Rule 06
+                Rule 07
               </span>
               <h2 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 dark:text-white">
                 Ace Moniruzzaman Sir's Lectures
@@ -202,7 +262,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
           </p>
         </section>
 
-        {/* 7. Wednesday IUTCS Programming Training */}
+        {/* 8. Wednesday IUTCS Programming Training */}
         <section className="bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-md transition-all flex flex-col gap-3.5">
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 rounded-xl bg-teal-500/10 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
@@ -210,7 +270,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">
-                Rule 07
+                Rule 08
               </span>
               <h2 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 dark:text-white">
                 Wednesday IUTCS Programming Training
