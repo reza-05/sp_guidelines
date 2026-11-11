@@ -22,8 +22,8 @@ export const ProblemRow: React.FC<ProblemRowProps> = ({
       onClick={() => onToggle(problem.id)}
       className={`group relative flex items-center justify-between gap-3 p-3 sm:p-3.5 rounded-xl border transition-all duration-150 cursor-pointer select-none ${
         isSolved
-          ? 'bg-emerald-500/[0.04] dark:bg-emerald-950/20 border-emerald-500/30 dark:border-emerald-500/25 shadow-2xs'
-          : 'bg-white dark:bg-[#0E131F] border-slate-200/90 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-xs'
+          ? 'bg-emerald-50/80 dark:bg-emerald-950/30 border-emerald-300 dark:border-emerald-700/60 shadow-2xs'
+          : 'bg-slate-50 hover:bg-slate-100/90 dark:bg-slate-900/80 dark:hover:bg-slate-800/80 border-slate-200 hover:border-slate-300 dark:border-slate-800 dark:hover:border-slate-700 shadow-2xs hover:shadow-xs'
       }`}
     >
       {/* Main Content Area */}

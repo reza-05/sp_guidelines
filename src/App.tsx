@@ -176,7 +176,7 @@ export const App: React.FC = () => {
   let currentModule = '';
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#07090E] ambient-bg text-slate-900 dark:text-slate-100 transition-colors flex flex-col font-sans antialiased">
+    <div className="min-h-screen bg-[#F1F5F9] dark:bg-[#07090E] ambient-bg text-slate-900 dark:text-slate-100 transition-colors flex flex-col font-sans antialiased">
       {/* Full-Width Modern Navbar */}
       <Navbar
         currentView={currentView}
@@ -188,8 +188,8 @@ export const App: React.FC = () => {
         onReset={handleResetProgress}
       />
 
-      {/* Main Container: Full Width Clean Layout */}
-      <div className="w-full max-w-5xl mx-auto px-3 sm:px-6 py-5 sm:py-8 flex-1 flex flex-col gap-6">
+      {/* Main Container: Compact, Centered, High-Contrast Layout */}
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex-1 flex flex-col gap-6">
         {currentView === 'patterns' ? (
           <PatternLab onBackToCurriculum={() => handleChangeView('curriculum')} />
         ) : (
@@ -282,17 +282,22 @@ export const App: React.FC = () => {
                   return (
                     <React.Fragment key={dayData.day}>
                       {showModuleBanner && (
-                        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-slate-850 dark:via-slate-800 dark:to-slate-900 text-white p-3.5 sm:p-4 rounded-2xl shadow-sm border border-slate-700/60 dark:border-slate-700/50 flex flex-wrap items-center justify-between gap-3 mt-4">
+                        <div className="bg-slate-900 dark:bg-slate-850 text-white p-4 rounded-2xl shadow-sm border border-slate-800 dark:border-slate-700 flex flex-wrap items-center justify-between gap-3 mt-6 mb-1">
                           <div className="flex items-center gap-3">
-                            <span className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center font-mono font-extrabold text-xs text-sky-400">
+                            <span className="w-9 h-9 rounded-xl bg-sky-500 text-white flex items-center justify-center font-mono font-black text-xs shadow-xs">
                               M{dayData.module}
                             </span>
-                            <span className="font-bold text-xs sm:text-sm tracking-tight">
-                              {dayData.moduleName}
-                            </span>
+                            <div>
+                              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-sky-400 block">
+                                Module {dayData.module}
+                              </span>
+                              <h2 className="font-extrabold text-sm sm:text-base tracking-tight text-white">
+                                {dayData.moduleName}
+                              </h2>
+                            </div>
                           </div>
-                          <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-md bg-white/10 text-slate-300">
-                            Curriculum Module {dayData.module}
+                          <span className="text-xs font-mono font-bold px-3 py-1 rounded-lg bg-white/10 text-slate-200 border border-white/10">
+                            Milestone
                           </span>
                         </div>
                       )}
