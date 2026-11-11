@@ -2,36 +2,19 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="text-center border-t border-slate-200 dark:border-gray-800 pt-6 mt-4 text-xs text-slate-500 dark:text-slate-400 flex flex-col gap-2">
-      <div className="flex justify-center gap-3 font-semibold">
+    <footer className="text-center border-t border-slate-200/80 dark:border-slate-800/80 py-8 mt-6 text-xs text-slate-500 dark:text-slate-400 flex flex-col items-center justify-center gap-2 no-print">
+      <p className="flex items-center gap-1.5 text-xs sm:text-sm font-medium">
+        <span>Created by</span>
         <a
-          href="https://github.com/reza-05/sp_guidelines"
+          href="https://github.com/reza-05"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-600 dark:text-sky-400 hover:underline"
+          className="font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 underline underline-offset-4 decoration-slate-300 dark:decoration-slate-700 transition-colors"
         >
-          GitHub Repository
+          Reza
         </a>
-        <span>•</span>
-        <a
-          href="https://www.codechef.com/practice-old"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sky-600 dark:text-sky-400 hover:underline"
-        >
-          CodeChef Practice
-        </a>
-        <span>•</span>
-        <a
-          href="https://codeforces.com/problemset"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sky-600 dark:text-sky-400 hover:underline"
-        >
-          Codeforces Problemset
-        </a>
-      </div>
-      <p>Created for beginners and university students mastering C Language &amp; Competitive Programming.</p>
+        <span>for basic programming &amp; problem solving</span>
+      </p>
     </footer>
   );
 };
