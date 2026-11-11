@@ -75,17 +75,38 @@ export const App: React.FC = () => {
   // Handle Solved Toggle
   const handleToggleProblem = (id: string) => {
     setSolvedMap(prev => {
-      const next = { ...prev, [id]: !prev[id] };
+      const isMarkingAsSolved = !prev[id];
+      const next = { ...prev, [id]: isMarkingAsSolved };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
 
-      // Trigger confetti on progress milestone!
-      const count = Object.values(next).filter(Boolean).length;
-      if (count === TOTAL_PROBLEMS || count % 25 === 0) {
-        confetti({
-          particleCount: 80,
-          spread: 60,
-          origin: { y: 0.7 }
-        });
+      // Trigger celebration ONLY when marking a problem as SOLVED (never when unchecking)
+      if (isMarkingAsSolved) {
+        // Check if all problems in this day are now completed
+        const parentDay = curriculumData.find(d => d.problems.some(p => p.id === id));
+        const dayProblems = parentDay ? parentDay.problems : [];
+        const isDayNowCompleted = dayProblems.length > 0 && dayProblems.every(p => !!next[p.id]);
+
+        if (isDayNowCompleted) {
+          // Grand celebration burst when completing all 5 problems of a day
+          confetti({
+            particleCount: 110,
+            spread: 70,
+            ticks: 250,
+            gravity: 1.0,
+            origin: { y: 0.6 }
+          });
+        } else {
+          // Instant satisfying celebration burst when marking a problem as solved
+          confetti({
+            particleCount: 40,
+            spread: 50,
+            ticks: 180,
+            gravity: 1.1,
+            decay: 0.94,
+            startVelocity: 28,
+            origin: { y: 0.72 }
+          });
+        }
       }
 
       return next;

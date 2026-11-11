@@ -1,7 +1,7 @@
 import React from 'react';
 import { DayCurriculum, Problem } from '../types/curriculum';
 import { ProblemRow } from './ProblemRow';
-import { Play, Terminal, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Play, Terminal, ArrowRight, CheckCircle2, Video, Code2 } from 'lucide-react';
 
 interface DayCardProps {
   dayData: DayCurriculum;
@@ -20,6 +20,7 @@ export const DayCard: React.FC<DayCardProps> = ({
 }) => {
   const dayNumStr = String(dayData.day).padStart(2, '0');
   const isNestedLoopDay = dayData.module === 3;
+  const hasVideos = (dayData.bct && dayData.bct.length > 0) || (dayData.ac && dayData.ac.length > 0);
 
   // Day Solved Progress
   const totalDayProblems = dayData.problems.length;
@@ -29,7 +30,7 @@ export const DayCard: React.FC<DayCardProps> = ({
   return (
     <section
       id={`day${dayData.day}`}
-      className={`day-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 sm:p-5 transition-colors flex flex-col gap-3.5 ${dayData.theme}`}
+      className={`day-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 sm:p-5 transition-colors flex flex-col gap-4 ${dayData.theme}`}
     >
       {/* Section Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-100 dark:border-slate-800">
@@ -66,48 +67,60 @@ export const DayCard: React.FC<DayCardProps> = ({
         </div>
       </div>
 
-      {/* Video Strip with SOLID RED Watch Buttons matching Image 4 */}
-      <div className="flex flex-wrap items-center gap-2 bg-slate-50 dark:bg-slate-950/50 p-2.5 border border-slate-200 dark:border-slate-800 rounded-lg">
-        {dayData.bct && dayData.bct.length > 0 && (
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-rose-100 dark:bg-rose-950/70 text-rose-800 dark:text-rose-300 border border-rose-200 dark:border-rose-900">
-              Bangla Coding Tutor
+      {/* Tutorial Section */}
+      {hasVideos && (
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+              <Video className="w-3.5 h-3.5 text-rose-600 dark:text-rose-400" />
+              <span>Tutorial</span>
             </span>
-            {dayData.bct.map(v => (
-              <a
-                key={v.id}
-                href={v.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="watch-btn inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#ff0000] hover:bg-[#cc0000] active:scale-95 text-white font-bold text-xs rounded-md shadow-xs transition-all duration-150 shrink-0 cursor-pointer"
-              >
-                <Play className="w-2.5 h-2.5 fill-white text-white shrink-0" />
-                <span>{v.title}</span>
-              </a>
-            ))}
+            <div className="h-px bg-slate-100 dark:bg-slate-800 flex-1" />
           </div>
-        )}
 
-        {dayData.ac && dayData.ac.length > 0 && (
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-violet-100 dark:bg-violet-950/70 text-violet-800 dark:text-violet-300 border border-violet-200 dark:border-violet-900">
-              Apna College
-            </span>
-            {dayData.ac.map(v => (
-              <a
-                key={v.id}
-                href={v.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="watch-btn inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#ff0000] hover:bg-[#cc0000] active:scale-95 text-white font-bold text-xs rounded-md shadow-xs transition-all duration-150 shrink-0 cursor-pointer"
-              >
-                <Play className="w-2.5 h-2.5 fill-white text-white shrink-0" />
-                <span>{v.title}</span>
-              </a>
-            ))}
+          <div className="flex flex-wrap items-center gap-2 bg-slate-50 dark:bg-slate-950/50 p-2.5 border border-slate-200 dark:border-slate-800 rounded-lg">
+            {dayData.bct && dayData.bct.length > 0 && (
+              <div className="flex flex-wrap items-center gap-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-rose-100 dark:bg-rose-950/70 text-rose-800 dark:text-rose-300 border border-rose-200 dark:border-rose-900">
+                  Bangla Coding Tutor
+                </span>
+                {dayData.bct.map(v => (
+                  <a
+                    key={v.id}
+                    href={v.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="watch-btn inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#ff0000] hover:bg-[#cc0000] active:scale-95 text-white font-bold text-xs rounded-md shadow-xs transition-all duration-150 shrink-0 cursor-pointer"
+                  >
+                    <Play className="w-2.5 h-2.5 fill-white text-white shrink-0" />
+                    <span>{v.title}</span>
+                  </a>
+                ))}
+              </div>
+            )}
+
+            {dayData.ac && dayData.ac.length > 0 && (
+              <div className="flex flex-wrap items-center gap-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-violet-100 dark:bg-violet-950/70 text-violet-800 dark:text-violet-300 border border-violet-200 dark:border-violet-900">
+                  Apna College
+                </span>
+                {dayData.ac.map(v => (
+                  <a
+                    key={v.id}
+                    href={v.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="watch-btn inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#ff0000] hover:bg-[#cc0000] active:scale-95 text-white font-bold text-xs rounded-md shadow-xs transition-all duration-150 shrink-0 cursor-pointer"
+                  >
+                    <Play className="w-2.5 h-2.5 fill-white text-white shrink-0" />
+                    <span>{v.title}</span>
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Special Nested Loop Pattern Lab Callout */}
       {isNestedLoopDay && onNavigateToPatterns && (
@@ -138,16 +151,32 @@ export const DayCard: React.FC<DayCardProps> = ({
         </div>
       )}
 
-      {/* Problem Cards Stack */}
-      <div className="flex flex-col gap-2" role="list" aria-label={`${dayData.title} Problems`}>
-        {visibleProblems.map(problem => (
-          <ProblemRow
-            key={problem.id}
-            problem={problem}
-            isSolved={!!solvedMap[problem.id]}
-            onToggle={onToggleProblem}
-          />
-        ))}
+      {/* Related Problems Section */}
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 flex-1">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+              <Code2 className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />
+              <span>Related Problems</span>
+            </span>
+            <div className="h-px bg-slate-100 dark:bg-slate-800 flex-1" />
+          </div>
+          <span className="text-[11px] font-mono font-medium text-slate-400 dark:text-slate-500">
+            {visibleProblems.length} Problems
+          </span>
+        </div>
+
+        {/* Problem Cards Stack */}
+        <div className="flex flex-col gap-2" role="list" aria-label={`${dayData.title} Problems`}>
+          {visibleProblems.map(problem => (
+            <ProblemRow
+              key={problem.id}
+              problem={problem}
+              isSolved={!!solvedMap[problem.id]}
+              onToggle={onToggleProblem}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
