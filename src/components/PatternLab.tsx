@@ -70,7 +70,7 @@ export const PatternLab: React.FC<PatternLabProps> = ({ onBackToCurriculum }) =>
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs sm:text-sm font-bold transition-colors border border-slate-200 dark:border-slate-700 cursor-pointer shadow-2xs"
         >
           <ArrowLeft className="w-4 h-4 text-emerald-600 dark:text-emerald-400 stroke-[2.5]" />
-          <span>← Back to Curriculum</span>
+          <span>Back to Curriculum</span>
         </button>
 
         <a
@@ -254,7 +254,7 @@ export const PatternLab: React.FC<PatternLabProps> = ({ onBackToCurriculum }) =>
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 text-sm font-bold transition-colors cursor-pointer shadow-sm"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>← Back to Curriculum</span>
+          <span>Back to Curriculum</span>
         </button>
       </div>
     </div>

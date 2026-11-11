@@ -8,6 +8,7 @@ import {
   GraduationCap,
   Users2,
   ArrowRight,
+  ArrowLeft,
   BookOpen
 } from 'lucide-react';
 
@@ -24,8 +25,8 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
           onClick={onNavigateToCurriculum}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs sm:text-sm font-bold transition-colors border border-slate-200 dark:border-slate-700 cursor-pointer shadow-2xs"
         >
-          <ArrowRight className="w-4 h-4 text-sky-600 dark:text-sky-400 rotate-180" />
-          <span>← Back to Curriculum</span>
+          <ArrowLeft className="w-4 h-4 text-sky-600 dark:text-sky-400 stroke-[2.5]" />
+          <span>Back to Curriculum</span>
         </button>
 
         <span className="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">
