@@ -40,32 +40,32 @@ export const PatternCard: React.FC<PatternCardProps> = ({ pattern }) => {
             {String(pattern.num).padStart(2, '0')}
           </div>
           <div>
-            <h3 className="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">
+            <h3 className="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white tracking-tight">
               {pattern.title}
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium mt-0.5">
+            <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium mt-0.5">
               {pattern.description}
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          <span className="text-xs font-bold px-2.5 sm:px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+          <span className="text-xs sm:text-sm font-bold px-2.5 sm:px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
             {categoryLabels}
           </span>
-          <span className={`text-xs font-bold px-2.5 sm:px-3 py-1 rounded-lg border ${difficultyColors}`}>
+          <span className={`text-xs sm:text-sm font-bold px-2.5 sm:px-3 py-1 rounded-lg border ${difficultyColors}`}>
             {pattern.difficulty}
           </span>
         </div>
       </div>
 
       {/* Logic Summary Box */}
-      <div className="bg-slate-50 dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 text-slate-700 dark:text-slate-300">
-        <h4 className="font-bold text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2 flex items-center gap-2">
+      <div className="bg-slate-50 dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800 rounded-xl p-4 sm:p-5 text-slate-700 dark:text-slate-300">
+        <h4 className="font-extrabold text-xs sm:text-sm uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2 flex items-center gap-2">
           <ListOrdered className="w-4 h-4 text-slate-500" />
           Nested Loop Logic:
         </h4>
-        <ul className="list-disc list-inside space-y-1.5 text-xs sm:text-sm font-medium leading-relaxed">
+        <ul className="list-disc list-inside space-y-1.5 text-sm sm:text-base font-medium leading-relaxed">
           {pattern.logic.map((step, idx) => (
             <li key={idx}>
               <span className="text-slate-800 dark:text-slate-200">{step}</span>
