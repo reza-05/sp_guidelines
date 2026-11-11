@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sun, Moon, RotateCcw, Printer, Code2, CalendarDays, Terminal, BookOpen } from 'lucide-react';
+import { Sun, Moon, RotateCcw, Code2, CalendarDays, Terminal, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
   currentView: 'curriculum' | 'patterns' | 'instructions';
@@ -162,16 +162,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             aria-label="Reset All Progress"
           >
             <RotateCcw className="w-4 h-4 stroke-[2.2]" />
-          </button>
-
-          {/* Print Checklist Button */}
-          <button
-            onClick={() => window.print()}
-            className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors border border-slate-200 dark:border-slate-700 cursor-pointer shadow-2xs"
-            title="Print / Save PDF"
-            aria-label="Print / Save PDF"
-          >
-            <Printer className="w-4 h-4 stroke-[2.2]" />
           </button>
         </div>
 
