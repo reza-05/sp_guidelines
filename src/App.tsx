@@ -273,119 +273,121 @@ export const App: React.FC = () => {
                 </div>
               )}
 
-              {/* Days List */}
-              {filteredDays.length === 0 ? (
-                <div className="text-center py-20 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 bg-white dark:bg-[#0C1017] rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-xs">
-                  <SearchX className="w-12 h-12 stroke-[1.5] mb-3 text-slate-300 dark:text-slate-600" />
-                  <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">No matching problems found</h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-sm">
-                    Try adjusting your search query, or clear your platform and status filters to see more days.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setModuleFilter('all');
-                      setPlatformFilter('all');
-                      setStatusFilter('all');
-                      setSearch('');
-                    }}
-                    className="mt-4 px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl text-xs font-bold shadow-xs hover:bg-slate-800 transition"
-                  >
-                    Reset All Filters
-                  </button>
-                </div>
-              ) : (
-                filteredDays.map(({ dayData, visibleProblems }) => {
-                  const showModuleBanner = dayData.moduleName !== currentModule;
-                  const isFirstModule = currentModule === '';
-                  if (showModuleBanner) {
-                    currentModule = dayData.moduleName;
-                  }
+              {/* Days List with Generous Spacing */}
+              <div className="flex flex-col gap-8 sm:gap-10">
+                {filteredDays.length === 0 ? (
+                  <div className="text-center py-20 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 bg-white dark:bg-[#0C1017] rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-xs">
+                    <SearchX className="w-12 h-12 stroke-[1.5] mb-3 text-slate-300 dark:text-slate-600" />
+                    <h3 className="text-base font-bold text-slate-800 dark:text-slate-200">No matching problems found</h3>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-sm">
+                      Try adjusting your search query, or clear your platform and status filters to see more days.
+                    </p>
+                    <button
+                      onClick={() => {
+                        setModuleFilter('all');
+                        setPlatformFilter('all');
+                        setStatusFilter('all');
+                        setSearch('');
+                      }}
+                      className="mt-4 px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl text-xs font-bold shadow-xs hover:bg-slate-800 transition"
+                    >
+                      Reset All Filters
+                    </button>
+                  </div>
+                ) : (
+                  filteredDays.map(({ dayData, visibleProblems }) => {
+                    const showModuleBanner = dayData.moduleName !== currentModule;
+                    const isFirstModule = currentModule === '';
+                    if (showModuleBanner) {
+                      currentModule = dayData.moduleName;
+                    }
 
-                  // Module stats for the banner
-                  const moduleDays = curriculumData.filter(d => d.module === dayData.module);
-                  const totalModuleProblems = moduleDays.reduce((acc, d) => acc + d.problems.length, 0);
-                  const solvedModuleProblems = moduleDays.reduce(
-                    (acc, d) => acc + d.problems.filter(p => !!solvedMap[p.id]).length,
-                    0
-                  );
-                  const firstDayOfModule = moduleDays[0]?.day || dayData.day;
-                  const lastDayOfModule = moduleDays[moduleDays.length - 1]?.day || dayData.day;
-                  const dayRangeStr = `Days ${String(firstDayOfModule).padStart(2, '0')}–${String(lastDayOfModule).padStart(2, '0')}`;
-                  const modulePct = totalModuleProblems > 0 ? Math.round((solvedModuleProblems / totalModuleProblems) * 100) : 0;
+                    // Module stats for the banner
+                    const moduleDays = curriculumData.filter(d => d.module === dayData.module);
+                    const totalModuleProblems = moduleDays.reduce((acc, d) => acc + d.problems.length, 0);
+                    const solvedModuleProblems = moduleDays.reduce(
+                      (acc, d) => acc + d.problems.filter(p => !!solvedMap[p.id]).length,
+                      0
+                    );
+                    const firstDayOfModule = moduleDays[0]?.day || dayData.day;
+                    const lastDayOfModule = moduleDays[moduleDays.length - 1]?.day || dayData.day;
+                    const dayRangeStr = `Days ${String(firstDayOfModule).padStart(2, '0')}–${String(lastDayOfModule).padStart(2, '0')}`;
+                    const modulePct = totalModuleProblems > 0 ? Math.round((solvedModuleProblems / totalModuleProblems) * 100) : 0;
 
-                  return (
-                    <React.Fragment key={dayData.day}>
-                      {showModuleBanner && (
-                        <div className={`w-full flex flex-col ${isFirstModule ? 'mt-1 mb-2' : 'pt-14 sm:pt-20 mt-6 mb-3'}`}>
-                          {/* Generous spacing & transition divider when a previous module ends */}
-                          {!isFirstModule && (
-                            <div className="w-full flex items-center gap-4 pb-6">
-                              <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1" />
-                              <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-mono font-bold text-slate-500 dark:text-slate-400 shadow-2xs">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                                <span>Module Milestone</span>
-                                <span className="text-slate-300 dark:text-slate-600">•</span>
-                                <span className="text-slate-800 dark:text-slate-200 font-black">Next Module Begins</span>
-                              </div>
-                              <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1" />
-                            </div>
-                          )}
-
-                          {/* Upgraded Modern Module Banner */}
-                          <div className="bg-slate-900 dark:bg-[#0E131F] text-white p-5 sm:p-6 rounded-3xl shadow-md border border-slate-800 dark:border-slate-700/80 flex flex-wrap items-center justify-between gap-4">
-                            <div className="flex items-center gap-3.5 min-w-0">
-                              <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 text-white flex items-center justify-center font-mono font-black text-base shadow-sm shrink-0">
-                                M{dayData.module}
-                              </span>
-                              <div className="min-w-0">
-                                <div className="flex flex-wrap items-center gap-2">
-                                  <span className="text-xs font-mono font-black uppercase tracking-wider text-sky-400">
-                                    Module {dayData.module}
-                                  </span>
-                                  <span className="text-slate-500">•</span>
-                                  <span className="text-xs font-mono text-slate-300 font-bold">
-                                    {dayRangeStr} ({totalModuleProblems} Problems)
-                                  </span>
+                    return (
+                      <React.Fragment key={dayData.day}>
+                        {showModuleBanner && (
+                          <div className={`w-full flex flex-col ${isFirstModule ? 'mt-1 mb-2' : 'pt-14 sm:pt-20 mt-6 mb-3'}`}>
+                            {/* Generous spacing & transition divider when a previous module ends */}
+                            {!isFirstModule && (
+                              <div className="w-full flex items-center gap-4 pb-6">
+                                <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1" />
+                                <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-mono font-bold text-slate-500 dark:text-slate-400 shadow-2xs">
+                                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                                  <span>Module Milestone</span>
+                                  <span className="text-slate-300 dark:text-slate-600">•</span>
+                                  <span className="text-slate-800 dark:text-slate-200 font-black">Next Module Begins</span>
                                 </div>
-                                <h2 className="font-black text-base sm:text-lg md:text-xl tracking-tight text-white mt-0.5 truncate">
-                                  {dayData.moduleName}
-                                </h2>
+                                <div className="h-px bg-slate-200 dark:bg-slate-800 flex-1" />
                               </div>
-                            </div>
+                            )}
 
-                            <div className="flex items-center gap-4 shrink-0 self-start sm:self-center">
-                              <div className="text-right">
-                                <div className="text-xs font-mono font-bold text-slate-300">
-                                  {solvedModuleProblems} / {totalModuleProblems} Solved ({modulePct}%)
-                                </div>
-                                <div className="w-32 sm:w-40 h-2 bg-slate-800 rounded-full mt-1.5 overflow-hidden border border-slate-700/50">
-                                  <div
-                                    className="h-full bg-emerald-500 rounded-full transition-all duration-300"
-                                    style={{ width: `${modulePct}%` }}
-                                  />
-                                </div>
-                              </div>
-                              {modulePct === 100 && (
-                                <span className="hidden sm:inline-flex px-3 py-1 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold font-mono">
-                                  Completed ✓
+                            {/* Upgraded Modern Module Banner */}
+                            <div className="bg-slate-900 dark:bg-[#0E131F] text-white p-5 sm:p-6 rounded-3xl shadow-md border border-slate-800 dark:border-slate-700/80 flex flex-wrap items-center justify-between gap-4">
+                              <div className="flex items-center gap-3.5 min-w-0">
+                                <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 text-white flex items-center justify-center font-mono font-black text-base shadow-sm shrink-0">
+                                  M{dayData.module}
                                 </span>
-                              )}
+                                <div className="min-w-0">
+                                  <div className="flex flex-wrap items-center gap-2">
+                                    <span className="text-xs font-mono font-black uppercase tracking-wider text-sky-400">
+                                      Module {dayData.module}
+                                    </span>
+                                    <span className="text-slate-500">•</span>
+                                    <span className="text-xs font-mono text-slate-300 font-bold">
+                                      {dayRangeStr} ({totalModuleProblems} Problems)
+                                    </span>
+                                  </div>
+                                  <h2 className="font-black text-base sm:text-lg md:text-xl tracking-tight text-white mt-0.5 truncate">
+                                    {dayData.moduleName}
+                                  </h2>
+                                </div>
+                              </div>
+
+                              <div className="flex items-center gap-4 shrink-0 self-start sm:self-center">
+                                <div className="text-right">
+                                  <div className="text-xs font-mono font-bold text-slate-300">
+                                    {solvedModuleProblems} / {totalModuleProblems} Solved ({modulePct}%)
+                                  </div>
+                                  <div className="w-32 sm:w-40 h-2 bg-slate-800 rounded-full mt-1.5 overflow-hidden border border-slate-700/50">
+                                    <div
+                                      className="h-full bg-emerald-500 rounded-full transition-all duration-300"
+                                      style={{ width: `${modulePct}%` }}
+                                    />
+                                  </div>
+                                </div>
+                                {modulePct === 100 && (
+                                  <span className="hidden sm:inline-flex px-3 py-1 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold font-mono">
+                                    Completed ✓
+                                  </span>
+                                )}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      )}
+                        )}
 
-                      <DayCard
-                        dayData={dayData}
-                        visibleProblems={visibleProblems}
-                        solvedMap={solvedMap}
-                        onToggleProblem={handleToggleProblem}
-                        onNavigateToPatterns={() => handleChangeView('patterns')}
-                      />
-                    </React.Fragment>
-                  );
-                })
-              )}
+                        <DayCard
+                          dayData={dayData}
+                          visibleProblems={visibleProblems}
+                          solvedMap={solvedMap}
+                          onToggleProblem={handleToggleProblem}
+                          onNavigateToPatterns={() => handleChangeView('patterns')}
+                        />
+                      </React.Fragment>
+                    );
+                  })
+                )}
+              </div>
             </main>
         )}
 
