@@ -1,9 +1,9 @@
 import React from 'react';
-import { Sun, Moon, RotateCcw, Printer, Code2, CalendarDays, Terminal } from 'lucide-react';
+import { Sun, Moon, RotateCcw, Printer, Code2, CalendarDays, Terminal, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
-  currentView: 'curriculum' | 'patterns';
-  onChangeView: (view: 'curriculum' | 'patterns') => void;
+  currentView: 'curriculum' | 'patterns' | 'instructions';
+  onChangeView: (view: 'curriculum' | 'patterns' | 'instructions') => void;
   solvedCount: number;
   totalCount: number;
   isDark: boolean;
@@ -46,10 +46,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* View Mode Segmented Tabs (Desktop) */}
-          <div className="hidden md:flex items-center bg-slate-100 dark:bg-slate-800/90 p-0.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 ml-3 shadow-2xs">
+          <nav className="hidden md:flex items-center bg-slate-100 dark:bg-slate-800/90 p-0.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 ml-3 shadow-2xs">
             <button
               onClick={() => onChangeView('curriculum')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                 currentView === 'curriculum'
                   ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -64,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => onChangeView('patterns')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                 currentView === 'patterns'
                   ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -76,33 +76,57 @@ export const Navbar: React.FC<NavbarProps> = ({
                 26
               </span>
             </button>
-          </div>
+
+            <button
+              onClick={() => onChangeView('instructions')}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                currentView === 'instructions'
+                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+              }`}
+            >
+              <BookOpen className="w-3.5 h-3.5 text-amber-500" />
+              <span>Instructions</span>
+            </button>
+          </nav>
         </div>
 
         {/* Mobile View Switcher */}
         <div className="flex md:hidden items-center bg-slate-100 dark:bg-slate-800 p-0.5 rounded-xl border border-slate-200/80 dark:border-slate-700/80 w-full sm:w-auto order-3 sm:order-2 shadow-2xs">
           <button
             onClick={() => onChangeView('curriculum')}
-            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
               currentView === 'curriculum'
                 ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                 : 'text-slate-600 dark:text-slate-400'
             }`}
           >
-            <CalendarDays className="w-3.5 h-3.5 text-sky-500" />
-            <span>Curriculum (175)</span>
+            <CalendarDays className="w-3 h-3 text-sky-500" />
+            <span>Curriculum</span>
           </button>
 
           <button
             onClick={() => onChangeView('patterns')}
-            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
               currentView === 'patterns'
                 ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                 : 'text-slate-600 dark:text-slate-400'
             }`}
           >
-            <Terminal className="w-3.5 h-3.5 text-emerald-500" />
-            <span>Patterns (26)</span>
+            <Terminal className="w-3 h-3 text-emerald-500" />
+            <span>Patterns</span>
+          </button>
+
+          <button
+            onClick={() => onChangeView('instructions')}
+            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              currentView === 'instructions'
+                ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
+                : 'text-slate-600 dark:text-slate-400'
+            }`}
+          >
+            <BookOpen className="w-3 h-3 text-amber-500" />
+            <span>Instructions</span>
           </button>
         </div>
 
@@ -119,33 +143,38 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Theme Toggle */}
           <button
             onClick={onToggleTheme}
-            className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-colors shadow-2xs"
-            aria-label="Toggle Dark/Light Mode"
+            className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors border border-slate-200 dark:border-slate-700 cursor-pointer shadow-2xs"
             title="Toggle Theme"
+            aria-label="Toggle Theme"
           >
-            {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-600" />}
+            {isDark ? (
+              <Sun className="w-4 h-4 text-amber-400 stroke-[2.2]" />
+            ) : (
+              <Moon className="w-4 h-4 text-slate-700 stroke-[2.2]" />
+            )}
           </button>
 
-          {/* Reset Button */}
-          {currentView === 'curriculum' && (
-            <button
-              onClick={onReset}
-              className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-rose-50 dark:bg-slate-800 dark:hover:bg-rose-950/40 text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-colors shadow-2xs"
-              title="Reset All Progress"
-            >
-              <RotateCcw className="w-3.5 h-3.5" />
-            </button>
-          )}
+          {/* Reset Progress Button */}
+          <button
+            onClick={onReset}
+            className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors border border-slate-200 dark:border-slate-700 cursor-pointer shadow-2xs"
+            title="Reset All Progress"
+            aria-label="Reset All Progress"
+          >
+            <RotateCcw className="w-4 h-4 stroke-[2.2]" />
+          </button>
 
-          {/* PDF Print Button */}
+          {/* Print Checklist Button */}
           <button
             onClick={() => window.print()}
-            className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-colors shadow-2xs"
-            title="Print or Export to PDF"
+            className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors border border-slate-200 dark:border-slate-700 cursor-pointer shadow-2xs"
+            title="Print / Save PDF"
+            aria-label="Print / Save PDF"
           >
-            <Printer className="w-3.5 h-3.5" />
+            <Printer className="w-4 h-4 stroke-[2.2]" />
           </button>
         </div>
+
       </div>
     </header>
   );

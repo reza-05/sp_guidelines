@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { TopFilterBar } from './components/TopFilterBar';
 import { DayCard } from './components/DayCard';
 import { PatternLab } from './components/PatternLab';
+import { Instructions } from './components/Instructions';
 import { Footer } from './components/Footer';
 import { SearchX } from 'lucide-react';
 
@@ -19,9 +20,11 @@ export const App: React.FC = () => {
     return localStorage.getItem(THEME_KEY) === 'dark';
   });
 
-  // Navigation View state ('curriculum' | 'patterns')
-  const [currentView, setCurrentView] = useState<'curriculum' | 'patterns'>(() => {
-    return window.location.hash.startsWith('#patterns') ? 'patterns' : 'curriculum';
+  // Navigation View state ('curriculum' | 'patterns' | 'instructions')
+  const [currentView, setCurrentView] = useState<'curriculum' | 'patterns' | 'instructions'>(() => {
+    if (window.location.hash.startsWith('#patterns')) return 'patterns';
+    if (window.location.hash.startsWith('#instructions') || window.location.hash.startsWith('#guidelines')) return 'instructions';
+    return 'curriculum';
   });
 
   // Progress state
@@ -43,9 +46,12 @@ export const App: React.FC = () => {
   // Handle URL Hash Synchronization
   useEffect(() => {
     const handleHashChange = () => {
-      if (window.location.hash.startsWith('#patterns')) {
+      const hash = window.location.hash;
+      if (hash.startsWith('#patterns')) {
         setCurrentView('patterns');
-      } else if (window.location.hash.startsWith('#curriculum') || window.location.hash === '') {
+      } else if (hash.startsWith('#instructions') || hash.startsWith('#guidelines')) {
+        setCurrentView('instructions');
+      } else if (hash.startsWith('#curriculum') || hash === '') {
         setCurrentView('curriculum');
       }
     };
@@ -55,9 +61,15 @@ export const App: React.FC = () => {
   }, []);
 
   // Handle Switching View
-  const handleChangeView = (view: 'curriculum' | 'patterns') => {
+  const handleChangeView = (view: 'curriculum' | 'patterns' | 'instructions') => {
     setCurrentView(view);
-    window.location.hash = view === 'patterns' ? '#patterns' : '#curriculum';
+    if (view === 'patterns') {
+      window.location.hash = '#patterns';
+    } else if (view === 'instructions') {
+      window.location.hash = '#instructions';
+    } else {
+      window.location.hash = '#curriculum';
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -192,6 +204,8 @@ export const App: React.FC = () => {
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 flex flex-col gap-6">
         {currentView === 'patterns' ? (
           <PatternLab onBackToCurriculum={() => handleChangeView('curriculum')} />
+        ) : currentView === 'instructions' ? (
+          <Instructions onNavigateToCurriculum={() => handleChangeView('curriculum')} />
         ) : (
           <main className="flex flex-col gap-6" aria-label="Curriculum content">
             <Header />
