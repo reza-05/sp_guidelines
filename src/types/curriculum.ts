@@ -18,8 +18,8 @@ export interface Problem {
 
 export interface DayCurriculum {
   day: number;
-  week: number;
-  weekName: string;
+  module: number;
+  moduleName: string;
   title: string;
   tagline: string;
   theme: string;

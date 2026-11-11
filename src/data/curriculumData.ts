@@ -3,8 +3,6 @@ import { DayCurriculum } from "../types/curriculum";
 export const curriculumData: DayCurriculum[] = [
   {
     "day": 1,
-    "week": 1,
-    "weekName": "Week 1: Foundations, I/O, Conditionals & Branching",
     "title": "Day 01 \u2014 First Steps: Formatted Output & Structure of a C Program",
     "tagline": "Basic C program layout, main() function, printf(), escape sequences, and initial problem solving.",
     "theme": "theme-d1",
@@ -13,15 +11,14 @@ export const curriculumData: DayCurriculum[] = [
         "id": "Kwye58pHhxE",
         "title": "Ep 01: Printf()",
         "url": "https://youtu.be/Kwye58pHhxE"
-      }
-    ],
-    "ac": [
+      },
       {
-        "id": "VTLCoHnyACE",
-        "title": "Lec 1: Flowcharts",
-        "url": "https://youtu.be/VTLCoHnyACE"
+        "id": "yrhf85_bqP0",
+        "title": "Ep 02: Data Types",
+        "url": "https://youtu.be/yrhf85_bqP0"
       }
     ],
+    "ac": [],
     "problems": [
       {
         "id": "p_1_1",
@@ -78,28 +75,34 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/4/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 1,
+    "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)"
   },
   {
     "day": 2,
-    "week": 1,
-    "weekName": "Week 1: Foundations, I/O, Conditionals & Branching",
     "title": "Day 02 \u2014 Data Types, Variables & Memory Sizes",
     "tagline": "Integer types, long long representation, overflow prevention, and ratio comparisons.",
     "theme": "theme-d2",
     "bct": [
       {
-        "id": "yrhf85_bqP0",
-        "title": "Ep 02: Data Types",
-        "url": "https://youtu.be/yrhf85_bqP0"
-      },
-      {
         "id": "WJznertdKXg",
         "title": "Ep 03: Integer & Long",
         "url": "https://youtu.be/WJznertdKXg"
+      },
+      {
+        "id": "vHCCmlAwEO4",
+        "title": "Ep 04: Float & Double",
+        "url": "https://youtu.be/vHCCmlAwEO4"
       }
     ],
-    "ac": [],
+    "ac": [
+      {
+        "id": "Dxu7GKtdbnA",
+        "title": "Lec 2: Variables & Data Types",
+        "url": "https://youtu.be/Dxu7GKtdbnA"
+      }
+    ],
     "problems": [
       {
         "id": "p_2_1",
@@ -156,21 +159,16 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/1/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 1,
+    "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)"
   },
   {
     "day": 3,
-    "week": 1,
-    "weekName": "Week 1: Foundations, I/O, Conditionals & Branching",
     "title": "Day 03 \u2014 Floats, Double Precision & User Input with scanf()",
     "tagline": "Reading multiple inputs, address operator &, floating-point numbers, and integer division nuances.",
     "theme": "theme-d3",
     "bct": [
-      {
-        "id": "vHCCmlAwEO4",
-        "title": "Ep 04: Float & Double",
-        "url": "https://youtu.be/vHCCmlAwEO4"
-      },
       {
         "id": "bz2fhsxH6dw",
         "title": "Ep 06: Scanf()",
@@ -180,7 +178,7 @@ export const curriculumData: DayCurriculum[] = [
     "ac": [
       {
         "id": "Dxu7GKtdbnA",
-        "title": "Lec 2: Variables & Operators",
+        "title": "Lec 2: User Input & Output",
         "url": "https://youtu.be/Dxu7GKtdbnA"
       }
     ],
@@ -240,28 +238,29 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/158/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 1,
+    "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)"
   },
   {
     "day": 4,
-    "week": 1,
-    "weekName": "Week 1: Foundations, I/O, Conditionals & Branching",
-    "title": "Day 04 \u2014 Relational Operators & Basic if-else Decisions",
-    "tagline": "Comparisons, boolean logic, operator precedence, and basic two-way decision branches.",
+    "title": "Day 04 \u2014 Arithmetic Operators, Precedence & Modulo Mechanics",
+    "tagline": "Arithmetic operations, operator precedence, modulo remainder evaluation, and expression evaluation.",
     "theme": "theme-d4",
     "bct": [
-      {
-        "id": "131sbMRQVxc",
-        "title": "Ep 07: If Else",
-        "url": "https://youtu.be/131sbMRQVxc"
-      },
       {
         "id": "AR2HKNPntME",
         "title": "Ep 10: Operators",
         "url": "https://youtu.be/AR2HKNPntME"
       }
     ],
-    "ac": [],
+    "ac": [
+      {
+        "id": "Dxu7GKtdbnA",
+        "title": "Lec 2: Operators",
+        "url": "https://youtu.be/Dxu7GKtdbnA"
+      }
+    ],
     "problems": [
       {
         "id": "p_4_1",
@@ -318,23 +317,29 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/236/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 1,
+    "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)"
   },
   {
     "day": 5,
-    "week": 1,
-    "weekName": "Week 1: Foundations, I/O, Conditionals & Branching",
-    "title": "Day 05 \u2014 Multi-Branch Decisions: else if Chains & Logical Operators",
-    "tagline": "Logical AND, OR, NOT, evaluating multiple conditions, and interval classifications.",
+    "title": "Day 05 \u2014 Relational Operators & Basic if-else Decisions",
+    "tagline": "Comparison operators, boolean evaluation, and basic if-else branching.",
     "theme": "theme-d5",
     "bct": [
       {
-        "id": "YiSSRggLTg0",
-        "title": "Ep 08: Else If Chains",
-        "url": "https://youtu.be/YiSSRggLTg0"
+        "id": "131sbMRQVxc",
+        "title": "Ep 07: If Else",
+        "url": "https://youtu.be/131sbMRQVxc"
       }
     ],
-    "ac": [],
+    "ac": [
+      {
+        "id": "qR9U6bKxJ7g",
+        "title": "Lec 3: Conditionals (if-else)",
+        "url": "https://youtu.be/qR9U6bKxJ7g"
+      }
+    ],
     "problems": [
       {
         "id": "p_5_1",
@@ -391,20 +396,26 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/281/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 1,
+    "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)"
   },
   {
     "day": 6,
-    "week": 1,
-    "weekName": "Week 1: Foundations, I/O, Conditionals & Branching",
     "title": "Day 06 \u2014 Nested Conditionals & Boundary Decision Trees",
     "tagline": "Nested conditional hierarchies, checking edge values, and complex business logic.",
     "theme": "theme-d6",
-    "bct": [],
+    "bct": [
+      {
+        "id": "YiSSRggLTg0",
+        "title": "Ep 08: Else If Chains",
+        "url": "https://youtu.be/YiSSRggLTg0"
+      }
+    ],
     "ac": [
       {
         "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Conditionals",
+        "title": "Lec 3: Else-If Ladder",
         "url": "https://youtu.be/qR9U6bKxJ7g"
       }
     ],
@@ -464,23 +475,29 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/110/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 1,
+    "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)"
   },
   {
     "day": 7,
-    "week": 1,
-    "weekName": "Week 1: Foundations, I/O, Conditionals & Branching",
-    "title": "Day 07 \u2014 Switch-Case & State Transitions",
-    "tagline": "Discrete value matching, case fallthrough, break statements, and state cycles.",
+    "title": "Day 07 \u2014 Nested if-else & Boundary Decision Trees",
+    "tagline": "Multi-level conditional branching, decision trees, and boundary interval validation.",
     "theme": "theme-d7",
     "bct": [
       {
-        "id": "v7I6-qm2ZYU",
-        "title": "Ep 09: Switch Case",
-        "url": "https://youtu.be/v7I6-qm2ZYU"
+        "id": "YiSSRggLTg0",
+        "title": "Ep 08: Else If Chains",
+        "url": "https://youtu.be/YiSSRggLTg0"
       }
     ],
-    "ac": [],
+    "ac": [
+      {
+        "id": "qR9U6bKxJ7g",
+        "title": "Lec 3: Nested Conditionals",
+        "url": "https://youtu.be/qR9U6bKxJ7g"
+      }
+    ],
     "problems": [
       {
         "id": "p_7_1",
@@ -537,23 +554,29 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/1475/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 2,
+    "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics"
   },
   {
     "day": 8,
-    "week": 2,
-    "weekName": "Week 2: Loops, Number Theory & Primes",
-    "title": "Day 08 \u2014 The for Loop: Step Increments & Counters",
-    "tagline": "Controlled repetition, loop initialization, condition tests, step counters, and range traversals.",
+    "title": "Day 08 \u2014 Switch-Case & Conversion (Switch to If-Else & If-Else to Switch)",
+    "tagline": "Evaluating discrete integer/char values with switch-case, break statements, default handling, and bidirectional conversion with if-else.",
     "theme": "theme-d8",
     "bct": [
       {
-        "id": "6-9xhJsp1Vo",
-        "title": "Ep 11: for Loop",
-        "url": "https://youtu.be/6-9xhJsp1Vo"
+        "id": "v7I6-qm2ZYU",
+        "title": "Ep 09: Switch Case",
+        "url": "https://youtu.be/v7I6-qm2ZYU"
       }
     ],
-    "ac": [],
+    "ac": [
+      {
+        "id": "qR9U6bKxJ7g",
+        "title": "Lec 3: Switch Case",
+        "url": "https://youtu.be/qR9U6bKxJ7g"
+      }
+    ],
     "problems": [
       {
         "id": "p_8_1",
@@ -610,28 +633,29 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/791/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 2,
+    "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics"
   },
   {
     "day": 9,
-    "week": 2,
-    "weekName": "Week 2: Loops, Number Theory & Primes",
-    "title": "Day 09 \u2014 The while & do-while Loops",
-    "tagline": "Indefinite iteration, dynamic condition checks, and post-tested loops.",
+    "title": "Day 09 \u2014 The for Loop: Step Increments & Iterations",
+    "tagline": "Loop initialization, condition checking, step increments, and counter variables.",
     "theme": "theme-d9",
     "bct": [
       {
-        "id": "hTU2AA-lpSU",
-        "title": "Ep 12: while Loop",
-        "url": "https://youtu.be/hTU2AA-lpSU"
-      },
-      {
-        "id": "U6SfSl3Nf-g",
-        "title": "Ep 13: do while",
-        "url": "https://youtu.be/U6SfSl3Nf-g"
+        "id": "6-9xhJsp1Vo",
+        "title": "Ep 11: for Loop",
+        "url": "https://youtu.be/6-9xhJsp1Vo"
       }
     ],
-    "ac": [],
+    "ac": [
+      {
+        "id": "qR9U6bKxJ7g",
+        "title": "Lec 3: Loops in C++",
+        "url": "https://youtu.be/qR9U6bKxJ7g"
+      }
+    ],
     "problems": [
       {
         "id": "p_9_1",
@@ -688,20 +712,25 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/116/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 2,
+    "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics"
   },
   {
     "day": 10,
-    "week": 2,
-    "weekName": "Week 2: Loops, Number Theory & Primes",
-    "title": "Day 10 \u2014 Loop Control Flow: break, continue & Early Exits",
-    "tagline": "Skipping iterations, loop early termination, sentinel value patterns, and search halts.",
+    "title": "Day 10 \u2014 The while & do-while Loops",
+    "tagline": "Pre-test while loops, post-test do-while loops, and condition-driven termination.",
     "theme": "theme-d10",
     "bct": [
       {
-        "id": "UQVM-empou4",
-        "title": "Ep 15: Break & Continue",
-        "url": "https://youtu.be/UQVM-empou4"
+        "id": "hTU2AA-lpSU",
+        "title": "Ep 12: while Loop",
+        "url": "https://youtu.be/hTU2AA-lpSU"
+      },
+      {
+        "id": "U6SfSl3Nf-g",
+        "title": "Ep 13: do while",
+        "url": "https://youtu.be/U6SfSl3Nf-g"
       }
     ],
     "ac": [],
@@ -761,20 +790,20 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/734/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 2,
+    "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics"
   },
   {
     "day": 11,
-    "week": 2,
-    "weekName": "Week 2: Loops, Number Theory & Primes",
-    "title": "Day 11 \u2014 Digit Extraction & Mathematical Simulation",
-    "tagline": "Isolating decimal digits, place value decomposition, number reconstruction, and numeric properties.",
+    "title": "Day 11 \u2014 Loop Control Flow: break, continue & Early Exits",
+    "tagline": "Terminating loops prematurely with break, skipping iterations with continue, and avoiding infinite loops.",
     "theme": "theme-d11",
     "bct": [
       {
-        "id": "QGkMWkOQro0",
-        "title": "Ep 16: Loop Practice",
-        "url": "https://youtu.be/QGkMWkOQro0"
+        "id": "UQVM-empou4",
+        "title": "Ep 15: Break & Continue",
+        "url": "https://youtu.be/UQVM-empou4"
       }
     ],
     "ac": [],
@@ -834,12 +863,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/1328/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 2,
+    "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics"
   },
   {
     "day": 12,
-    "week": 2,
-    "weekName": "Week 2: Loops, Number Theory & Primes",
     "title": "Day 12 \u2014 Number Theory: Divisors, Factors & Euclid's Algorithm",
     "tagline": "Factors of numbers, Euclidean GCD algorithm, LCM formula, and divisor counting.",
     "theme": "theme-d12",
@@ -907,12 +936,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/318/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 2,
+    "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics"
   },
   {
     "day": 13,
-    "week": 2,
-    "weekName": "Week 2: Loops, Number Theory & Primes",
     "title": "Day 13 \u2014 Prime Numbers: Primality Check & Sieve Logic",
     "tagline": "Prime identification, trial division limits, and composite number factor discovery.",
     "theme": "theme-d1",
@@ -980,21 +1009,27 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/1475/B",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 2,
+    "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics"
   },
   {
     "day": 14,
-    "week": 2,
-    "weekName": "Week 2: Loops, Number Theory & Primes",
-    "title": "Day 14 \u2014 Loop Simulation & State Accumulation",
-    "tagline": "Multi-turn simulation, running totals, alternating sequences, and accumulator variables.",
+    "title": "Day 14 \u2014 Nested Loops Fundamentals: Row-Column Iterations & Rectangles",
+    "tagline": "Two-dimensional loop execution, outer loop row indexing, inner loop column traversal, and rectangular shapes.",
     "theme": "theme-d2",
-    "bct": [],
+    "bct": [
+      {
+        "id": "AY7GOmY9a8Y",
+        "title": "Ep 14: Nested Loop",
+        "url": "https://youtu.be/AY7GOmY9a8Y"
+      }
+    ],
     "ac": [
       {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Loops Practice",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
+        "id": "rga_q2N7vU8",
+        "title": "Lec 4: Patterns Part 1",
+        "url": "https://youtu.be/rga_q2N7vU8"
       }
     ],
     "problems": [
@@ -1053,14 +1088,14 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/282/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 3,
+    "moduleName": "Module 3: Nested Loops & Pattern Printing"
   },
   {
     "day": 15,
-    "week": 3,
-    "weekName": "Week 3: Patterns, Swapping, Bitwise & 1D Arrays",
-    "title": "Day 15 \u2014 Pattern Printing Part 1: Nested Loops & Geometric Shapes",
-    "tagline": "Nested row-column iteration, printing rectangles, right triangles, and pyramid shapes.",
+    "title": "Day 15 \u2014 Pattern Printing Part 1: Half Pyramids & Triangle Shapes",
+    "tagline": "Right-angled triangles, inverted half pyramids, and inner loop boundaries tied to row index i.",
     "theme": "theme-d3",
     "bct": [
       {
@@ -1132,14 +1167,14 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/1030A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 3,
+    "moduleName": "Module 3: Nested Loops & Pattern Printing"
   },
   {
     "day": 16,
-    "week": 3,
-    "weekName": "Week 3: Patterns, Swapping, Bitwise & 1D Arrays",
-    "title": "Day 16 \u2014 Pattern Printing Part 2: Coordinate Logic & Number Grids",
-    "tagline": "Diagonal conditions, symmetric checkerboards, Floyd's triangle, and coordinate-based characters.",
+    "title": "Day 16 \u2014 Pattern Printing Part 2: Centered Pyramids, Diamonds & Palindromic Grids",
+    "tagline": "Equilateral star triangles, space calculation formulas (n - i), palindromic number triangles, and diamond patterns.",
     "theme": "theme-d4",
     "bct": [],
     "ac": [
@@ -1205,27 +1240,21 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/344/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 3,
+    "moduleName": "Module 3: Nested Loops & Pattern Printing"
   },
   {
     "day": 17,
-    "week": 3,
-    "weekName": "Week 3: Patterns, Swapping, Bitwise & 1D Arrays",
-    "title": "Day 17 \u2014 Swapping Techniques & Variables in Memory",
-    "tagline": "Exchanging values in memory, temporary variables, arithmetic addition/subtraction, and bitwise XOR swapping.",
+    "title": "Day 17 \u2014 Pattern Printing Part 3: Hollow Shapes & Coordinate Boundaries",
+    "tagline": "Hollow squares, hollow triangles, boundary conditions (i == 1, i == n, j == 1, j == n), and hourglass patterns.",
     "theme": "theme-d5",
-    "bct": [
-      {
-        "id": "AR2HKNPntME",
-        "title": "Ep 10: Operators",
-        "url": "https://youtu.be/AR2HKNPntME"
-      }
-    ],
+    "bct": [],
     "ac": [
       {
-        "id": "Dxu7GKtdbnA",
-        "title": "Lec 2: Variables",
-        "url": "https://youtu.be/Dxu7GKtdbnA"
+        "id": "rga_q2N7vU8",
+        "title": "Lec 4: Patterns Part 2",
+        "url": "https://youtu.be/rga_q2N7vU8"
       }
     ],
     "problems": [
@@ -1284,14 +1313,14 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/451/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 3,
+    "moduleName": "Module 3: Nested Loops & Pattern Printing"
   },
   {
     "day": 18,
-    "week": 3,
-    "weekName": "Week 3: Patterns, Swapping, Bitwise & 1D Arrays",
-    "title": "Day 18 \u2014 Bitwise Operations & Bitmasking Basics",
-    "tagline": "Bitwise AND, OR, XOR, NOT, shift left, shift right, bit parity, and odd element discovery.",
+    "title": "Day 18 \u2014 Integer Division vs Float Division, Casting & Modulo Mechanics",
+    "tagline": "Integer truncation (/), floating-point precision, explicit typecasting ((float)a / b), and modulo (%) operator constraints.",
     "theme": "theme-d6",
     "bct": [],
     "ac": [
@@ -1362,12 +1391,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/1612/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 4,
+    "moduleName": "Module 4: Division Mechanics, 1D Arrays & Frequency Arrays"
   },
   {
     "day": 19,
-    "week": 3,
-    "weekName": "Week 3: Patterns, Swapping, Bitwise & 1D Arrays",
     "title": "Day 19 \u2014 1D Arrays Part 1: Declaration, Indexing & Linear Search",
     "tagline": "Contiguous memory layout, 0-based indices, reading elements, array boundaries, and linear scans.",
     "theme": "theme-d7",
@@ -1435,12 +1464,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/469/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 4,
+    "moduleName": "Module 4: Division Mechanics, 1D Arrays & Frequency Arrays"
   },
   {
     "day": 20,
-    "week": 3,
-    "weekName": "Week 3: Patterns, Swapping, Bitwise & 1D Arrays",
     "title": "Day 20 \u2014 1D Arrays Part 2: Extremum Tracking (Min/Max) & Updates",
     "tagline": "Tracking maximums, minimums, second largest elements, prefix sums, and element replacements.",
     "theme": "theme-d8",
@@ -1508,12 +1537,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/337/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 4,
+    "moduleName": "Module 4: Division Mechanics, 1D Arrays & Frequency Arrays"
   },
   {
     "day": 21,
-    "week": 3,
-    "weekName": "Week 3: Patterns, Swapping, Bitwise & 1D Arrays",
     "title": "Day 21 \u2014 1D Arrays Part 3: In-Place Transformations & Shifts",
     "tagline": "Reversing an array without auxiliary memory, cyclic rotations, and element swapping in arrays.",
     "theme": "theme-d9",
@@ -1581,12 +1610,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/520/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 4,
+    "moduleName": "Module 4: Division Mechanics, 1D Arrays & Frequency Arrays"
   },
   {
     "day": 22,
-    "week": 4,
-    "weekName": "Week 4: Two Pointers, Frequency Arrays, Subsets & Matrices",
     "title": "Day 22 \u2014 Two-Pointers Technique on Arrays",
     "tagline": "Opposite-ends traversal, converging indices, pair comparisons, and linear-time optimizations.",
     "theme": "theme-d10",
@@ -1654,12 +1683,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/58/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 4,
+    "moduleName": "Module 4: Division Mechanics, 1D Arrays & Frequency Arrays"
   },
   {
     "day": 23,
-    "week": 4,
-    "weekName": "Week 4: Two Pointers, Frequency Arrays, Subsets & Matrices",
     "title": "Day 23 \u2014 Frequency Arrays & Element Counting (Hash Buckets)",
     "tagline": "Direct addressing with frequency arrays, finding duplicates, most frequent elements, and presence maps.",
     "theme": "theme-d11",
@@ -1727,12 +1756,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/1560/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 4,
+    "moduleName": "Module 4: Division Mechanics, 1D Arrays & Frequency Arrays"
   },
   {
     "day": 24,
-    "week": 4,
-    "weekName": "Week 4: Two Pointers, Frequency Arrays, Subsets & Matrices",
     "title": "Day 24 \u2014 Subarrays & Contiguous Slices of Arrays",
     "tagline": "Contiguous array slices, sliding windows, contiguous running sums, and window comparisons.",
     "theme": "theme-d12",
@@ -1800,12 +1829,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/208/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 4,
+    "moduleName": "Module 4: Division Mechanics, 1D Arrays & Frequency Arrays"
   },
   {
     "day": 25,
-    "week": 4,
-    "weekName": "Week 4: Two Pointers, Frequency Arrays, Subsets & Matrices",
     "title": "Day 25 \u2014 Subsets of Arrays & Prefix Sums",
     "tagline": "Non-contiguous subsets, subset sum properties, cumulative prefix arrays, and fast range queries.",
     "theme": "theme-d1",
@@ -1873,12 +1902,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/492/B",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 5,
+    "moduleName": "Module 5: 2D Arrays, Matrices & Multidimensional Grids"
   },
   {
     "day": 26,
-    "week": 4,
-    "weekName": "Week 4: Two Pointers, Frequency Arrays, Subsets & Matrices",
     "title": "Day 26 \u2014 2D Arrays (Matrices) Part 1: Row & Column Traversal",
     "tagline": "Matrix declaration, nested loop traversal, row-major memory order, and computing row & column sums.",
     "theme": "theme-d2",
@@ -1946,12 +1975,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/71/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 5,
+    "moduleName": "Module 5: 2D Arrays, Matrices & Multidimensional Grids"
   },
   {
     "day": 27,
-    "week": 4,
-    "weekName": "Week 4: Two Pointers, Frequency Arrays, Subsets & Matrices",
     "title": "Day 27 \u2014 2D Arrays (Matrices) Part 2: Diagonals, Symmetry & Transpose",
     "tagline": "Primary diagonal, secondary diagonal, swapping rows and columns for transpose, and symmetry verification.",
     "theme": "theme-d3",
@@ -2019,12 +2048,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/133/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 5,
+    "moduleName": "Module 5: 2D Arrays, Matrices & Multidimensional Grids"
   },
   {
     "day": 28,
-    "week": 4,
-    "weekName": "Week 4: Two Pointers, Frequency Arrays, Subsets & Matrices",
     "title": "Day 28 \u2014 2D Arrays Part 3: Grid Simulation & Direction Vectors",
     "tagline": "Direction vectors (dx, dy), boundary clamping, grid traversal, and cellular simulation.",
     "theme": "theme-d4",
@@ -2092,12 +2121,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/451/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 5,
+    "moduleName": "Module 5: 2D Arrays, Matrices & Multidimensional Grids"
   },
   {
     "day": 29,
-    "week": 5,
-    "weekName": "Week 5: Strings, Custom Functions, Pointers & Structures",
     "title": "Day 29 \u2014 Character Arrays & ASCII Fundamentals (1D Strings)",
     "tagline": "Null terminator \\0, char arrays in C, ASCII character arithmetic, and safe string input.",
     "theme": "theme-d5",
@@ -2170,12 +2199,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/71/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 6,
+    "moduleName": "Module 6: Character Arrays & Strings"
   },
   {
     "day": 30,
-    "week": 5,
-    "weekName": "Week 5: Strings, Custom Functions, Pointers & Structures",
     "title": "Day 30 \u2014 String Functions & Anagram Validation",
     "tagline": "strlen, strcpy, strcmp, 26-element character frequency array, and palindrome validation.",
     "theme": "theme-d6",
@@ -2249,12 +2278,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/41/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 6,
+    "moduleName": "Module 6: Character Arrays & Strings"
   },
   {
     "day": 31,
-    "week": 5,
-    "weekName": "Week 5: Strings, Custom Functions, Pointers & Structures",
     "title": "Day 31 \u2014 2D Character Arrays (Array of Strings) & Word Sorting",
     "tagline": "char words[N][M], reading multiple words, row string pointers, and lexicographical sorting.",
     "theme": "theme-d7",
@@ -2322,12 +2351,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/131/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 6,
+    "moduleName": "Module 6: Character Arrays & Strings"
   },
   {
     "day": 32,
-    "week": 5,
-    "weekName": "Week 5: Strings, Custom Functions, Pointers & Structures",
     "title": "Day 32 \u2014 3D Arrays & Multi-Dimensional Representation",
     "tagline": "int arr[layers][rows][cols], 3D coordinate grids, multi-testcase matrices, and layered grids.",
     "theme": "theme-d8",
@@ -2395,12 +2424,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/1475/B",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 7,
+    "moduleName": "Module 7: Functions, Pointers & Custom Structures"
   },
   {
     "day": 33,
-    "week": 5,
-    "weekName": "Week 5: Strings, Custom Functions, Pointers & Structures",
     "title": "Day 33 \u2014 Custom Functions: Declarations, Parameters & Returns",
     "tagline": "Function prototypes, formal vs actual parameters, return values, pass-by-value, and modular code.",
     "theme": "theme-d9",
@@ -2479,12 +2508,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/479/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 7,
+    "moduleName": "Module 7: Functions, Pointers & Custom Structures"
   },
   {
     "day": 34,
-    "week": 5,
-    "weekName": "Week 5: Strings, Custom Functions, Pointers & Structures",
     "title": "Day 34 \u2014 Pointers in C: Address (&), Dereference (*) & Pass-by-Reference",
     "tagline": "Pointer variables, memory addresses, dereference operator, swap functions, and passing arrays.",
     "theme": "theme-d10",
@@ -2563,12 +2592,12 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/136/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 7,
+    "moduleName": "Module 7: Functions, Pointers & Custom Structures"
   },
   {
     "day": 35,
-    "week": 5,
-    "weekName": "Week 5: Strings, Custom Functions, Pointers & Structures",
     "title": "Day 35 \u2014 Dynamic Memory (malloc/free) & Structures (struct) in C",
     "tagline": "struct declaration, member access, array of structures, and dynamic memory with malloc and free.",
     "theme": "theme-d11",
@@ -2641,6 +2670,8 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://codeforces.com/problemset/problem/116/A",
         "btnClass": "btn-cf"
       }
-    ]
+    ],
+    "module": 7,
+    "moduleName": "Module 7: Functions, Pointers & Custom Structures"
   }
 ];

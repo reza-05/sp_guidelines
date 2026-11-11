@@ -4,8 +4,8 @@ import { Search, X } from 'lucide-react';
 interface FiltersProps {
   search: string;
   onSearchChange: (val: string) => void;
-  weekFilter: string;
-  onWeekChange: (week: string) => void;
+  moduleFilter: string;
+  onModuleChange: (mod: string) => void;
   platformFilter: string;
   onPlatformChange: (platform: string) => void;
   statusFilter: string;
@@ -15,15 +15,15 @@ interface FiltersProps {
 export const Filters: React.FC<FiltersProps> = ({
   search,
   onSearchChange,
-  weekFilter,
-  onWeekChange,
+  moduleFilter,
+  onModuleChange,
   platformFilter,
   onPlatformChange,
   statusFilter,
   onStatusChange
 }) => {
   return (
-    <div className="flex flex-col gap-3 bg-slate-50 dark:bg-gray-900/60 p-3 sm:p-4 border border-slate-200 dark:border-gray-800 rounded-xl no-print">
+    <div className="flex flex-col gap-3 bg-slate-50 dark:bg-slate-900/60 p-3 sm:p-4 border border-slate-200 dark:border-slate-800 rounded-xl no-print">
       {/* Search Input */}
       <div className="relative w-full">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -31,8 +31,8 @@ export const Filters: React.FC<FiltersProps> = ({
           type="text"
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Search problems by name or code (e.g. SPEEDTEST, 1A, LAPIN, Array)..."
-          className="w-full pl-9 pr-9 py-2 text-xs sm:text-sm rounded-lg bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition"
+          placeholder="Search problems by name or code..."
+          className="w-full pl-9 pr-9 py-2 text-xs sm:text-sm rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 transition"
         />
         {search && (
           <button
@@ -45,24 +45,26 @@ export const Filters: React.FC<FiltersProps> = ({
         )}
       </div>
 
-      {/* Week Filters */}
+      {/* Module Filters */}
       <div className="flex flex-wrap items-center gap-1.5">
-        <span className="text-[11px] font-extrabold uppercase text-slate-400 dark:text-slate-500 mr-1">Weeks:</span>
+        <span className="text-[11px] font-bold uppercase text-slate-400 dark:text-slate-500 mr-1">Modules:</span>
         {[
           { id: 'all', label: 'All' },
-          { id: '1', label: 'W1: Syntax' },
-          { id: '2', label: 'W2: Loops' },
-          { id: '3', label: 'W3: Arrays' },
-          { id: '4', label: 'W4: Matrices' },
-          { id: '5', label: 'W5: Pointers & Structs' },
+          { id: '1', label: 'M1: Basics' },
+          { id: '2', label: 'M2: Loops' },
+          { id: '3', label: 'M3: Patterns' },
+          { id: '4', label: 'M4: Arrays' },
+          { id: '5', label: 'M5: Matrices' },
+          { id: '6', label: 'M6: Strings' },
+          { id: '7', label: 'M7: Pointers' },
         ].map(item => (
           <button
             key={item.id}
-            onClick={() => onWeekChange(item.id)}
-            className={`text-xs font-semibold px-2.5 py-1 rounded-full border transition ${
-              weekFilter === item.id
-                ? 'bg-sky-600 border-sky-600 text-white'
-                : 'bg-white dark:bg-gray-800 border-slate-200 dark:border-gray-700 text-slate-700 dark:text-slate-300 hover:border-sky-500'
+            onClick={() => onModuleChange(item.id)}
+            className={`text-xs font-semibold px-2.5 py-1 rounded-md border transition ${
+              moduleFilter === item.id
+                ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white'
+                : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400'
             }`}
           >
             {item.label}
@@ -73,19 +75,19 @@ export const Filters: React.FC<FiltersProps> = ({
       {/* Platform & Status Filters */}
       <div className="flex flex-wrap items-center gap-3">
         <div className="flex flex-wrap items-center gap-1.5">
-          <span className="text-[11px] font-extrabold uppercase text-slate-400 dark:text-slate-500 mr-1">Platform:</span>
+          <span className="text-[11px] font-bold uppercase text-slate-400 dark:text-slate-500 mr-1">Platform:</span>
           {[
             { id: 'all', label: 'All' },
-            { id: 'CodeChef', label: 'CodeChef (500+)' },
-            { id: 'Codeforces', label: 'Codeforces (800-1100)' },
+            { id: 'CodeChef', label: 'CodeChef' },
+            { id: 'Codeforces', label: 'Codeforces' },
           ].map(item => (
             <button
               key={item.id}
               onClick={() => onPlatformChange(item.id)}
-              className={`text-xs font-semibold px-2.5 py-1 rounded-full border transition ${
+              className={`text-xs font-semibold px-2.5 py-1 rounded-md border transition ${
                 platformFilter === item.id
-                  ? 'bg-sky-600 border-sky-600 text-white'
-                  : 'bg-white dark:bg-gray-800 border-slate-200 dark:border-gray-700 text-slate-700 dark:text-slate-300 hover:border-sky-500'
+                  ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white'
+                  : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400'
               }`}
             >
               {item.label}
@@ -94,7 +96,7 @@ export const Filters: React.FC<FiltersProps> = ({
         </div>
 
         <div className="flex flex-wrap items-center gap-1.5 sm:ml-auto">
-          <span className="text-[11px] font-extrabold uppercase text-slate-400 dark:text-slate-500 mr-1">Status:</span>
+          <span className="text-[11px] font-bold uppercase text-slate-400 dark:text-slate-500 mr-1">Status:</span>
           {[
             { id: 'all', label: 'All' },
             { id: 'solved', label: 'Solved' },
@@ -103,10 +105,10 @@ export const Filters: React.FC<FiltersProps> = ({
             <button
               key={item.id}
               onClick={() => onStatusChange(item.id)}
-              className={`text-xs font-semibold px-2.5 py-1 rounded-full border transition ${
+              className={`text-xs font-semibold px-2.5 py-1 rounded-md border transition ${
                 statusFilter === item.id
-                  ? 'bg-sky-600 border-sky-600 text-white'
-                  : 'bg-white dark:bg-gray-800 border-slate-200 dark:border-gray-700 text-slate-700 dark:text-slate-300 hover:border-sky-500'
+                  ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 border-slate-900 dark:border-white'
+                  : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400'
               }`}
             >
               {item.label}

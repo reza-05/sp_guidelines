@@ -36,7 +36,7 @@ export const App: React.FC = () => {
 
   // Filter states
   const [search, setSearch] = useState<string>('');
-  const [weekFilter, setWeekFilter] = useState<string>('all');
+  const [moduleFilter, setModuleFilter] = useState<string>('all');
   const [platformFilter, setPlatformFilter] = useState<string>('all');
   const [statusFilter, setStatusFilter] = useState<string>('all');
 
@@ -110,8 +110,8 @@ export const App: React.FC = () => {
 
     return curriculumData
       .map(day => {
-        // Week filter
-        if (weekFilter !== 'all' && String(day.week) !== weekFilter) {
+        // Module filter
+        if (moduleFilter !== 'all' && String(day.module) !== moduleFilter) {
           return null;
         }
 
@@ -149,10 +149,10 @@ export const App: React.FC = () => {
         };
       })
       .filter((item): item is { dayData: typeof curriculumData[0]; visibleProblems: typeof curriculumData[0]['problems'] } => item !== null);
-  }, [search, weekFilter, platformFilter, statusFilter, solvedMap]);
+  }, [search, moduleFilter, platformFilter, statusFilter, solvedMap]);
 
-  // Group by week for section banners
-  let currentWeek = '';
+  // Group by module for section banners
+  let currentModule = '';
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#07090E] text-slate-900 dark:text-slate-100 transition-colors flex flex-col font-sans antialiased">
@@ -167,8 +167,8 @@ export const App: React.FC = () => {
         onReset={handleResetProgress}
       />
 
-      {/* Main Container: Full Screen / 1600px Max-Width with Fluid Layout */}
-      <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 flex flex-col gap-8">
+      {/* Main Container: Full Screen Fluid Dashboard */}
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 flex flex-col gap-6">
         {currentView === 'patterns' ? (
           <PatternLab onBackToCurriculum={() => handleChangeView('curriculum')} />
         ) : (
@@ -180,8 +180,8 @@ export const App: React.FC = () => {
                 totalProblems={TOTAL_PROBLEMS}
                 search={search}
                 onSearchChange={setSearch}
-                weekFilter={weekFilter}
-                onWeekChange={setWeekFilter}
+                moduleFilter={moduleFilter}
+                onModuleChange={setModuleFilter}
                 platformFilter={platformFilter}
                 onPlatformChange={setPlatformFilter}
                 statusFilter={statusFilter}
@@ -194,28 +194,36 @@ export const App: React.FC = () => {
             <main className="lg:col-span-8 xl:col-span-8.5 flex flex-col gap-6" aria-label="Curriculum content">
               <Header />
 
-              {/* Active Filter Pill Bar (When filters are applied) */}
-              {(weekFilter !== 'all' || platformFilter !== 'all' || statusFilter !== 'all' || search) && (
+              {/* Active Filter Pill Bar */}
+              {(moduleFilter !== 'all' || platformFilter !== 'all' || statusFilter !== 'all' || search) && (
                 <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs">
                   <div className="flex flex-wrap items-center gap-1.5 text-slate-800 dark:text-slate-200">
                     <span className="font-semibold text-slate-500 dark:text-slate-400">Filters:</span>
-                    {weekFilter !== 'all' && (
-                      <span className="px-2 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-medium">Week {weekFilter}</span>
+                    {moduleFilter !== 'all' && (
+                      <span className="px-2 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-medium">
+                        Module {moduleFilter}
+                      </span>
                     )}
                     {platformFilter !== 'all' && (
-                      <span className="px-2 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-medium">{platformFilter}</span>
+                      <span className="px-2 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-medium">
+                        {platformFilter}
+                      </span>
                     )}
                     {statusFilter !== 'all' && (
-                      <span className="px-2 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-medium uppercase">{statusFilter}</span>
+                      <span className="px-2 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-medium uppercase">
+                        {statusFilter}
+                      </span>
                     )}
                     {search && (
-                      <span className="px-2 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-medium">"{search}"</span>
+                      <span className="px-2 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-medium">
+                        "{search}"
+                      </span>
                     )}
                   </div>
 
                   <button
                     onClick={() => {
-                      setWeekFilter('all');
+                      setModuleFilter('all');
                       setPlatformFilter('all');
                       setStatusFilter('all');
                       setSearch('');
@@ -238,18 +246,18 @@ export const App: React.FC = () => {
                 </div>
               ) : (
                 filteredDays.map(({ dayData, visibleProblems }) => {
-                  const showWeekBanner = dayData.weekName !== currentWeek;
-                  if (showWeekBanner) {
-                    currentWeek = dayData.weekName;
+                  const showModuleBanner = dayData.moduleName !== currentModule;
+                  if (showModuleBanner) {
+                    currentModule = dayData.moduleName;
                   }
 
                   return (
                     <React.Fragment key={dayData.day}>
-                      {showWeekBanner && (
-                        <div className="bg-slate-900 dark:bg-slate-800 text-white px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider flex items-center justify-between mt-2">
-                          <span className="font-mono">{dayData.weekName}</span>
+                      {showModuleBanner && (
+                        <div className="bg-slate-900 dark:bg-slate-800 text-white px-4 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider flex items-center justify-between mt-3">
+                          <span className="font-mono">{dayData.moduleName}</span>
                           <span className="text-[11px] font-mono text-slate-400">
-                            5 Problems
+                            Module {dayData.module}
                           </span>
                         </div>
                       )}

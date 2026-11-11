@@ -19,7 +19,7 @@ export const DayCard: React.FC<DayCardProps> = ({
   onNavigateToPatterns
 }) => {
   const dayNumStr = String(dayData.day).padStart(2, '0');
-  const isNestedLoopDay = dayData.day === 15 || dayData.day === 16;
+  const isNestedLoopDay = dayData.module === 3;
 
   // Day Solved Progress
   const totalDayProblems = dayData.problems.length;

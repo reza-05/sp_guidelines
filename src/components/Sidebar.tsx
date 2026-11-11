@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, X, CheckCircle2, Calendar, Terminal } from 'lucide-react';
+import { Search, X, CheckCircle2, Layers, Terminal } from 'lucide-react';
 import { curriculumData } from '../data/curriculumData';
 
 interface SidebarProps {
@@ -7,8 +7,8 @@ interface SidebarProps {
   totalProblems: number;
   search: string;
   onSearchChange: (val: string) => void;
-  weekFilter: string;
-  onWeekChange: (week: string) => void;
+  moduleFilter: string;
+  onModuleChange: (mod: string) => void;
   platformFilter: string;
   onPlatformChange: (platform: string) => void;
   statusFilter: string;
@@ -21,8 +21,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   totalProblems,
   search,
   onSearchChange,
-  weekFilter,
-  onWeekChange,
+  moduleFilter,
+  onModuleChange,
   platformFilter,
   onPlatformChange,
   statusFilter,
@@ -39,13 +39,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const solvedCC = codechefProblems.filter(p => !!solvedMap[p.id]).length;
   const solvedCF = codeforcesProblems.filter(p => !!solvedMap[p.id]).length;
 
-  // Weeks data
-  const weeks = [
-    { num: '1', title: 'Week 1: Syntax & Conditionals', range: 'Days 01–07' },
-    { num: '2', title: 'Week 2: Loops & Number Theory', range: 'Days 08–14' },
-    { num: '3', title: 'Week 3: Patterns & 1D Arrays', range: 'Days 15–21' },
-    { num: '4', title: 'Week 4: Matrices & Subarrays', range: 'Days 22–28' },
-    { num: '5', title: 'Week 5: Pointers & Structures', range: 'Days 29–35' },
+  // 7 Modules
+  const modules = [
+    { num: '1', title: 'Module 1: Start with C', range: 'Days 01–06 (30 P)' },
+    { num: '2', title: 'Module 2: Branching & Loops', range: 'Days 07–13 (35 P)' },
+    { num: '3', title: 'Module 3: Nested Loops & Patterns', range: 'Days 14–17 (20 P)' },
+    { num: '4', title: 'Module 4: Division, 1D & Freq Arrays', range: 'Days 18–24 (35 P)' },
+    { num: '5', title: 'Module 5: 2D Matrices & 3D Grids', range: 'Days 25–28 (20 P)' },
+    { num: '6', title: 'Module 6: Character Arrays & Strings', range: 'Days 29–31 (15 P)' },
+    { num: '7', title: 'Module 7: Functions, Pointers & Structs', range: 'Days 32–35 (20 P)' },
   ];
 
   return (
@@ -186,18 +188,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
 
-      {/* 3. Weekly Schedule */}
+      {/* 3. Modules Navigator */}
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col gap-2.5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5">
-            <Calendar className="w-3.5 h-3.5 text-slate-500" />
+            <Layers className="w-3.5 h-3.5 text-slate-500" />
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-              Weekly Schedule
+              Curriculum Modules
             </h4>
           </div>
-          {weekFilter !== 'all' && (
+          {moduleFilter !== 'all' && (
             <button
-              onClick={() => onWeekChange('all')}
+              onClick={() => onModuleChange('all')}
               className="text-[11px] text-sky-600 dark:text-sky-400 font-semibold hover:underline"
             >
               Reset
@@ -207,29 +209,29 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         <div className="flex flex-col gap-1">
           <button
-            onClick={() => onWeekChange('all')}
+            onClick={() => onModuleChange('all')}
             className={`w-full text-left p-2 rounded-lg border text-xs font-semibold transition-colors flex items-center justify-between ${
-              weekFilter === 'all'
+              moduleFilter === 'all'
                 ? 'bg-slate-900 dark:bg-white border-slate-900 dark:border-white text-white dark:text-slate-900'
                 : 'bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700/60 text-slate-700 dark:text-slate-300 hover:bg-slate-100'
             }`}
           >
-            <span>All Weeks (Days 01–35)</span>
+            <span>All Modules (Days 01–35)</span>
             <span className="font-mono text-[11px] opacity-75">175 P</span>
           </button>
 
-          {weeks.map((w) => {
-            const weekDays = curriculumData.filter((d) => String(d.week) === w.num);
-            const weekProblems = weekDays.flatMap((d) => d.problems);
-            const weekSolved = weekProblems.filter((p) => !!solvedMap[p.id]).length;
-            const weekPct = Math.round((weekSolved / (weekProblems.length || 1)) * 100);
+          {modules.map((m) => {
+            const modDays = curriculumData.filter((d) => String(d.module) === m.num);
+            const modProblems = modDays.flatMap((d) => d.problems);
+            const modSolved = modProblems.filter((p) => !!solvedMap[p.id]).length;
+            const modPct = Math.round((modSolved / (modProblems.length || 1)) * 100);
 
-            const isSelected = weekFilter === w.num;
+            const isSelected = moduleFilter === m.num;
 
             return (
               <button
-                key={w.num}
-                onClick={() => onWeekChange(w.num)}
+                key={m.num}
+                onClick={() => onModuleChange(m.num)}
                 className={`w-full text-left p-2 rounded-lg border text-xs transition-colors flex flex-col gap-1 ${
                   isSelected
                     ? 'bg-sky-50 dark:bg-sky-950/40 border-sky-500 text-sky-950 dark:text-sky-200'
@@ -238,10 +240,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
               >
                 <div className="flex items-center justify-between w-full">
                   <span className={`font-semibold ${isSelected ? 'text-sky-900 dark:text-sky-200' : 'text-slate-800 dark:text-slate-200'}`}>
-                    {w.title}
+                    {m.title}
                   </span>
                   <span className="text-[10px] font-mono text-slate-400 dark:text-slate-500">
-                    {w.range}
+                    {m.range}
                   </span>
                 </div>
 
@@ -249,11 +251,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   <div className="flex-1 h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-emerald-600 rounded-full transition-all duration-300"
-                      style={{ width: `${weekPct}%` }}
+                      style={{ width: `${modPct}%` }}
                     />
                   </div>
                   <span className="text-[10px] font-mono font-medium text-slate-500 dark:text-slate-400 shrink-0">
-                    {weekSolved}/{weekProblems.length} ({weekPct}%)
+                    {modSolved}/{modProblems.length} ({modPct}%)
                   </span>
                 </div>
               </button>
