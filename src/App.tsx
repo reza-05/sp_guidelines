@@ -3,7 +3,7 @@ import confetti from 'canvas-confetti';
 import { curriculumData } from './data/curriculumData';
 import { Navbar } from './components/Navbar';
 import { Header } from './components/Header';
-import { Filters } from './components/Filters';
+import { Sidebar } from './components/Sidebar';
 import { DayCard } from './components/DayCard';
 import { PatternLab } from './components/PatternLab';
 import { Footer } from './components/Footer';
@@ -155,45 +155,82 @@ export const App: React.FC = () => {
   let currentWeek = '';
 
   return (
-    <div className="min-h-screen bg-slate-100 dark:bg-gray-950 text-slate-900 dark:text-slate-100 py-6 px-3 sm:px-6 flex justify-center transition-colors">
-      <div className="document-card w-full max-w-4xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl shadow-xl p-5 sm:p-10 flex flex-col gap-8 transition-colors">
-        
-        {/* Navigation Bar */}
-        <Navbar
-          currentView={currentView}
-          onChangeView={handleChangeView}
-          solvedCount={solvedCount}
-          totalCount={TOTAL_PROBLEMS}
-          isDark={isDark}
-          onToggleTheme={() => setIsDark(prev => !prev)}
-          onReset={handleResetProgress}
-        />
+    <div className="min-h-screen bg-slate-50 dark:bg-[#07090E] text-slate-900 dark:text-slate-100 transition-colors flex flex-col font-sans antialiased">
+      {/* Full-Width Modern Navbar */}
+      <Navbar
+        currentView={currentView}
+        onChangeView={handleChangeView}
+        solvedCount={solvedCount}
+        totalCount={TOTAL_PROBLEMS}
+        isDark={isDark}
+        onToggleTheme={() => setIsDark(prev => !prev)}
+        onReset={handleResetProgress}
+      />
 
-        {/* Conditional Rendering based on current view */}
+      {/* Main Container: Full Screen / 1600px Max-Width with Fluid Layout */}
+      <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 flex flex-col gap-8">
         {currentView === 'patterns' ? (
           <PatternLab onBackToCurriculum={() => handleChangeView('curriculum')} />
         ) : (
-          <>
-            {/* Header Section */}
-            <Header />
+          <div className="lg:grid lg:grid-cols-12 gap-8 items-start">
+            {/* Left Sticky Sidebar on Desktop */}
+            <div className="lg:col-span-4 xl:col-span-3.5 mb-6 lg:mb-0">
+              <Sidebar
+                solvedMap={solvedMap}
+                totalProblems={TOTAL_PROBLEMS}
+                search={search}
+                onSearchChange={setSearch}
+                weekFilter={weekFilter}
+                onWeekChange={setWeekFilter}
+                platformFilter={platformFilter}
+                onPlatformChange={setPlatformFilter}
+                statusFilter={statusFilter}
+                onStatusChange={setStatusFilter}
+                onNavigateToPatterns={() => handleChangeView('patterns')}
+              />
+            </div>
 
-            {/* Filters & Search */}
-            <Filters
-              search={search}
-              onSearchChange={setSearch}
-              weekFilter={weekFilter}
-              onWeekChange={setWeekFilter}
-              platformFilter={platformFilter}
-              onPlatformChange={setPlatformFilter}
-              statusFilter={statusFilter}
-              onStatusChange={setStatusFilter}
-            />
+            {/* Right Main Content Area */}
+            <main className="lg:col-span-8 xl:col-span-8.5 flex flex-col gap-6" aria-label="Curriculum content">
+              <Header />
 
-            {/* Curriculum Days List */}
-            <main className="flex flex-col gap-6" aria-label="Curriculum content">
+              {/* Active Filter Pill Bar (When filters are applied) */}
+              {(weekFilter !== 'all' || platformFilter !== 'all' || statusFilter !== 'all' || search) && (
+                <div className="flex flex-wrap items-center justify-between gap-2 p-3 rounded-xl bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-800 text-xs">
+                  <div className="flex flex-wrap items-center gap-1.5 text-sky-900 dark:text-sky-200">
+                    <span className="font-extrabold">Active Filters:</span>
+                    {weekFilter !== 'all' && (
+                      <span className="px-2 py-0.5 rounded-md bg-sky-200 dark:bg-sky-900 font-bold">Week {weekFilter}</span>
+                    )}
+                    {platformFilter !== 'all' && (
+                      <span className="px-2 py-0.5 rounded-md bg-sky-200 dark:bg-sky-900 font-bold">{platformFilter}</span>
+                    )}
+                    {statusFilter !== 'all' && (
+                      <span className="px-2 py-0.5 rounded-md bg-sky-200 dark:bg-sky-900 font-bold uppercase">{statusFilter}</span>
+                    )}
+                    {search && (
+                      <span className="px-2 py-0.5 rounded-md bg-sky-200 dark:bg-sky-900 font-bold">"{search}"</span>
+                    )}
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      setWeekFilter('all');
+                      setPlatformFilter('all');
+                      setStatusFilter('all');
+                      setSearch('');
+                    }}
+                    className="font-bold text-sky-600 dark:text-sky-400 hover:underline"
+                  >
+                    Clear All Filters
+                  </button>
+                </div>
+              )}
+
+              {/* Days List */}
               {filteredDays.length === 0 ? (
-                <div className="text-center py-16 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
-                  <SearchX className="w-12 h-12 stroke-[1.5] mb-2" />
+                <div className="text-center py-20 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 bg-white/60 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800">
+                  <SearchX className="w-12 h-12 stroke-[1.5] mb-2 text-slate-400" />
                   <h3 className="text-base font-bold text-slate-700 dark:text-slate-300">No matching problems found</h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                     Try clearing your search query or adjusting your filters.
@@ -209,9 +246,14 @@ export const App: React.FC = () => {
                   return (
                     <React.Fragment key={dayData.day}>
                       {showWeekBanner && (
-                        <div className="bg-slate-900 dark:bg-gray-800 text-white px-4 py-2.5 rounded-lg text-xs sm:text-sm font-extrabold uppercase tracking-wider flex items-center justify-between mt-3">
-                          <span>{dayData.weekName}</span>
-                          <span className="text-[11px] font-semibold text-slate-400">5 Problems Daily</span>
+                        <div className="bg-gradient-to-r from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 text-white px-5 py-3 rounded-2xl text-xs sm:text-sm font-extrabold uppercase tracking-wider flex items-center justify-between shadow-sm mt-3">
+                          <span className="flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-sky-400" />
+                            {dayData.weekName}
+                          </span>
+                          <span className="text-[11px] font-semibold text-slate-300 dark:text-slate-400">
+                            5 Problems Daily
+                          </span>
                         </div>
                       )}
 
@@ -227,12 +269,11 @@ export const App: React.FC = () => {
                 })
               )}
             </main>
-          </>
+          </div>
         )}
 
-        {/* Footer */}
+        {/* Global Footer */}
         <Footer />
-
       </div>
     </div>
   );

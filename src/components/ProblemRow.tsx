@@ -1,6 +1,6 @@
 import React from 'react';
 import { Problem } from '../types/curriculum';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Check, Star } from 'lucide-react';
 
 interface ProblemRowProps {
   problem: Problem;
@@ -9,53 +9,93 @@ interface ProblemRowProps {
 }
 
 export const ProblemRow: React.FC<ProblemRowProps> = ({ problem, isSolved, onToggle }) => {
+  const isCodeChef = problem.platform === 'CodeChef';
+
   return (
-    <tr className="hover:bg-slate-50 dark:hover:bg-gray-800/60 transition-colors border-b border-slate-100 dark:border-gray-800/80 last:border-b-0">
-      <td className="w-8 text-center p-2.5 sm:p-3">
-        <input
-          type="checkbox"
-          checked={isSolved}
-          onChange={() => onToggle(problem.id)}
-          aria-label={`Mark ${problem.title} as solved`}
-          className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 dark:border-gray-600 dark:bg-gray-700 cursor-pointer accent-emerald-600"
-        />
-      </td>
-
-      <td className="w-12 text-xs font-bold text-slate-400 dark:text-slate-500 p-2.5 sm:p-3 whitespace-nowrap">
-        {problem.numId}
-      </td>
-
-      <td className={`w-48 sm:w-60 text-xs sm:text-sm font-bold p-2.5 sm:p-3 ${isSolved ? 'line-through text-slate-400 dark:text-slate-500' : 'text-slate-900 dark:text-white'}`}>
-        {problem.title}
-      </td>
-
-      <td className="text-xs text-slate-600 dark:text-slate-300 p-2.5 sm:p-3">
-        <span
-          className={`inline-block text-[11px] font-black px-1.5 py-0.5 rounded border mr-2 whitespace-nowrap ${
-            problem.platform === 'CodeChef'
-              ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 border-amber-300 dark:border-amber-800'
-              : 'bg-sky-100 dark:bg-sky-950/60 text-sky-900 dark:text-sky-300 border-sky-300 dark:border-sky-800'
+    <div
+      onClick={() => onToggle(problem.id)}
+      className={`group relative flex flex-col md:flex-row md:items-center justify-between gap-3 p-3.5 sm:p-4 rounded-xl border transition-all duration-200 cursor-pointer select-none ${
+        isSolved
+          ? 'bg-emerald-500/[0.04] dark:bg-emerald-950/20 border-emerald-500/30 dark:border-emerald-500/25 shadow-xs'
+          : 'bg-white dark:bg-slate-900/70 border-slate-200/90 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-md hover:-translate-y-0.5'
+      }`}
+    >
+      {/* Left: Checkbox, ID, Title, Badges */}
+      <div className="flex items-start sm:items-center gap-3.5 flex-1 min-w-0">
+        {/* Custom Tactile Checkbox */}
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggle(problem.id);
+          }}
+          aria-label={`Mark ${problem.title} as ${isSolved ? 'unsolved' : 'solved'}`}
+          className={`w-6 h-6 rounded-lg flex items-center justify-center shrink-0 transition-all duration-150 border-2 mt-0.5 sm:mt-0 ${
+            isSolved
+              ? 'bg-emerald-600 border-emerald-600 text-white shadow-sm shadow-emerald-600/30 scale-105'
+              : 'border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800 group-hover:border-emerald-500/60'
           }`}
         >
-          {problem.badgeText}
-        </span>
-        <span className="hidden sm:inline">{problem.desc}</span>
-      </td>
+          {isSolved && <Check className="w-3.5 h-3.5 stroke-[3]" />}
+        </button>
 
-      <td className="w-20 text-right p-2.5 sm:p-3 whitespace-nowrap">
+        {/* Problem Num ID */}
+        <span className="font-mono text-xs font-bold text-slate-400 dark:text-slate-500 shrink-0 w-9">
+          {problem.numId}
+        </span>
+
+        {/* Title & Description Container */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 flex-1 min-w-0">
+          <span
+            className={`text-sm font-bold tracking-tight transition-colors truncate ${
+              isSolved
+                ? 'line-through text-slate-400 dark:text-slate-500'
+                : 'text-slate-900 dark:text-slate-100 group-hover:text-sky-600 dark:group-hover:text-sky-400'
+            }`}
+          >
+            {problem.title}
+          </span>
+
+          {/* Rating Badge */}
+          <span
+            className={`inline-flex items-center gap-1 text-[11px] font-extrabold px-2 py-0.5 rounded-md border shrink-0 tracking-wide ${
+              isCodeChef
+                ? 'bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-800/60'
+                : 'bg-sky-50 dark:bg-sky-950/40 text-sky-800 dark:text-sky-300 border-sky-300 dark:border-sky-800/60'
+            }`}
+          >
+            {isCodeChef && <Star className="w-2.5 h-2.5 fill-amber-500 text-amber-500" />}
+            {problem.badgeText}
+          </span>
+
+          {/* Problem Topic / Description */}
+          <span className="text-xs text-slate-500 dark:text-slate-400 truncate hidden xl:inline">
+            {problem.desc}
+          </span>
+        </div>
+      </div>
+
+      {/* Right: Topic for smaller screens & Solve Action Button */}
+      <div className="flex items-center justify-between sm:justify-end gap-3 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-slate-800">
+        <span className="text-xs text-slate-500 dark:text-slate-400 truncate xl:hidden max-w-[200px]">
+          {problem.desc}
+        </span>
+
         <a
           href={problem.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`inline-flex items-center gap-1 text-[11px] font-extrabold px-2.5 py-1 rounded transition tracking-wide ${
-            problem.platform === 'CodeChef'
-              ? 'bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-800 hover:bg-amber-600 hover:text-white dark:hover:bg-amber-600'
-              : 'bg-sky-50 dark:bg-sky-950/30 text-sky-700 dark:text-sky-400 border border-sky-200 dark:border-sky-800 hover:bg-sky-600 hover:text-white dark:hover:bg-sky-600'
+          onClick={(e) => e.stopPropagation()}
+          className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg transition-all duration-150 tracking-wider shadow-xs hover:shadow-md hover:scale-105 active:scale-95 ${
+            isCodeChef
+              ? 'bg-amber-600 hover:bg-amber-500 text-white'
+              : 'bg-sky-600 hover:bg-sky-500 text-white'
           }`}
         >
-          SOLVE <ExternalLink className="w-3 h-3" />
+          <span>SOLVE</span>
+          <ExternalLink className="w-3 h-3 stroke-[2.5]" />
         </a>
-      </td>
-    </tr>
+      </div>
+    </div>
   );
 };
