@@ -202,7 +202,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
           </p>
         </section>
 
-        {/* 7. Wednesday Training & Senior Mentorship */}
+        {/* 7. Wednesday IUTCS Programming Training */}
         <section className="bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-md transition-all flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-teal-500/10 dark:bg-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0">
@@ -213,7 +213,7 @@ export const Instructions: React.FC<InstructionsProps> = ({ onNavigateToCurricul
                 Rule 07
               </span>
               <h2 className="text-base sm:text-lg font-black text-slate-900 dark:text-white">
-                Wednesday IUTCS Training & Senior Mentorship
+                Wednesday IUTCS Programming Training
               </h2>
             </div>
           </div>
