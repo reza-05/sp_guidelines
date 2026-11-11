@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar';
 import { Header } from './components/Header';
 import { Filters } from './components/Filters';
 import { DayCard } from './components/DayCard';
+import { PatternLab } from './components/PatternLab';
 import { Footer } from './components/Footer';
 import { SearchX } from 'lucide-react';
 
@@ -16,6 +17,11 @@ export const App: React.FC = () => {
   // Theme state
   const [isDark, setIsDark] = useState<boolean>(() => {
     return localStorage.getItem(THEME_KEY) === 'dark';
+  });
+
+  // Navigation View state ('curriculum' | 'patterns')
+  const [currentView, setCurrentView] = useState<'curriculum' | 'patterns'>(() => {
+    return window.location.hash.startsWith('#patterns') ? 'patterns' : 'curriculum';
   });
 
   // Progress state
@@ -33,6 +39,27 @@ export const App: React.FC = () => {
   const [weekFilter, setWeekFilter] = useState<string>('all');
   const [platformFilter, setPlatformFilter] = useState<string>('all');
   const [statusFilter, setStatusFilter] = useState<string>('all');
+
+  // Handle URL Hash Synchronization
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash.startsWith('#patterns')) {
+        setCurrentView('patterns');
+      } else if (window.location.hash.startsWith('#curriculum') || window.location.hash === '') {
+        setCurrentView('curriculum');
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Handle Switching View
+  const handleChangeView = (view: 'curriculum' | 'patterns') => {
+    setCurrentView(view);
+    window.location.hash = view === 'patterns' ? '#patterns' : '#curriculum';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Handle Theme
   useEffect(() => {
@@ -133,6 +160,8 @@ export const App: React.FC = () => {
         
         {/* Navigation Bar */}
         <Navbar
+          currentView={currentView}
+          onChangeView={handleChangeView}
           solvedCount={solvedCount}
           totalCount={TOTAL_PROBLEMS}
           isDark={isDark}
@@ -140,58 +169,66 @@ export const App: React.FC = () => {
           onReset={handleResetProgress}
         />
 
-        {/* Header Section */}
-        <Header />
+        {/* Conditional Rendering based on current view */}
+        {currentView === 'patterns' ? (
+          <PatternLab onBackToCurriculum={() => handleChangeView('curriculum')} />
+        ) : (
+          <>
+            {/* Header Section */}
+            <Header />
 
-        {/* Filters & Search */}
-        <Filters
-          search={search}
-          onSearchChange={setSearch}
-          weekFilter={weekFilter}
-          onWeekChange={setWeekFilter}
-          platformFilter={platformFilter}
-          onPlatformChange={setPlatformFilter}
-          statusFilter={statusFilter}
-          onStatusChange={setStatusFilter}
-        />
+            {/* Filters & Search */}
+            <Filters
+              search={search}
+              onSearchChange={setSearch}
+              weekFilter={weekFilter}
+              onWeekChange={setWeekFilter}
+              platformFilter={platformFilter}
+              onPlatformChange={setPlatformFilter}
+              statusFilter={statusFilter}
+              onStatusChange={setStatusFilter}
+            />
 
-        {/* Curriculum Days List */}
-        <main className="flex flex-col gap-6" aria-label="Curriculum content">
-          {filteredDays.length === 0 ? (
-            <div className="text-center py-16 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
-              <SearchX className="w-12 h-12 stroke-[1.5] mb-2" />
-              <h3 className="text-base font-bold text-slate-700 dark:text-slate-300">No matching problems found</h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                Try clearing your search query or adjusting your filters.
-              </p>
-            </div>
-          ) : (
-            filteredDays.map(({ dayData, visibleProblems }) => {
-              const showWeekBanner = dayData.weekName !== currentWeek;
-              if (showWeekBanner) {
-                currentWeek = dayData.weekName;
-              }
+            {/* Curriculum Days List */}
+            <main className="flex flex-col gap-6" aria-label="Curriculum content">
+              {filteredDays.length === 0 ? (
+                <div className="text-center py-16 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
+                  <SearchX className="w-12 h-12 stroke-[1.5] mb-2" />
+                  <h3 className="text-base font-bold text-slate-700 dark:text-slate-300">No matching problems found</h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    Try clearing your search query or adjusting your filters.
+                  </p>
+                </div>
+              ) : (
+                filteredDays.map(({ dayData, visibleProblems }) => {
+                  const showWeekBanner = dayData.weekName !== currentWeek;
+                  if (showWeekBanner) {
+                    currentWeek = dayData.weekName;
+                  }
 
-              return (
-                <React.Fragment key={dayData.day}>
-                  {showWeekBanner && (
-                    <div className="bg-slate-900 dark:bg-gray-800 text-white px-4 py-2.5 rounded-lg text-xs sm:text-sm font-extrabold uppercase tracking-wider flex items-center justify-between mt-3">
-                      <span>{dayData.weekName}</span>
-                      <span className="text-[11px] font-semibold text-slate-400">5 Problems Daily</span>
-                    </div>
-                  )}
+                  return (
+                    <React.Fragment key={dayData.day}>
+                      {showWeekBanner && (
+                        <div className="bg-slate-900 dark:bg-gray-800 text-white px-4 py-2.5 rounded-lg text-xs sm:text-sm font-extrabold uppercase tracking-wider flex items-center justify-between mt-3">
+                          <span>{dayData.weekName}</span>
+                          <span className="text-[11px] font-semibold text-slate-400">5 Problems Daily</span>
+                        </div>
+                      )}
 
-                  <DayCard
-                    dayData={dayData}
-                    visibleProblems={visibleProblems}
-                    solvedMap={solvedMap}
-                    onToggleProblem={handleToggleProblem}
-                  />
-                </React.Fragment>
-              );
-            })
-          )}
-        </main>
+                      <DayCard
+                        dayData={dayData}
+                        visibleProblems={visibleProblems}
+                        solvedMap={solvedMap}
+                        onToggleProblem={handleToggleProblem}
+                        onNavigateToPatterns={() => handleChangeView('patterns')}
+                      />
+                    </React.Fragment>
+                  );
+                })
+              )}
+            </main>
+          </>
+        )}
 
         {/* Footer */}
         <Footer />

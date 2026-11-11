@@ -1,22 +1,25 @@
 import React from 'react';
 import { DayCurriculum, Problem } from '../types/curriculum';
 import { ProblemRow } from './ProblemRow';
-import { Play } from 'lucide-react';
+import { Play, Sparkles, ArrowRight } from 'lucide-react';
 
 interface DayCardProps {
   dayData: DayCurriculum;
   visibleProblems: Problem[];
   solvedMap: Record<string, boolean>;
   onToggleProblem: (id: string) => void;
+  onNavigateToPatterns?: () => void;
 }
 
 export const DayCard: React.FC<DayCardProps> = ({
   dayData,
   visibleProblems,
   solvedMap,
-  onToggleProblem
+  onToggleProblem,
+  onNavigateToPatterns
 }) => {
   const dayNumStr = String(dayData.day).padStart(2, '0');
+  const isNestedLoopDay = dayData.day === 15 || dayData.day === 16;
 
   return (
     <section className={`day-card flex flex-col gap-3 pt-5 border-t border-dashed border-slate-200 dark:border-gray-800 first:border-t-0 first:pt-0 ${dayData.theme}`} id={`day${dayData.day}`}>
@@ -77,6 +80,35 @@ export const DayCard: React.FC<DayCardProps> = ({
           </>
         )}
       </div>
+
+      {/* Special Nested Loop Pattern Lab Callout Button */}
+      {isNestedLoopDay && onNavigateToPatterns && (
+        <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-sky-500/10 border-2 border-emerald-500/30 dark:border-emerald-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5 sm:mt-0">
+              <Sparkles className="w-4 h-4 text-amber-300" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-2">
+                Nested Loops Pattern Lab (GFG Curated)
+                <span className="text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-emerald-200 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">
+                  26 Patterns
+                </span>
+              </h4>
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5 leading-relaxed">
+                Want to master nested loops? Check out all standard star, number, alphabet, and hollow pattern programs with visual previews and easy C code.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={onNavigateToPatterns}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white rounded-lg text-xs font-bold shrink-0 transition-all shadow-md"
+          >
+            <span>Open Pattern Lab</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
 
       {/* Data Table */}
       <div

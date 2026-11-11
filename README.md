@@ -18,6 +18,13 @@ Every day features targeted video lectures paired with exactly **5 practice prob
 
 * **Interactive Problem Tracker:** Checkboxes save your progress in browser `localStorage` automatically with real-time percentage indicators.
 * **Celebration Confetti:** Milestones (every 25 problems solved and 100% completion) trigger confetti animations.
+* **🧩 Dedicated C Pattern Programs Lab (GeeksforGeeks Inspired):**
+  * Direct access button right after nested loop modules (Day 15 & 16) and top navbar toggle.
+  * **26 Complete Patterns** categorized into Star, Number, Alphabet, and Hollow shapes.
+  * Real-time search, difficulty tags (Easy, Medium, Hard), and Category pills.
+  * Terminal-styled monospace ASCII visual output previews ($n = 5$).
+  * Step-by-step nested loop logic breakdown (Outer row loops, space alignment, and inner column loops).
+  * Clean, easy-to-understand C source code with one-click **"Copy Code"** clipboard integration.
 * **Instant Search & Multi-Filter:**
   * Search by problem name or platform code (e.g. `SPEEDTEST`, `1A`, `LAPIN`, `MISSP`).
   * Filter by **Week** (Weeks 1 to 5).
