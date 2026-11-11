@@ -231,12 +231,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_3_4",
         "numId": "03.4",
-        "title": "Weights",
+        "title": "Cyclic Quadrilateral",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 647",
+        "badgeText": "CC ★ 735",
         "badgeClass": "rate-cc",
-        "desc": "Measuring weight using available pans • WEIGHTS",
-        "url": "https://www.codechef.com/problems/WEIGHTS",
+        "desc": "Verifying quadrilateral opposite angles sum to 180 • CYCLICQD",
+        "url": "https://www.codechef.com/problems/CYCLICQD",
         "btnClass": "btn-cc"
       },
       {
@@ -271,12 +271,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_4_1",
         "numId": "04.1",
-        "title": "Problem Category",
+        "title": "Mileage matters",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 658",
+        "badgeText": "CC ★ 831",
         "badgeClass": "rate-cc",
-        "desc": "Rating classification into problem tiers • PROBCAT",
-        "url": "https://www.codechef.com/problems/PROBCAT",
+        "desc": "Comparing travel costs using multi-branch decisions • MILEAGE",
+        "url": "https://www.codechef.com/problems/MILEAGE",
         "btnClass": "btn-cc"
       },
       {
@@ -293,12 +293,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_4_3",
         "numId": "04.3",
-        "title": "Chef and Spells",
+        "title": "Cricket Ranking",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 671",
+        "badgeText": "CC ★ 966",
         "badgeClass": "rate-cc",
-        "desc": "Selecting most powerful spell combinations • CHFSPL",
-        "url": "https://www.codechef.com/problems/CHFSPL",
+        "desc": "Comparing 3 match statistics with compound conditions • CRICRANK",
+        "url": "https://www.codechef.com/problems/CRICRANK",
         "btnClass": "btn-cc"
       },
       {
@@ -405,12 +405,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_6_1",
         "numId": "06.1",
-        "title": "Chef and Stock Prices",
+        "title": "Sum OR Difference",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 756",
+        "badgeText": "CC ★ 749",
         "badgeClass": "rate-cc",
-        "desc": "Stock price fluctuation and target range • CSTOCK",
-        "url": "https://www.codechef.com/problems/CSTOCK",
+        "desc": "Evaluating difference or sum depending on scalar inequality • DIFFSUM",
+        "url": "https://www.codechef.com/problems/DIFFSUM",
         "btnClass": "btn-cc"
       },
       {
@@ -707,12 +707,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_10_2",
         "numId": "10.2",
-        "title": "Lucky Four",
+        "title": "Highest Divisor",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 600",
+        "badgeText": "CC ★ 860",
         "badgeClass": "rate-cc",
-        "desc": "Counting occurrences of digit four • LUCKFOUR",
-        "url": "https://www.codechef.com/problems/LUCKFOUR",
+        "desc": "Finding the highest single-digit divisor of N with a loop • HDIVISR",
+        "url": "https://www.codechef.com/problems/HDIVISR",
         "btnClass": "btn-cc"
       },
       {
@@ -1427,12 +1427,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_20_2",
         "numId": "20.2",
-        "title": "The Smallest Pair",
+        "title": "Red Light, Green Light",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 800",
+        "badgeText": "CC ★ 984",
         "badgeClass": "rate-cc",
-        "desc": "Locating two smallest values in list • SMPAIR",
-        "url": "https://www.codechef.com/problems/SMPAIR",
+        "desc": "Counting elements strictly greater than threshold in array • DOLL",
+        "url": "https://www.codechef.com/problems/DOLL",
         "btnClass": "btn-cc"
       },
       {
@@ -1550,12 +1550,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_22_1",
         "numId": "22.1",
-        "title": "Count Substrings",
+        "title": "Compress the Video",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 950",
+        "badgeText": "CC ★ 940",
         "badgeClass": "rate-cc",
-        "desc": "Pair combination count from running totals • CSUB",
-        "url": "https://www.codechef.com/problems/CSUB",
+        "desc": "Array segment traversal eliminating adjacent duplicates • COMPRESSVD",
+        "url": "https://www.codechef.com/problems/COMPRESSVD",
         "btnClass": "btn-cc"
       },
       {
@@ -1594,12 +1594,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_22_5",
         "numId": "22.5",
-        "title": "Maximum Weight Difference",
+        "title": "Kitchen Timetable",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 940",
+        "badgeText": "CC ★ 950",
         "badgeClass": "rate-cc",
-        "desc": "Partitioning items to maximize group difference • MAXDIFF",
-        "url": "https://www.codechef.com/problems/MAXDIFF",
+        "desc": "Comparing consecutive timestamp intervals in an array • KTTABLE",
+        "url": "https://www.codechef.com/problems/KTTABLE",
         "btnClass": "btn-cc"
       }
     ]
@@ -1650,23 +1650,23 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_23_4",
         "numId": "23.4",
-        "title": "Version Control System",
+        "title": "Problems in your to-do list",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 910",
+        "badgeText": "CC ★ 580",
         "badgeClass": "rate-cc",
-        "desc": "Counting tracked and ignored file states • VCS",
-        "url": "https://www.codechef.com/problems/VCS",
+        "desc": "Filtering and tallying problems above threshold in array • TODOLIST",
+        "url": "https://www.codechef.com/problems/TODOLIST",
         "btnClass": "btn-cc"
       },
       {
         "id": "p_23_5",
         "numId": "23.5",
-        "title": "Make all equal using Pairs",
+        "title": "Save Water Save Life",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 920",
+        "badgeText": "CC ★ 918",
         "badgeClass": "rate-cc",
-        "desc": "Most frequent element in sequence • PAIREQ",
-        "url": "https://www.codechef.com/problems/PAIREQ",
+        "desc": "Validating resource consumption against capacity • SAVWATER",
+        "url": "https://www.codechef.com/problems/SAVWATER",
         "btnClass": "btn-cc"
       }
     ]
@@ -1695,12 +1695,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_24_2",
         "numId": "24.2",
-        "title": "Count Subarrays (Increasing)",
+        "title": "Devendra and Water Sports",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 930",
+        "badgeText": "CC ★ 859",
         "badgeClass": "rate-cc",
-        "desc": "Non-decreasing contiguous subarray count • SUBINC",
-        "url": "https://www.codechef.com/problems/SUBINC",
+        "desc": "Array expenditure sum check against remaining budget • DEVSPORTS",
+        "url": "https://www.codechef.com/problems/DEVSPORTS",
         "btnClass": "btn-cc"
       },
       {
@@ -1717,23 +1717,23 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_24_4",
         "numId": "24.4",
-        "title": "Cops and the Thief Devu",
+        "title": "Relativity",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 950",
+        "badgeText": "CC ★ 872",
         "badgeClass": "rate-cc",
-        "desc": "Segment coverage by police officers • COPS",
-        "url": "https://www.codechef.com/problems/COPS",
+        "desc": "Computing orbital velocity threshold equations • RELATIVE",
+        "url": "https://www.codechef.com/problems/RELATIVE",
         "btnClass": "btn-cc"
       },
       {
         "id": "p_24_5",
         "numId": "24.5",
-        "title": "Sums in a Triangle",
+        "title": "Packaging Cupcakes",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 960",
+        "badgeText": "CC ★ 1023",
         "badgeClass": "rate-cc",
-        "desc": "Dynamic path collection through array • SUMTRAIN",
-        "url": "https://www.codechef.com/problems/SUMTRAIN",
+        "desc": "Modulo optimization to maximize remaining cupcakes • MUFFINS3",
+        "url": "https://www.codechef.com/problems/MUFFINS3",
         "btnClass": "btn-cc"
       }
     ]
@@ -2138,23 +2138,23 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_30_2",
         "numId": "30.2",
-        "title": "Chef and the Wildcard Matching",
+        "title": "Complementary Strand in a DNA",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 970",
+        "badgeText": "CC ★ 660",
         "badgeClass": "rate-cc",
-        "desc": "Wildcard character pattern matching • TWOSTR",
-        "url": "https://www.codechef.com/problems/TWOSTR",
+        "desc": "Character mapping and string replacement • DNASTRAND",
+        "url": "https://www.codechef.com/problems/DNASTRAND",
         "btnClass": "btn-cc"
       },
       {
         "id": "p_30_3",
         "numId": "30.3",
-        "title": "Chef and Feedback",
+        "title": "Playing with Strings",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 990",
+        "badgeText": "CC ★ 1108",
         "badgeClass": "rate-cc",
-        "desc": "Substring pattern identification • ERROR",
-        "url": "https://www.codechef.com/problems/ERROR",
+        "desc": "Binary string frequency matching and transformation • PLAYSTR",
+        "url": "https://www.codechef.com/problems/PLAYSTR",
         "btnClass": "btn-cc"
       },
       {
@@ -2356,12 +2356,12 @@ export const curriculumData: DayCurriculum[] = [
       {
         "id": "p_33_2",
         "numId": "33.2",
-        "title": "GCD and LCM (Function)",
+        "title": "Helping Chef (Function)",
         "platform": "CodeChef",
-        "badgeText": "CC ★ 819",
+        "badgeText": "CC ★ 776",
         "badgeClass": "rate-cc",
-        "desc": "Modular greatest common divisor function • FLOW016",
-        "url": "https://www.codechef.com/problems/FLOW016",
+        "desc": "Modular decision function checking numerical thresholds • FLOW008",
+        "url": "https://www.codechef.com/problems/FLOW008",
         "btnClass": "btn-cc"
       },
       {
