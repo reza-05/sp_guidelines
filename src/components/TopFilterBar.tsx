@@ -53,27 +53,27 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
   const hasActiveFilters = moduleFilter !== 'all' || platformFilter !== 'all' || statusFilter !== 'all' || search.trim() !== '';
 
   return (
-    <div className="w-full bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-5 shadow-[0_2px_10px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] flex flex-col gap-4 no-print">
+    <div className="w-full bg-white dark:bg-[#0C1017] border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-6 shadow-[0_2px_14px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] flex flex-col gap-5 no-print">
       {/* 1. Header Row: Progress, Platform Badges & Pattern Lab CTA */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-2xs">
-            <CheckCircle2 className="w-5 h-5 stroke-[2.5]" />
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div className="flex items-center gap-3.5">
+          <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-2xs">
+            <CheckCircle2 className="w-6 h-6 stroke-[2.5]" />
           </div>
           <div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-xl sm:text-2xl font-black font-mono text-slate-900 dark:text-white">
+            <div className="flex items-baseline gap-2.5">
+              <span className="text-2xl sm:text-3xl font-black font-mono text-slate-900 dark:text-white tracking-tight">
                 {percentage}%
               </span>
-              <span className="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 font-mono">
+              <span className="text-sm sm:text-base font-extrabold text-slate-500 dark:text-slate-400 font-mono">
                 ({solvedCount} / {totalProblems} Solved)
               </span>
             </div>
-            <div className="flex items-center gap-2 mt-0.5">
-              <span className="text-[11px] font-mono font-bold text-amber-700 dark:text-amber-300 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+            <div className="flex items-center gap-2 mt-1">
+              <span className="text-xs font-mono font-bold text-amber-700 dark:text-amber-300 bg-amber-500/10 px-2.5 py-0.5 rounded-md border border-amber-500/30">
                 CodeChef: {solvedCC}/{codechefProblems.length}
               </span>
-              <span className="text-[11px] font-mono font-bold text-sky-700 dark:text-sky-300 bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/30">
+              <span className="text-xs font-mono font-bold text-sky-700 dark:text-sky-300 bg-sky-500/10 px-2.5 py-0.5 rounded-md border border-sky-500/30">
                 Codeforces: {solvedCF}/{codeforcesProblems.length}
               </span>
             </div>
@@ -82,15 +82,15 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
 
         <button
           onClick={onNavigateToPatterns}
-          className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs font-bold shadow-xs hover:shadow transition-all shrink-0 self-start sm:self-center"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white text-xs sm:text-sm font-extrabold shadow-xs hover:shadow transition-all shrink-0 self-start sm:self-center"
         >
-          <Terminal className="w-3.5 h-3.5" />
+          <Terminal className="w-4 h-4" />
           <span>Pattern Programs (26) →</span>
         </button>
       </div>
 
       {/* Progress Track Bar */}
-      <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+      <div className="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-sky-500 rounded-full transition-all duration-300"
           style={{ width: `${percentage}%` }}
@@ -98,26 +98,26 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
       </div>
 
       {/* 2. Module Selector Tabs */}
-      <div className="flex flex-col gap-2 pt-1">
+      <div className="flex flex-col gap-2.5 pt-1">
         <div className="flex items-center justify-between">
-          <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-            <SlidersHorizontal className="w-3.5 h-3.5 text-slate-500" />
+          <span className="text-xs font-black uppercase tracking-wider text-slate-600 dark:text-slate-300 flex items-center gap-1.5">
+            <SlidersHorizontal className="w-4 h-4 text-slate-500" />
             <span>Modules:</span>
           </span>
           {moduleFilter !== 'all' && (
             <button
               onClick={() => onModuleChange('all')}
-              className="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline"
+              className="text-xs sm:text-sm font-bold text-sky-600 dark:text-sky-400 hover:underline"
             >
               Show All Modules
             </button>
           )}
         </div>
 
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-0.5 no-scrollbar -mx-1 px-1">
+        <div className="flex items-center gap-2 overflow-x-auto pb-1.5 pt-0.5 no-scrollbar -mx-1 px-1">
           <button
             onClick={() => onModuleChange('all')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-all ${
+            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-black shrink-0 transition-all ${
               moduleFilter === 'all'
                 ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-xs'
                 : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700'
@@ -136,14 +136,14 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
               <button
                 key={m.num}
                 onClick={() => onModuleChange(m.num)}
-                className={`px-2.5 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-all flex items-center gap-1.5 ${
+                className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-black shrink-0 transition-all flex items-center gap-2 ${
                   isSelected
                     ? 'bg-sky-600 text-white shadow-xs'
                     : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700'
                 }`}
               >
                 <span>{m.short}: {m.name}</span>
-                <span className={`font-mono text-[10px] px-1.5 py-0.2 rounded-md ${
+                <span className={`font-mono text-xs px-2 py-0.5 rounded-md font-bold ${
                   isSelected
                     ? 'bg-sky-700 text-white'
                     : 'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400'
@@ -157,24 +157,24 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
       </div>
 
       {/* 3. Search & Platform / Status Filters */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-slate-200 dark:border-slate-800">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 pt-2 border-t border-slate-200 dark:border-slate-800">
         {/* Search Input */}
-        <div className="relative flex-1 min-w-[200px]">
-          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+        <div className="relative flex-1 min-w-[220px]">
+          <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
             type="text"
             placeholder="Search problems by title or code..."
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            className="w-full pl-8 pr-7 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 transition"
+            className="w-full pl-9 pr-8 py-2.5 text-xs sm:text-sm rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 font-medium transition"
           />
           {search && (
             <button
               onClick={() => onSearchChange('')}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
               aria-label="Clear Search"
             >
-              <X className="w-3.5 h-3.5" />
+              <X className="w-4 h-4" />
             </button>
           )}
         </div>
@@ -191,7 +191,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
               <button
                 key={p.id}
                 onClick={() => onPlatformChange(p.id)}
-                className={`text-xs font-bold py-1 px-2.5 rounded-lg transition-all ${
+                className={`text-xs sm:text-sm font-extrabold py-1.5 px-3 rounded-lg transition-all ${
                   platformFilter === p.id
                     ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -212,7 +212,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
               <button
                 key={s.id}
                 onClick={() => onStatusChange(s.id)}
-                className={`text-xs font-bold py-1 px-2.5 rounded-lg transition-all capitalize ${
+                className={`text-xs sm:text-sm font-extrabold py-1.5 px-3 rounded-lg transition-all capitalize ${
                   statusFilter === s.id
                     ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -232,7 +232,7 @@ export const TopFilterBar: React.FC<TopFilterBarProps> = ({
                 onStatusChange('all');
                 onSearchChange('');
               }}
-              className="text-xs font-bold text-rose-600 dark:text-rose-400 hover:underline px-1 py-1 transition-colors"
+              className="text-xs sm:text-sm font-extrabold text-rose-600 dark:text-rose-400 hover:underline px-1 py-1 transition-colors"
             >
               Reset
             </button>
