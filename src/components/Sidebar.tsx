@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, X, Sparkles, Trophy, Flame } from 'lucide-react';
+import { Search, X, CheckCircle2, Calendar, Terminal } from 'lucide-react';
 import { curriculumData } from '../data/curriculumData';
 
 interface SidebarProps {
@@ -41,45 +41,44 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   // Weeks data
   const weeks = [
-    { num: '1', title: 'Week 1: Foundations & Branches', range: 'Days 01–07' },
+    { num: '1', title: 'Week 1: Syntax & Conditionals', range: 'Days 01–07' },
     { num: '2', title: 'Week 2: Loops & Number Theory', range: 'Days 08–14' },
     { num: '3', title: 'Week 3: Patterns & 1D Arrays', range: 'Days 15–21' },
     { num: '4', title: 'Week 4: Matrices & Subarrays', range: 'Days 22–28' },
-    { num: '5', title: 'Week 5: Pointers & Structs', range: 'Days 29–35' },
+    { num: '5', title: 'Week 5: Pointers & Structures', range: 'Days 29–35' },
   ];
 
   return (
-    <aside className="flex flex-col gap-5 sticky top-24 no-print" aria-label="Curriculum Sidebar">
-      {/* 1. Overall Progress Hero Card */}
-      <div className="bg-white/90 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-800/90 rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+    <aside className="flex flex-col gap-4 sticky top-20 no-print" aria-label="Curriculum Sidebar">
+      {/* 1. Overall Progress */}
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Trophy className="w-5 h-5 text-amber-500" />
-            <h3 className="text-sm font-extrabold uppercase tracking-wider text-slate-800 dark:text-slate-200">
-              Your Progress
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+              Curriculum Progress
             </h3>
           </div>
-          <span className="inline-flex items-center gap-1 text-[11px] font-black px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300">
-            <Flame className="w-3 h-3 fill-amber-500 text-amber-500" />
+          <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
             35 Days
           </span>
         </div>
 
         {/* Counter and Progress Bar */}
         <div>
-          <div className="flex items-baseline justify-between mb-2">
-            <span className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+          <div className="flex items-baseline justify-between mb-1.5">
+            <span className="text-2xl font-bold font-mono text-slate-900 dark:text-white tracking-tight">
               {solvedCount}
-              <span className="text-base font-bold text-slate-400 dark:text-slate-500"> / {totalProblems}</span>
+              <span className="text-sm font-normal text-slate-500 dark:text-slate-400"> / {totalProblems}</span>
             </span>
-            <span className="text-lg font-black text-emerald-600 dark:text-emerald-400">
+            <span className="text-sm font-bold font-mono text-emerald-600 dark:text-emerald-400">
               {percentage}%
             </span>
           </div>
 
-          <div className="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden p-0.5 border border-slate-200/60 dark:border-slate-700/60">
+          <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-500 ease-out shadow-xs"
+              className="h-full bg-emerald-600 rounded-full transition-all duration-300 ease-out"
               style={{ width: `${percentage}%` }}
             />
           </div>
@@ -87,41 +86,41 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Platform Breakdown */}
         <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100 dark:border-slate-800 text-xs">
-          <div className="p-2 rounded-lg bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-900/40">
-            <span className="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wide block">
+          <div className="p-2 rounded bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+            <span className="text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide block">
               CodeChef (500+)
             </span>
-            <span className="text-sm font-black text-amber-900 dark:text-amber-200 mt-0.5 block">
+            <span className="text-xs font-mono font-bold text-slate-900 dark:text-slate-200 mt-0.5 block">
               {solvedCC} / {codechefProblems.length}
             </span>
           </div>
 
-          <div className="p-2 rounded-lg bg-sky-50/70 dark:bg-sky-950/20 border border-sky-200/60 dark:border-sky-900/40">
-            <span className="text-[10px] font-bold text-sky-700 dark:text-sky-400 uppercase tracking-wide block">
+          <div className="p-2 rounded bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+            <span className="text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide block">
               Codeforces (800+)
             </span>
-            <span className="text-sm font-black text-sky-900 dark:text-sky-200 mt-0.5 block">
+            <span className="text-xs font-mono font-bold text-slate-900 dark:text-slate-200 mt-0.5 block">
               {solvedCF} / {codeforcesProblems.length}
             </span>
           </div>
         </div>
       </div>
 
-      {/* 2. Search & Filters Card */}
-      <div className="bg-white/90 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-800/90 rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col gap-3.5">
-        <h4 className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500">
+      {/* 2. Search & Filters */}
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col gap-3">
+        <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
           Search &amp; Filter
         </h4>
 
         {/* Search Input */}
         <div className="relative">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
           <input
             type="text"
-            placeholder="Search problems by name or code..."
+            placeholder="Search problem title or code..."
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            className="w-full pl-9 pr-8 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition"
+            className="w-full pl-8 pr-7 py-1.5 text-xs rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 transition"
           />
           {search && (
             <button
@@ -136,22 +135,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Platform Selector */}
         <div>
-          <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400 block mb-1.5">
+          <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 block mb-1">
             Platform:
           </span>
           <div className="grid grid-cols-3 gap-1">
             {[
               { id: 'all', label: 'All' },
               { id: 'CodeChef', label: 'CodeChef' },
-              { id: 'Codeforces', label: 'CF 800+' },
+              { id: 'Codeforces', label: 'Codeforces' },
             ].map((p) => (
               <button
                 key={p.id}
                 onClick={() => onPlatformChange(p.id)}
-                className={`text-[11px] font-bold py-1.5 px-2 rounded-lg border transition-all text-center ${
+                className={`text-[11px] font-semibold py-1 px-1.5 rounded border transition-colors text-center ${
                   platformFilter === p.id
-                    ? 'bg-sky-600 border-sky-600 text-white shadow-xs'
-                    : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300 hover:bg-slate-100'
+                    ? 'bg-slate-900 dark:bg-white border-slate-900 dark:border-white text-white dark:text-slate-900'
+                    : 'bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100'
                 }`}
               >
                 {p.label}
@@ -162,8 +161,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Status Selector */}
         <div>
-          <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400 block mb-1.5">
-            Problem Status:
+          <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 block mb-1">
+            Status:
           </span>
           <div className="grid grid-cols-3 gap-1">
             {[
@@ -174,10 +173,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <button
                 key={s.id}
                 onClick={() => onStatusChange(s.id)}
-                className={`text-[11px] font-bold py-1.5 px-2 rounded-lg border transition-all text-center ${
+                className={`text-[11px] font-semibold py-1 px-1.5 rounded border transition-colors text-center ${
                   statusFilter === s.id
-                    ? 'bg-emerald-600 border-emerald-600 text-white shadow-xs'
-                    : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300 hover:bg-slate-100'
+                    ? 'bg-slate-900 dark:bg-white border-slate-900 dark:border-white text-white dark:text-slate-900'
+                    : 'bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100'
                 }`}
               >
                 {s.label}
@@ -187,33 +186,36 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
 
-      {/* 3. Week Quick Navigator */}
-      <div className="bg-white/90 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-800/90 rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col gap-3">
+      {/* 3. Weekly Schedule */}
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col gap-2.5">
         <div className="flex items-center justify-between">
-          <h4 className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500">
-            Sprint Timeline
-          </h4>
+          <div className="flex items-center gap-1.5">
+            <Calendar className="w-3.5 h-3.5 text-slate-500" />
+            <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+              Weekly Schedule
+            </h4>
+          </div>
           {weekFilter !== 'all' && (
             <button
               onClick={() => onWeekChange('all')}
-              className="text-[11px] text-sky-600 dark:text-sky-400 font-bold hover:underline"
+              className="text-[11px] text-sky-600 dark:text-sky-400 font-semibold hover:underline"
             >
-              Reset Week
+              Reset
             </button>
           )}
         </div>
 
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-col gap-1">
           <button
             onClick={() => onWeekChange('all')}
-            className={`w-full text-left p-2.5 rounded-xl border text-xs font-bold transition-all flex items-center justify-between ${
+            className={`w-full text-left p-2 rounded-lg border text-xs font-semibold transition-colors flex items-center justify-between ${
               weekFilter === 'all'
-                ? 'bg-sky-600 border-sky-600 text-white shadow-xs'
-                : 'bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700/60 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+                ? 'bg-slate-900 dark:bg-white border-slate-900 dark:border-white text-white dark:text-slate-900'
+                : 'bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700/60 text-slate-700 dark:text-slate-300 hover:bg-slate-100'
             }`}
           >
-            <span>Show All 5 Weeks (Days 01–35)</span>
-            <span className="text-[11px] opacity-80">175 P</span>
+            <span>All Weeks (Days 01–35)</span>
+            <span className="font-mono text-[11px] opacity-75">175 P</span>
           </button>
 
           {weeks.map((w) => {
@@ -228,14 +230,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <button
                 key={w.num}
                 onClick={() => onWeekChange(w.num)}
-                className={`w-full text-left p-2.5 rounded-xl border text-xs transition-all flex flex-col gap-1.5 ${
+                className={`w-full text-left p-2 rounded-lg border text-xs transition-colors flex flex-col gap-1 ${
                   isSelected
-                    ? 'bg-sky-50 dark:bg-sky-950/40 border-sky-500 dark:border-sky-500 shadow-xs ring-1 ring-sky-500'
-                    : 'bg-slate-50/70 dark:bg-slate-800/30 border-slate-200/80 dark:border-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800/70'
+                    ? 'bg-sky-50 dark:bg-sky-950/40 border-sky-500 text-sky-950 dark:text-sky-200'
+                    : 'bg-slate-50/60 dark:bg-slate-800/30 border-slate-200/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800/60'
                 }`}
               >
                 <div className="flex items-center justify-between w-full">
-                  <span className={`font-bold ${isSelected ? 'text-sky-900 dark:text-sky-200' : 'text-slate-800 dark:text-slate-200'}`}>
+                  <span className={`font-semibold ${isSelected ? 'text-sky-900 dark:text-sky-200' : 'text-slate-800 dark:text-slate-200'}`}>
                     {w.title}
                   </span>
                   <span className="text-[10px] font-mono text-slate-400 dark:text-slate-500">
@@ -244,13 +246,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 </div>
 
                 <div className="flex items-center gap-2 w-full">
-                  <div className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                  <div className="flex-1 h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-emerald-500 rounded-full transition-all duration-300"
+                      className="h-full bg-emerald-600 rounded-full transition-all duration-300"
                       style={{ width: `${weekPct}%` }}
                     />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 shrink-0">
+                  <span className="text-[10px] font-mono font-medium text-slate-500 dark:text-slate-400 shrink-0">
                     {weekSolved}/{weekProblems.length} ({weekPct}%)
                   </span>
                 </div>
@@ -260,22 +262,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
 
-      {/* 4. Pattern Lab Quick Access Card */}
-      <div className="rounded-2xl p-4 bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-md flex flex-col gap-2">
-        <div className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-amber-300" />
-          <h4 className="text-xs font-black uppercase tracking-wider text-emerald-100">
-            C Pattern Programs Lab
-          </h4>
+      {/* 4. Pattern Programs Link */}
+      <div className="rounded-xl p-3.5 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col gap-1.5">
+        <div className="flex items-center gap-1.5 text-slate-900 dark:text-white font-semibold text-xs">
+          <Terminal className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+          <span>Pattern Programs Lab</span>
         </div>
-        <p className="text-xs text-emerald-50 leading-relaxed">
-          Master nested loops with 26 visual star, number, alphabet &amp; hollow pattern programs from GeeksforGeeks.
+        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+          26 standard star, number, alphabet, and hollow pattern programs with logic and C code.
         </p>
         <button
           onClick={onNavigateToPatterns}
-          className="mt-1 w-full py-2 px-3 rounded-xl bg-white text-emerald-800 hover:bg-emerald-50 text-xs font-black transition-all text-center shadow-xs active:scale-95"
+          className="mt-1 w-full py-1.5 px-3 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 text-xs font-semibold transition-colors text-center"
         >
-          Explore 26 Patterns ↗
+          Open Pattern Programs →
         </button>
       </div>
     </aside>

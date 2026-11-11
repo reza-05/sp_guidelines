@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sun, Moon, RotateCcw, Printer, Code2, Sparkles, CalendarDays } from 'lucide-react';
+import { Sun, Moon, RotateCcw, Printer, Code2, CalendarDays, Terminal } from 'lucide-react';
 
 interface NavbarProps {
   currentView: 'curriculum' | 'patterns';
@@ -23,40 +23,40 @@ export const Navbar: React.FC<NavbarProps> = ({
   const percentage = Math.round((solvedCount / totalCount) * 100);
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/85 dark:bg-[#090D16]/90 border-b border-slate-200/90 dark:border-slate-800/90 transition-colors shadow-2xs no-print">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-3 sm:gap-4">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/90 dark:bg-[#07090E]/90 border-b border-slate-200 dark:border-slate-800 transition-colors no-print">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
         
         {/* Brand Logo & Title */}
         <div className="flex items-center gap-3">
           <div
             onClick={() => onChangeView('curriculum')}
-            className="flex items-center gap-2.5 cursor-pointer select-none group"
+            className="flex items-center gap-2.5 cursor-pointer select-none"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 text-white flex items-center justify-center shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">
-              <Code2 className="w-5 h-5" />
+            <div className="w-8 h-8 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center font-mono font-bold text-sm">
+              <Code2 className="w-4 h-4" />
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-sm sm:text-base text-slate-900 dark:text-white tracking-tight leading-none group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+              <span className="font-bold text-sm text-slate-900 dark:text-white tracking-tight leading-none">
                 SP Guidelines
               </span>
-              <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase mt-0.5">
-                C Problem Solving
+              <span className="text-[10px] text-slate-500 dark:text-slate-400 font-mono tracking-normal mt-0.5">
+                C Curriculum
               </span>
             </div>
           </div>
 
           {/* View Mode Segmented Tabs */}
-          <div className="hidden md:flex items-center bg-slate-100/90 dark:bg-slate-800/90 p-1 rounded-xl border border-slate-200/80 dark:border-slate-700/80 ml-2">
+          <div className="hidden md:flex items-center bg-slate-100 dark:bg-slate-800 p-0.5 rounded-lg border border-slate-200 dark:border-slate-700 ml-3">
             <button
               onClick={() => onChangeView('curriculum')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-colors ${
                 currentView === 'curriculum'
-                  ? 'bg-white dark:bg-slate-900 text-sky-600 dark:text-sky-400 shadow-xs'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              <CalendarDays className="w-3.5 h-3.5" />
-              <span>35-Day Curriculum</span>
+              <CalendarDays className="w-3.5 h-3.5 text-sky-500" />
+              <span>Curriculum</span>
               <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
                 175
               </span>
@@ -64,62 +64,62 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => onChangeView('patterns')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold transition-colors ${
                 currentView === 'patterns'
-                  ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-              <span>Pattern Lab</span>
-              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/30 text-emerald-100">
+              <Terminal className="w-3.5 h-3.5 text-emerald-500" />
+              <span>Pattern Programs</span>
+              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
                 26
               </span>
             </button>
           </div>
         </div>
 
-        {/* Mobile View Switcher (Visible on small screens) */}
+        {/* Mobile View Switcher */}
         <div className="flex md:hidden items-center bg-slate-100 dark:bg-slate-800 p-0.5 rounded-lg border border-slate-200 dark:border-slate-700 w-full sm:w-auto order-3 sm:order-2">
           <button
             onClick={() => onChangeView('curriculum')}
-            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1 px-3 py-1 rounded-md text-xs font-bold transition-all ${
+            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
               currentView === 'curriculum'
-                ? 'bg-white dark:bg-slate-900 text-sky-600 dark:text-sky-400 shadow-xs'
+                ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                 : 'text-slate-600 dark:text-slate-400'
             }`}
           >
-            <CalendarDays className="w-3.5 h-3.5" />
+            <CalendarDays className="w-3.5 h-3.5 text-sky-500" />
             <span>Curriculum</span>
           </button>
 
           <button
             onClick={() => onChangeView('patterns')}
-            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1 px-3 py-1 rounded-md text-xs font-bold transition-all ${
+            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
               currentView === 'patterns'
-                ? 'bg-emerald-600 text-white shadow-xs'
+                ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs'
                 : 'text-slate-600 dark:text-slate-400'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-            <span>Pattern Lab</span>
+            <Terminal className="w-3.5 h-3.5 text-emerald-500" />
+            <span>Patterns</span>
           </button>
         </div>
 
-        {/* Right Side Tools & GitHub Link */}
-        <div className="flex items-center gap-2 sm:gap-2.5 order-2 sm:order-3">
-          {/* Header Solved Counter (Curriculum View) */}
+        {/* Right Side Tools */}
+        <div className="flex items-center gap-2 order-2 sm:order-3">
+          {/* Header Solved Counter */}
           {currentView === 'curriculum' && (
-            <div className="hidden xl:flex items-center gap-2 bg-slate-100 dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/80 px-3 py-1.5 rounded-full text-xs font-bold text-slate-800 dark:text-slate-200">
-              <span>{solvedCount} / {totalCount} Solved</span>
-              <span className="text-emerald-600 dark:text-emerald-400 font-black">({percentage}%)</span>
+            <div className="hidden xl:flex items-center gap-2 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300">
+              <span className="font-mono">{solvedCount}/{totalCount}</span>
+              <span className="font-bold text-emerald-600 dark:text-emerald-400">({percentage}%)</span>
             </div>
           )}
 
           {/* Theme Toggle */}
           <button
             onClick={onToggleTheme}
-            className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-all"
+            className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-colors"
             aria-label="Toggle Dark/Light Mode"
             title="Toggle Theme"
           >
@@ -130,20 +130,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           {currentView === 'curriculum' && (
             <button
               onClick={onReset}
-              className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-rose-50 dark:bg-slate-800 dark:hover:bg-rose-950/40 text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-all"
-              title="Reset All Solved Progress"
+              className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-rose-50 dark:bg-slate-800 dark:hover:bg-rose-950/40 text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-colors"
+              title="Reset All Progress"
             >
-              <RotateCcw className="w-4 h-4" />
+              <RotateCcw className="w-3.5 h-3.5" />
             </button>
           )}
 
           {/* PDF Print Button */}
           <button
             onClick={() => window.print()}
-            className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-all"
+            className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-colors"
             title="Print or Export to PDF"
           >
-            <Printer className="w-4 h-4" />
+            <Printer className="w-3.5 h-3.5" />
           </button>
 
           {/* GitHub Repo Link */}
@@ -151,7 +151,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             href="https://github.com/reza-05/sp_guidelines"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-white text-white dark:text-slate-900 text-xs font-bold transition-all shadow-xs"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-white text-white dark:text-slate-900 text-xs font-semibold transition-colors"
           >
             <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
               <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
