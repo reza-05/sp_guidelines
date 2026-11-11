@@ -95,8 +95,8 @@ export const DayCard: React.FC<DayCardProps> = ({
         </div>
       </div>
 
-      {/* 2. Tutorial Section: Sequential 1-by-1 List with Numbering */}
-      {hasVideos && (
+      {/* 2. Tutorial Section or Dedicated Practice Notice */}
+      {hasVideos ? (
         <div className="flex flex-col gap-3.5">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 flex-1">
@@ -178,6 +178,20 @@ export const DayCard: React.FC<DayCardProps> = ({
             })}
           </div>
         </div>
+      ) : (
+        <div className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-sky-50/60 dark:bg-sky-950/20 border border-sky-200/70 dark:border-sky-800/40 text-slate-700 dark:text-slate-300">
+          <div className="w-9 h-9 rounded-xl bg-sky-500/15 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-500/25">
+            <Code2 className="w-4.5 h-4.5 stroke-[2.2]" />
+          </div>
+          <div className="text-xs sm:text-sm">
+            <span className="font-extrabold text-slate-900 dark:text-white">
+              Dedicated Practice Day:
+            </span>{' '}
+            <span>
+              No new lecture videos today. Focus directly on applying concepts from previous lectures to solve the 5 curated problems below.
+            </span>
+          </div>
+        </div>
       )}
 
       {/* Special Nested Loop Pattern Lab Callout */}
@@ -214,10 +228,8 @@ export const DayCard: React.FC<DayCardProps> = ({
         </div>
       )}
 
-      {/* 3. Generous Space & Divider between Tutorial and Problems */}
-      {hasVideos && (
-        <div className="my-2 sm:my-3 border-t border-slate-200 dark:border-slate-800" />
-      )}
+      {/* 3. Space & Divider between Tutorial/Notice and Problems */}
+      <div className="my-1 sm:my-2 border-t border-slate-200/80 dark:border-slate-800/80" />
 
       {/* 4. Related Problems Section */}
       <div className="flex flex-col gap-3.5">

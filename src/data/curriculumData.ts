@@ -5,7 +5,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 1,
     "module": 1,
     "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)",
-    "title": "Day 01 \u2014 First Steps: I/O, Variables & Simple Arithmetic in C",
+    "title": "Day 01 — First Steps: I/O, Variables & Simple Arithmetic in C",
     "tagline": "Basic C program structure, main(), printf(), format specifiers, int variables, scanf(), and arithmetic (+, -, *).",
     "theme": "theme-d1",
     "bct": [
@@ -18,11 +18,6 @@ export const curriculumData: DayCurriculum[] = [
         "id": "yrhf85_bqP0",
         "title": "Ep 02: Data Types",
         "url": "https://youtu.be/yrhf85_bqP0"
-      },
-      {
-        "id": "WJznertdKXg",
-        "title": "Ep 03: Integer & Long",
-        "url": "https://youtu.be/WJznertdKXg"
       },
       {
         "id": "bz2fhsxH6dw",
@@ -43,9 +38,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "01.1",
         "title": "Chef and Vacation Transportation",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 557",
+        "badgeText": "CC ★ 557",
         "badgeClass": "rate-cc",
-        "desc": "Evaluating air versus rail travel choices \u2022 CHEFTRANS",
+        "desc": "Evaluating air versus rail travel choices • CHEFTRANS",
         "url": "https://www.codechef.com/problems/CHEFTRANS",
         "btnClass": "btn-cc"
       },
@@ -54,9 +49,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "01.2",
         "title": "Blackjack",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 590",
+        "badgeText": "CC ★ 590",
         "badgeClass": "rate-cc",
-        "desc": "Determining winning third card value \u2022 BLACKJACK",
+        "desc": "Determining winning third card value • BLACKJACK",
         "url": "https://www.codechef.com/problems/BLACKJACK",
         "btnClass": "btn-cc"
       },
@@ -67,7 +62,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Tiling a rectangular grid with dominoes \u2022 50A",
+        "desc": "Tiling a rectangular grid with dominoes • 50A",
         "url": "https://codeforces.com/problemset/problem/50/A",
         "btnClass": "btn-cf"
       },
@@ -78,7 +73,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Minimum steps to reach friend coordinate \u2022 617A",
+        "desc": "Minimum steps to reach friend coordinate • 617A",
         "url": "https://codeforces.com/problemset/problem/617/A",
         "btnClass": "btn-cf"
       },
@@ -89,7 +84,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Minutes remaining until midnight \u2022 1283A",
+        "desc": "Minutes remaining until midnight • 1283A",
         "url": "https://codeforces.com/problemset/problem/1283/A",
         "btnClass": "btn-cf"
       }
@@ -99,7 +94,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 2,
     "module": 1,
     "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)",
-    "title": "Day 02 \u2014 Arithmetic Operators, Modulo (%) & Large Integers (long long)",
+    "title": "Day 02 — Arithmetic Operators, Modulo (%) & Large Integers (long long)",
     "tagline": "Integer division truncation, modulo operator, long long int data type, and overflow prevention.",
     "theme": "theme-d2",
     "bct": [
@@ -109,27 +104,26 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/WJznertdKXg"
       },
       {
+        "id": "vHCCmlAwEO4",
+        "title": "Ep 04: Float & Double",
+        "url": "https://youtu.be/vHCCmlAwEO4"
+      },
+      {
         "id": "AR2HKNPntME",
         "title": "Ep 10: Operators",
         "url": "https://youtu.be/AR2HKNPntME"
       }
     ],
-    "ac": [
-      {
-        "id": "Dxu7GKtdbnA",
-        "title": "Lec 2: Operators & Data Types",
-        "url": "https://youtu.be/Dxu7GKtdbnA"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_2_1",
         "numId": "02.1",
         "title": "Chef and Water Bottles",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 602",
+        "badgeText": "CC ★ 602",
         "badgeClass": "rate-cc",
-        "desc": "Water bottle filling capacity \u2022 CHEFBOTTLE",
+        "desc": "Water bottle filling capacity • CHEFBOTTLE",
         "url": "https://www.codechef.com/problems/CHEFBOTTLE",
         "btnClass": "btn-cc"
       },
@@ -138,9 +132,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "02.2",
         "title": "Pass or Fail",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 614",
+        "badgeText": "CC ★ 614",
         "badgeClass": "rate-cc",
-        "desc": "Evaluating passing cutoff with penalties \u2022 PASSORFAIL",
+        "desc": "Evaluating passing cutoff with penalties • PASSORFAIL",
         "url": "https://www.codechef.com/problems/PASSORFAIL",
         "btnClass": "btn-cc"
       },
@@ -151,7 +145,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Flagstone paving for large square \u2022 1A",
+        "desc": "Flagstone paving for large square • 1A",
         "url": "https://codeforces.com/problemset/problem/1/A",
         "btnClass": "btn-cf"
       },
@@ -162,7 +156,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Apartment number to floor mapping \u2022 1426A",
+        "desc": "Apartment number to floor mapping • 1426A",
         "url": "https://codeforces.com/problemset/problem/1426/A",
         "btnClass": "btn-cf"
       },
@@ -173,7 +167,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Finding original numbers from pairwise sums \u2022 1154A",
+        "desc": "Finding original numbers from pairwise sums • 1154A",
         "url": "https://codeforces.com/problemset/problem/1154/A",
         "btnClass": "btn-cf"
       }
@@ -183,7 +177,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 3,
     "module": 1,
     "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)",
-    "title": "Day 03 \u2014 Relational Operators & Basic if-else Decisions",
+    "title": "Day 03 — Relational Operators & Basic if-else Decisions",
     "tagline": "Boolean logic, relational operators (>, <, ==, !=, >=, <=), and two-way conditional branching.",
     "theme": "theme-d3",
     "bct": [
@@ -208,7 +202,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Dividing watermelon into two even parts \u2022 4A",
+        "desc": "Dividing watermelon into two even parts • 4A",
         "url": "https://codeforces.com/problemset/problem/4/A",
         "btnClass": "btn-cf"
       },
@@ -217,9 +211,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "03.2",
         "title": "Speed Limit Test",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 635",
+        "badgeText": "CC ★ 635",
         "badgeClass": "rate-cc",
-        "desc": "Speed comparison between Alice and Bob \u2022 SPEEDTEST",
+        "desc": "Speed comparison between Alice and Bob • SPEEDTEST",
         "url": "https://www.codechef.com/problems/SPEEDTEST",
         "btnClass": "btn-cc"
       },
@@ -230,7 +224,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Parity check determining winning player \u2022 959A",
+        "desc": "Parity check determining winning player • 959A",
         "url": "https://codeforces.com/problemset/problem/959/A",
         "btnClass": "btn-cf"
       },
@@ -239,9 +233,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "03.4",
         "title": "Weights",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 647",
+        "badgeText": "CC ★ 647",
         "badgeClass": "rate-cc",
-        "desc": "Measuring weight using available pans \u2022 WEIGHTS",
+        "desc": "Measuring weight using available pans • WEIGHTS",
         "url": "https://www.codechef.com/problems/WEIGHTS",
         "btnClass": "btn-cc"
       },
@@ -252,7 +246,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Tournament fairness based on player skill \u2022 1535A",
+        "desc": "Tournament fairness based on player skill • 1535A",
         "url": "https://codeforces.com/problemset/problem/1535/A",
         "btnClass": "btn-cf"
       }
@@ -262,7 +256,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 4,
     "module": 1,
     "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)",
-    "title": "Day 04 \u2014 Multi-Branch Decisions: else-if Ladders & Logical Operators",
+    "title": "Day 04 — Multi-Branch Decisions: else-if Ladders & Logical Operators",
     "tagline": "Multiple alternatives with else if, logical AND (&&), logical OR (||), and NOT (!).",
     "theme": "theme-d4",
     "bct": [
@@ -272,22 +266,16 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/YiSSRggLTg0"
       }
     ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Else-If Ladders",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_4_1",
         "numId": "04.1",
         "title": "Problem Category",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 658",
+        "badgeText": "CC ★ 658",
         "badgeClass": "rate-cc",
-        "desc": "Rating classification into problem tiers \u2022 PROBCAT",
+        "desc": "Rating classification into problem tiers • PROBCAT",
         "url": "https://www.codechef.com/problems/PROBCAT",
         "btnClass": "btn-cc"
       },
@@ -298,7 +286,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Contest division placement based on rating \u2022 1669A",
+        "desc": "Contest division placement based on rating • 1669A",
         "url": "https://codeforces.com/problemset/problem/1669/A",
         "btnClass": "btn-cf"
       },
@@ -307,9 +295,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "04.3",
         "title": "Chef and Spells",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 671",
+        "badgeText": "CC ★ 671",
         "badgeClass": "rate-cc",
-        "desc": "Selecting most powerful spell combinations \u2022 CHFSPL",
+        "desc": "Selecting most powerful spell combinations • CHFSPL",
         "url": "https://www.codechef.com/problems/CHFSPL",
         "btnClass": "btn-cc"
       },
@@ -320,7 +308,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "Maximizing expression value with operations \u2022 479A",
+        "desc": "Maximizing expression value with operations • 479A",
         "url": "https://codeforces.com/problemset/problem/479/A",
         "btnClass": "btn-cf"
       },
@@ -331,7 +319,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Identifying the middle value of three numbers \u2022 1760A",
+        "desc": "Identifying the middle value of three numbers • 1760A",
         "url": "https://codeforces.com/problemset/problem/1760/A",
         "btnClass": "btn-cf"
       }
@@ -341,32 +329,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 5,
     "module": 1,
     "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)",
-    "title": "Day 05 \u2014 Complex Conditionals & Multi-Parameter Validation",
+    "title": "Day 05 — Complex Conditionals & Multi-Parameter Validation",
     "tagline": "Compound conditions, parameter ranges, geometry checks, and tax bracket calculations.",
     "theme": "theme-d5",
-    "bct": [
-      {
-        "id": "YiSSRggLTg0",
-        "title": "Ep 08: Else If Chains",
-        "url": "https://youtu.be/YiSSRggLTg0"
-      }
-    ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Conditionals Practice",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "bct": [],
+    "ac": [],
     "problems": [
       {
         "id": "p_5_1",
         "numId": "05.1",
         "title": "Grade The Steel",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 709",
+        "badgeText": "CC ★ 709",
         "badgeClass": "rate-cc",
-        "desc": "Industrial steel grading by quality checks \u2022 FLOW014",
+        "desc": "Industrial steel grading by quality checks • FLOW014",
         "url": "https://www.codechef.com/problems/FLOW014",
         "btnClass": "btn-cc"
       },
@@ -375,9 +351,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "05.2",
         "title": "Airline Restrictions",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 722",
+        "badgeText": "CC ★ 722",
         "badgeClass": "rate-cc",
-        "desc": "Luggage weight verification for flight \u2022 AIRLINE",
+        "desc": "Luggage weight verification for flight • AIRLINE",
         "url": "https://www.codechef.com/problems/AIRLINE",
         "btnClass": "btn-cc"
       },
@@ -386,9 +362,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "05.3",
         "title": "Gross Salary",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 734",
+        "badgeText": "CC ★ 734",
         "badgeClass": "rate-cc",
-        "desc": "Gross salary computation from basic pay \u2022 FLOW011",
+        "desc": "Gross salary computation from basic pay • FLOW011",
         "url": "https://www.codechef.com/problems/FLOW011",
         "btnClass": "btn-cc"
       },
@@ -397,9 +373,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "05.4",
         "title": "Rectangle",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 745",
+        "badgeText": "CC ★ 745",
         "badgeClass": "rate-cc",
-        "desc": "Checking four side lengths for a rectangle \u2022 RECTANGL",
+        "desc": "Checking four side lengths for a rectangle • RECTANGL",
         "url": "https://www.codechef.com/problems/RECTANGL",
         "btnClass": "btn-cc"
       },
@@ -410,7 +386,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Runner ranking based on distances \u2022 1692A",
+        "desc": "Runner ranking based on distances • 1692A",
         "url": "https://codeforces.com/problemset/problem/1692/A",
         "btnClass": "btn-cf"
       }
@@ -420,32 +396,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 6,
     "module": 1,
     "moduleName": "Module 1: Start with C (I/O, Variables, Data Types & Conditionals)",
-    "title": "Day 06 \u2014 Conditional Logic Review & Scalar Math",
+    "title": "Day 06 — Conditional Logic Review & Scalar Math",
     "tagline": "Comprehensive practice on I/O, arithmetic, and branch logic without loops or arrays.",
     "theme": "theme-d6",
-    "bct": [
-      {
-        "id": "AR2HKNPntME",
-        "title": "Ep 10: Operators",
-        "url": "https://youtu.be/AR2HKNPntME"
-      }
-    ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Conditionals Review",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "bct": [],
+    "ac": [],
     "problems": [
       {
         "id": "p_6_1",
         "numId": "06.1",
         "title": "Chef and Stock Prices",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 756",
+        "badgeText": "CC ★ 756",
         "badgeClass": "rate-cc",
-        "desc": "Stock price fluctuation and target range \u2022 CSTOCK",
+        "desc": "Stock price fluctuation and target range • CSTOCK",
         "url": "https://www.codechef.com/problems/CSTOCK",
         "btnClass": "btn-cc"
       },
@@ -454,9 +418,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "06.2",
         "title": "Possible Victory",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 768",
+        "badgeText": "CC ★ 768",
         "badgeClass": "rate-cc",
-        "desc": "Match outcome feasibility in remaining overs \u2022 T20MCH",
+        "desc": "Match outcome feasibility in remaining overs • T20MCH",
         "url": "https://www.codechef.com/problems/T20MCH",
         "btnClass": "btn-cc"
       },
@@ -467,7 +431,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Ticket number luckiness verification \u2022 1676A",
+        "desc": "Ticket number luckiness verification • 1676A",
         "url": "https://codeforces.com/problemset/problem/1676/A",
         "btnClass": "btn-cf"
       },
@@ -478,7 +442,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Finding maximum number with desired remainder \u2022 1378A",
+        "desc": "Finding maximum number with desired remainder • 1378A",
         "url": "https://codeforces.com/problemset/problem/1378/A",
         "btnClass": "btn-cf"
       },
@@ -489,7 +453,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Total cost calculation for banana purchases \u2022 546A",
+        "desc": "Total cost calculation for banana purchases • 546A",
         "url": "https://codeforces.com/problemset/problem/546/A",
         "btnClass": "btn-cf"
       }
@@ -499,32 +463,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 7,
     "module": 2,
     "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics",
-    "title": "Day 07 \u2014 Nested if-else & Boundary Decision Trees",
+    "title": "Day 07 — Nested if-else & Boundary Decision Trees",
     "tagline": "Multi-tier conditionals, state machines, interval classification, and nested checks.",
     "theme": "theme-d7",
-    "bct": [
-      {
-        "id": "YiSSRggLTg0",
-        "title": "Ep 08: Else If Chains",
-        "url": "https://youtu.be/YiSSRggLTg0"
-      }
-    ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Nested Conditionals",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "bct": [],
+    "ac": [],
     "problems": [
       {
         "id": "p_7_1",
         "numId": "07.1",
         "title": "Mario and Transformation",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 778",
+        "badgeText": "CC ★ 778",
         "badgeClass": "rate-cc",
-        "desc": "State cycle tracking after eating mushrooms \u2022 TRANSFORM",
+        "desc": "State cycle tracking after eating mushrooms • TRANSFORM",
         "url": "https://www.codechef.com/problems/TRANSFORM",
         "btnClass": "btn-cc"
       },
@@ -533,9 +485,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "07.2",
         "title": "Is it a VOWEL or CONSONANT",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 789",
+        "badgeText": "CC ★ 789",
         "badgeClass": "rate-cc",
-        "desc": "Character vowel classification \u2022 VOWELTB",
+        "desc": "Character vowel classification • VOWELTB",
         "url": "https://www.codechef.com/problems/VOWELTB",
         "btnClass": "btn-cc"
       },
@@ -544,9 +496,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "07.3",
         "title": "Smallest Numbers of Notes",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 798",
+        "badgeText": "CC ★ 798",
         "badgeClass": "rate-cc",
-        "desc": "Optimal currency note denomination breakdown \u2022 FLOW005",
+        "desc": "Optimal currency note denomination breakdown • FLOW005",
         "url": "https://www.codechef.com/problems/FLOW005",
         "btnClass": "btn-cc"
       },
@@ -557,7 +509,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Reaching target one through operations \u2022 1374B",
+        "desc": "Reaching target one through operations • 1374B",
         "url": "https://codeforces.com/problemset/problem/1374/B",
         "btnClass": "btn-cf"
       },
@@ -568,7 +520,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Checking for odd prime factors \u2022 1475A",
+        "desc": "Checking for odd prime factors • 1475A",
         "url": "https://codeforces.com/problemset/problem/1475/A",
         "btnClass": "btn-cf"
       }
@@ -578,7 +530,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 8,
     "module": 2,
     "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics",
-    "title": "Day 08 \u2014 The switch Statement & Bidirectional Conversion",
+    "title": "Day 08 — The switch Statement & Bidirectional Conversion",
     "tagline": "switch, case, default, break, converting switch to if-else, and if-else to switch.",
     "theme": "theme-d8",
     "bct": [
@@ -588,22 +540,16 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/v7I6-qm2ZYU"
       }
     ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Switch Case",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_8_1",
         "numId": "08.1",
         "title": "Chef and Remissness",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 809",
+        "badgeText": "CC ★ 809",
         "badgeClass": "rate-cc",
-        "desc": "Min and max guard counting \u2022 REMISS",
+        "desc": "Min and max guard counting • REMISS",
         "url": "https://www.codechef.com/problems/REMISS",
         "btnClass": "btn-cc"
       },
@@ -612,9 +558,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "08.2",
         "title": "Decrement OR Increment",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 818",
+        "badgeText": "CC ★ 818",
         "badgeClass": "rate-cc",
-        "desc": "Conditional increment or decrement update \u2022 DECINC",
+        "desc": "Conditional increment or decrement update • DECINC",
         "url": "https://www.codechef.com/problems/DECINC",
         "btnClass": "btn-cc"
       },
@@ -623,9 +569,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "08.3",
         "title": "Id and Ship",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 825",
+        "badgeText": "CC ★ 825",
         "badgeClass": "rate-cc",
-        "desc": "Ship class categorization by identification letter \u2022 FLOW010",
+        "desc": "Ship class categorization by identification letter • FLOW010",
         "url": "https://www.codechef.com/problems/FLOW010",
         "btnClass": "btn-cc"
       },
@@ -636,7 +582,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Minimum banknotes required for payment \u2022 996A",
+        "desc": "Minimum banknotes required for payment • 996A",
         "url": "https://codeforces.com/problemset/problem/996/A",
         "btnClass": "btn-cf"
       },
@@ -647,7 +593,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Round-by-round dice match scoring \u2022 703A",
+        "desc": "Round-by-round dice match scoring • 703A",
         "url": "https://codeforces.com/problemset/problem/703/A",
         "btnClass": "btn-cf"
       }
@@ -657,7 +603,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 9,
     "module": 2,
     "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics",
-    "title": "Day 09 \u2014 The for Loop: Iterations, Increments & Counters",
+    "title": "Day 09 — The for Loop: Iterations, Increments & Counters",
     "tagline": "Loop initialization, condition check, step increment, and running counters across test cases.",
     "theme": "theme-d9",
     "bct": [
@@ -667,13 +613,7 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/6-9xhJsp1Vo"
       }
     ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Loops Intro",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_9_1",
@@ -682,7 +622,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Counting consensus problems among team members \u2022 231A",
+        "desc": "Counting consensus problems among team members • 231A",
         "url": "https://codeforces.com/problemset/problem/231/A",
         "btnClass": "btn-cf"
       },
@@ -693,7 +633,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Step-by-step subtraction process \u2022 977A",
+        "desc": "Step-by-step subtraction process • 977A",
         "url": "https://codeforces.com/problemset/problem/977/A",
         "btnClass": "btn-cf"
       },
@@ -704,7 +644,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Annual weight growth comparison \u2022 791A",
+        "desc": "Annual weight growth comparison • 791A",
         "url": "https://codeforces.com/problemset/problem/791/A",
         "btnClass": "btn-cf"
       },
@@ -715,7 +655,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Evaluating problem clarity feedback \u2022 1030A",
+        "desc": "Evaluating problem clarity feedback • 1030A",
         "url": "https://codeforces.com/problemset/problem/1030/A",
         "btnClass": "btn-cf"
       },
@@ -726,7 +666,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Road barrier height checking \u2022 677A",
+        "desc": "Road barrier height checking • 677A",
         "url": "https://codeforces.com/problemset/problem/677/A",
         "btnClass": "btn-cf"
       }
@@ -736,7 +676,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 10,
     "module": 2,
     "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics",
-    "title": "Day 10 \u2014 while & do-while Loops: Digit Extraction & Accumulators",
+    "title": "Day 10 — while & do-while Loops: Digit Extraction & Accumulators",
     "tagline": "Condition-controlled repetition, do-while guarantees, digit isolation with % 10 and / 10, and running sums.",
     "theme": "theme-d10",
     "bct": [
@@ -751,22 +691,16 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/U6SfSl3Nf-g"
       }
     ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: while & do-while",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_10_1",
         "numId": "10.1",
         "title": "Sum of Digits",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 554",
+        "badgeText": "CC ★ 554",
         "badgeClass": "rate-cc",
-        "desc": "Sum of individual digits of integers \u2022 FLOW006",
+        "desc": "Sum of individual digits of integers • FLOW006",
         "url": "https://www.codechef.com/problems/FLOW006",
         "btnClass": "btn-cc"
       },
@@ -775,9 +709,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "10.2",
         "title": "Lucky Four",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 600",
+        "badgeText": "CC ★ 600",
         "badgeClass": "rate-cc",
-        "desc": "Counting occurrences of digit four \u2022 LUCKFOUR",
+        "desc": "Counting occurrences of digit four • LUCKFOUR",
         "url": "https://www.codechef.com/problems/LUCKFOUR",
         "btnClass": "btn-cc"
       },
@@ -786,9 +720,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "10.3",
         "title": "Reverse The Number",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 625",
+        "badgeText": "CC ★ 625",
         "badgeClass": "rate-cc",
-        "desc": "Reversing integer digits \u2022 FLOW007",
+        "desc": "Reversing integer digits • FLOW007",
         "url": "https://www.codechef.com/problems/FLOW007",
         "btnClass": "btn-cc"
       },
@@ -797,9 +731,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "10.4",
         "title": "Counting Pretty Numbers",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 672",
+        "badgeText": "CC ★ 672",
         "badgeClass": "rate-cc",
-        "desc": "Identifying pretty numbers in given range \u2022 NUM239",
+        "desc": "Identifying pretty numbers in given range • NUM239",
         "url": "https://www.codechef.com/problems/NUM239",
         "btnClass": "btn-cc"
       },
@@ -810,7 +744,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Peak passenger occupancy monitoring \u2022 116A",
+        "desc": "Peak passenger occupancy monitoring • 116A",
         "url": "https://codeforces.com/problemset/problem/116/A",
         "btnClass": "btn-cf"
       }
@@ -820,7 +754,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 11,
     "module": 2,
     "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics",
-    "title": "Day 11 \u2014 Loop Control Flow: break, continue & Early Exits",
+    "title": "Day 11 — Loop Control Flow: break, continue & Early Exits",
     "tagline": "Skipping iterations, loop early termination, sentinel value patterns, and search halts.",
     "theme": "theme-d11",
     "bct": [
@@ -830,13 +764,7 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/UQVM-empou4"
       }
     ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Loop Control",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_11_1",
@@ -845,7 +773,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Contest problem solving time management \u2022 751A",
+        "desc": "Contest problem solving time management • 751A",
         "url": "https://codeforces.com/problemset/problem/751/A",
         "btnClass": "btn-cf"
       },
@@ -854,9 +782,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "11.2",
         "title": "Judging Delay",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 693",
+        "badgeText": "CC ★ 693",
         "badgeClass": "rate-cc",
-        "desc": "Submission timestamp delay tracking \u2022 JDELAY",
+        "desc": "Submission timestamp delay tracking • JDELAY",
         "url": "https://www.codechef.com/problems/JDELAY",
         "btnClass": "btn-cc"
       },
@@ -867,7 +795,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Moves needed to reach divisible target \u2022 1328A",
+        "desc": "Moves needed to reach divisible target • 1328A",
         "url": "https://codeforces.com/problemset/problem/1328/A",
         "btnClass": "btn-cf"
       },
@@ -876,9 +804,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "11.4",
         "title": "Valid Triangles",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 710",
+        "badgeText": "CC ★ 710",
         "badgeClass": "rate-cc",
-        "desc": "Triangle internal angle validation \u2022 FLOW013",
+        "desc": "Triangle internal angle validation • FLOW013",
         "url": "https://www.codechef.com/problems/FLOW013",
         "btnClass": "btn-cc"
       },
@@ -889,7 +817,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Tracking statement operations \u2022 282A",
+        "desc": "Tracking statement operations • 282A",
         "url": "https://codeforces.com/problemset/problem/282/A",
         "btnClass": "btn-cf"
       }
@@ -899,7 +827,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 12,
     "module": 2,
     "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics",
-    "title": "Day 12 \u2014 Loop Practice & Number Analysis",
+    "title": "Day 12 — Loop Practice & Number Analysis",
     "tagline": "Accumulation loops, parity distribution, and digit-level simulation patterns.",
     "theme": "theme-d12",
     "bct": [
@@ -909,22 +837,16 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/QGkMWkOQro0"
       }
     ],
-    "ac": [
-      {
-        "id": "qR9U6bKxJ7g",
-        "title": "Lec 3: Loop Exercises",
-        "url": "https://youtu.be/qR9U6bKxJ7g"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_12_1",
         "numId": "12.1",
         "title": "Candy Love",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 740",
+        "badgeText": "CC ★ 740",
         "badgeClass": "rate-cc",
-        "desc": "Fair candy distribution feasibility \u2022 CNDLOVE",
+        "desc": "Fair candy distribution feasibility • CNDLOVE",
         "url": "https://www.codechef.com/problems/CNDLOVE",
         "btnClass": "btn-cc"
       },
@@ -933,9 +855,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "12.2",
         "title": "Banknotes and Sweets",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 830",
+        "badgeText": "CC ★ 830",
         "badgeClass": "rate-cc",
-        "desc": "Banknote calculation for sweet purchase \u2022 BUYING2",
+        "desc": "Banknote calculation for sweet purchase • BUYING2",
         "url": "https://www.codechef.com/problems/BUYING2",
         "btnClass": "btn-cc"
       },
@@ -946,7 +868,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Card statement verification rules \u2022 908A",
+        "desc": "Card statement verification rules • 908A",
         "url": "https://codeforces.com/problemset/problem/908/A",
         "btnClass": "btn-cf"
       },
@@ -957,7 +879,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Alternating emotion sequence expression \u2022 705A",
+        "desc": "Alternating emotion sequence expression • 705A",
         "url": "https://codeforces.com/problemset/problem/705/A",
         "btnClass": "btn-cf"
       },
@@ -968,7 +890,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Character case dominance conversion \u2022 59A",
+        "desc": "Character case dominance conversion • 59A",
         "url": "https://codeforces.com/problemset/problem/59/A",
         "btnClass": "btn-cf"
       }
@@ -978,77 +900,65 @@ export const curriculumData: DayCurriculum[] = [
     "day": 13,
     "module": 2,
     "moduleName": "Module 2: Advanced Branching, Switch-Case & Loop Mechanics",
-    "title": "Day 13 \u2014 Number Theory with Loops: Divisors, Primes & Euclid GCD",
-    "tagline": "Divisor counting up to sqrt(N), trial division primality testing, and Euclidean GCD loop.",
+    "title": "Day 13 — Core Loop Applications: Factorials, Digits & Palindromes",
+    "tagline": "Computing factorials, reversing numbers, palindrome checking, and digit accumulation without higher-level number theory.",
     "theme": "theme-d1",
-    "bct": [
-      {
-        "id": "QGkMWkOQro0",
-        "title": "Ep 16: Loop Practice",
-        "url": "https://youtu.be/QGkMWkOQro0"
-      }
-    ],
-    "ac": [
-      {
-        "id": "Y4KdgqV1IqA",
-        "title": "Maths for DSA - Euclid GCD & Primes",
-        "url": "https://youtu.be/Y4KdgqV1IqA"
-      }
-    ],
+    "bct": [],
+    "ac": [],
     "problems": [
       {
         "id": "p_13_1",
         "numId": "13.1",
-        "title": "GCD and LCM",
+        "title": "Finding Factorials",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 819",
+        "badgeText": "CC ★ 640",
         "badgeClass": "rate-cc",
-        "desc": "Greatest common divisor and least common multiple \u2022 FLOW016",
-        "url": "https://www.codechef.com/problems/FLOW016",
+        "desc": "Iterative factorial computation with a loop • FLOW018",
+        "url": "https://www.codechef.com/problems/FLOW018",
         "btnClass": "btn-cc"
       },
       {
         "id": "p_13_2",
         "numId": "13.2",
-        "title": "Primality Test",
+        "title": "The Block Game (Palindrome)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 783",
+        "badgeText": "CC ★ 750",
         "badgeClass": "rate-cc",
-        "desc": "Prime number validation \u2022 PRB01",
-        "url": "https://www.codechef.com/problems/PRB01",
+        "desc": "Palindrome number validation via reverse loop • PALL01",
+        "url": "https://www.codechef.com/problems/PALL01",
         "btnClass": "btn-cc"
       },
       {
         "id": "p_13_3",
         "numId": "13.3",
-        "title": "Bachgold Problem",
+        "title": "Drinks",
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Prime representation of even integers \u2022 749A",
-        "url": "https://codeforces.com/problemset/problem/749/A",
+        "desc": "Calculating mean fraction using loop accumulation • 200B",
+        "url": "https://codeforces.com/problemset/problem/200/B",
         "btnClass": "btn-cf"
       },
       {
         "id": "p_13_4",
         "numId": "13.4",
-        "title": "Almost Prime",
+        "title": "George and Accommodation",
         "platform": "Codeforces",
-        "badgeText": "CF 900",
+        "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Counting numbers with two prime factors \u2022 26A",
-        "url": "https://codeforces.com/problemset/problem/26/A",
+        "desc": "Filtering available dorm rooms using loop counting • 467A",
+        "url": "https://codeforces.com/problemset/problem/467/A",
         "btnClass": "btn-cf"
       },
       {
         "id": "p_13_5",
         "numId": "13.5",
-        "title": "K-th Divisor",
+        "title": "Anton and Danik",
         "platform": "Codeforces",
-        "badgeText": "CF 1000",
+        "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Finding the k-th smallest divisor \u2022 762A",
-        "url": "https://codeforces.com/problemset/problem/762/A",
+        "desc": "Tallying chess outcomes across rounds with a loop • 734A",
+        "url": "https://codeforces.com/problemset/problem/734/A",
         "btnClass": "btn-cf"
       }
     ]
@@ -1057,7 +967,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 14,
     "module": 3,
     "moduleName": "Module 3: Nested Loops & Pattern Printing",
-    "title": "Day 14 \u2014 Nested Loops Part 1: Grid Coordinates & Row-Column Iterations",
+    "title": "Day 14 — Nested Loops Part 1: Grid Coordinates & Row-Column Iterations",
     "tagline": "Outer loop controls rows (i), inner loop controls columns (j), coordinate iteration, and grid math.",
     "theme": "theme-d2",
     "bct": [
@@ -1080,9 +990,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "14.1",
         "title": "Fit Squares in Triangle",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 850",
+        "badgeText": "CC ★ 850",
         "badgeClass": "rate-cc",
-        "desc": "Fitting square blocks inside triangle grid \u2022 TRISQ",
+        "desc": "Fitting square blocks inside triangle grid • TRISQ",
         "url": "https://www.codechef.com/problems/TRISQ",
         "btnClass": "btn-cc"
       },
@@ -1091,9 +1001,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "14.2",
         "title": "Chef And Operators",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 580",
+        "badgeText": "CC ★ 580",
         "badgeClass": "rate-cc",
-        "desc": "Relational operator comparison logic \u2022 CHOPRT",
+        "desc": "Relational operator comparison logic • CHOPRT",
         "url": "https://www.codechef.com/problems/CHOPRT",
         "btnClass": "btn-cc"
       },
@@ -1104,7 +1014,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Grid intersection point elimination \u2022 451A",
+        "desc": "Grid intersection point elimination • 451A",
         "url": "https://codeforces.com/problemset/problem/451/A",
         "btnClass": "btn-cf"
       },
@@ -1113,9 +1023,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "14.4",
         "title": "Coronavirus Spread",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 840",
+        "badgeText": "CC ★ 840",
         "badgeClass": "rate-cc",
-        "desc": "Transmission distance simulation \u2022 COVID19",
+        "desc": "Transmission distance simulation • COVID19",
         "url": "https://www.codechef.com/problems/COVID19",
         "btnClass": "btn-cc"
       },
@@ -1126,7 +1036,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Fitting two rectangles in minimal square \u2022 1360A",
+        "desc": "Fitting two rectangles in minimal square • 1360A",
         "url": "https://codeforces.com/problemset/problem/1360/A",
         "btnClass": "btn-cf"
       }
@@ -1136,26 +1046,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 15,
     "module": 3,
     "moduleName": "Module 3: Nested Loops & Pattern Printing",
-    "title": "Day 15 \u2014 Nested Loops Part 2: Triangular & Inverted Iterations",
+    "title": "Day 15 — Nested Loops Part 2: Triangular & Inverted Iterations",
     "tagline": "Right-angled triangles, inverted pyramids, space padding calculations, and coordinate conditions.",
     "theme": "theme-d3",
     "bct": [],
-    "ac": [
-      {
-        "id": "rga_q2N7vU8",
-        "title": "Lec 4: Patterns Part 2",
-        "url": "https://youtu.be/rga_q2N7vU8"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_15_1",
         "numId": "15.1",
         "title": "Farmer Feb",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 821",
+        "badgeText": "CC ★ 821",
         "badgeClass": "rate-cc",
-        "desc": "Finding prime coordinate totals \u2022 RECTSQ",
+        "desc": "Finding prime coordinate totals • RECTSQ",
         "url": "https://www.codechef.com/problems/RECTSQ",
         "btnClass": "btn-cc"
       },
@@ -1164,9 +1068,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "15.2",
         "title": "Second Largest",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 730",
+        "badgeText": "CC ★ 730",
         "badgeClass": "rate-cc",
-        "desc": "Finding median value among elements \u2022 FLOW017",
+        "desc": "Finding median value among elements • FLOW017",
         "url": "https://www.codechef.com/problems/FLOW017",
         "btnClass": "btn-cc"
       },
@@ -1177,7 +1081,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Decomposing numbers into base components \u2022 1352A",
+        "desc": "Decomposing numbers into base components • 1352A",
         "url": "https://codeforces.com/problemset/problem/1352/A",
         "btnClass": "btn-cf"
       },
@@ -1188,7 +1092,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Eliminating adjacent elements within range \u2022 1399A",
+        "desc": "Eliminating adjacent elements within range • 1399A",
         "url": "https://codeforces.com/problemset/problem/1399/A",
         "btnClass": "btn-cf"
       },
@@ -1199,7 +1103,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Pairwise athlete strength difference minimization \u2022 1360B",
+        "desc": "Pairwise athlete strength difference minimization • 1360B",
         "url": "https://codeforces.com/problemset/problem/1360/B",
         "btnClass": "btn-cf"
       }
@@ -1209,26 +1113,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 16,
     "module": 3,
     "moduleName": "Module 3: Nested Loops & Pattern Printing",
-    "title": "Day 16 \u2014 Nested Loops Part 3: Symmetric & Diamond Iterations",
+    "title": "Day 16 — Nested Loops Part 3: Symmetric & Diamond Iterations",
     "tagline": "Diamond patterns, hollow squares, butterfly shapes, and concentric loop bounds.",
     "theme": "theme-d4",
     "bct": [],
-    "ac": [
-      {
-        "id": "rga_q2N7vU8",
-        "title": "Lec 4: Advanced Patterns",
-        "url": "https://youtu.be/rga_q2N7vU8"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_16_1",
         "numId": "16.1",
         "title": "Lucky Tickets",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 860",
+        "badgeText": "CC ★ 860",
         "badgeClass": "rate-cc",
-        "desc": "Two-digit alternating ticket sequence check \u2022 TICKETS5",
+        "desc": "Two-digit alternating ticket sequence check • TICKETS5",
         "url": "https://www.codechef.com/problems/TICKETS5",
         "btnClass": "btn-cc"
       },
@@ -1237,9 +1135,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "16.2",
         "title": "Total Expenses",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 740",
+        "badgeText": "CC ★ 740",
         "badgeClass": "rate-cc",
-        "desc": "Quantity discount boundary evaluation \u2022 FLOW009",
+        "desc": "Quantity discount boundary evaluation • FLOW009",
         "url": "https://www.codechef.com/problems/FLOW009",
         "btnClass": "btn-cc"
       },
@@ -1250,7 +1148,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Manhattan distance to grid center \u2022 263A",
+        "desc": "Manhattan distance to grid center • 263A",
         "url": "https://codeforces.com/problemset/problem/263/A",
         "btnClass": "btn-cf"
       },
@@ -1261,7 +1159,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "Spatial force balance verification \u2022 69A",
+        "desc": "Spatial force balance verification • 69A",
         "url": "https://codeforces.com/problemset/problem/69/A",
         "btnClass": "btn-cf"
       },
@@ -1272,7 +1170,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Filtered number sequence generation \u2022 1560A",
+        "desc": "Filtered number sequence generation • 1560A",
         "url": "https://codeforces.com/problemset/problem/1560/A",
         "btnClass": "btn-cf"
       }
@@ -1282,26 +1180,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 17,
     "module": 3,
     "moduleName": "Module 3: Nested Loops & Pattern Printing",
-    "title": "Day 17 \u2014 Nested Loops Part 4: Coordinate Grids & Geometry",
+    "title": "Day 17 — Nested Loops Part 4: Coordinate Grids & Geometry",
     "tagline": "2D Cartesian coordinate checks, grid parity, nested loop search, and boundary validation.",
     "theme": "theme-d5",
     "bct": [],
-    "ac": [
-      {
-        "id": "rga_q2N7vU8",
-        "title": "Lec 4: Pattern Practice",
-        "url": "https://youtu.be/rga_q2N7vU8"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_17_1",
         "numId": "17.1",
         "title": "Chef and his Students",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 870",
+        "badgeText": "CC ★ 870",
         "badgeClass": "rate-cc",
-        "desc": "Pairwise student orientation checks \u2022 CHEFSTUD",
+        "desc": "Pairwise student orientation checks • CHEFSTUD",
         "url": "https://www.codechef.com/problems/CHEFSTUD",
         "btnClass": "btn-cc"
       },
@@ -1310,9 +1202,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "17.2",
         "title": "Different Consecutive Characters",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 880",
+        "badgeText": "CC ★ 880",
         "badgeClass": "rate-cc",
-        "desc": "Adjacent duplicate character inspection \u2022 DIFFCONSEC",
+        "desc": "Adjacent duplicate character inspection • DIFFCONSEC",
         "url": "https://www.codechef.com/problems/DIFFCONSEC",
         "btnClass": "btn-cc"
       },
@@ -1323,7 +1215,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Finding exact payment quantity with change \u2022 732A",
+        "desc": "Finding exact payment quantity with change • 732A",
         "url": "https://codeforces.com/problemset/problem/732/A",
         "btnClass": "btn-cf"
       },
@@ -1334,7 +1226,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Task re-occurrence contiguous validation \u2022 1520A",
+        "desc": "Task re-occurrence contiguous validation • 1520A",
         "url": "https://codeforces.com/problemset/problem/1520/A",
         "btnClass": "btn-cf"
       },
@@ -1345,7 +1237,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Identifying index of unique element \u2022 1512A",
+        "desc": "Identifying index of unique element • 1512A",
         "url": "https://codeforces.com/problemset/problem/1512/A",
         "btnClass": "btn-cf"
       }
@@ -1355,37 +1247,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 18,
     "module": 4,
     "moduleName": "Module 4: Division Mechanics & 1D Arrays",
-    "title": "Day 18 \u2014 Division Mechanics, Typecasting & Modulo Rules",
+    "title": "Day 18 — Division Mechanics, Typecasting & Modulo Rules",
     "tagline": "Integer division truncation, float division precision, explicit casting (float)a / b, and negative modulo.",
     "theme": "theme-d6",
-    "bct": [
-      {
-        "id": "vHCCmlAwEO4",
-        "title": "Ep 04: Float & Double",
-        "url": "https://youtu.be/vHCCmlAwEO4"
-      },
-      {
-        "id": "AR2HKNPntME",
-        "title": "Ep 10: Operators",
-        "url": "https://youtu.be/AR2HKNPntME"
-      }
-    ],
-    "ac": [
-      {
-        "id": "Dxu7GKtdbnA",
-        "title": "Lec 2: Typecasting & Float Division",
-        "url": "https://youtu.be/Dxu7GKtdbnA"
-      }
-    ],
+    "bct": [],
+    "ac": [],
     "problems": [
       {
         "id": "p_18_1",
         "numId": "18.1",
         "title": "First and Last Digit",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 650",
+        "badgeText": "CC ★ 650",
         "badgeClass": "rate-cc",
-        "desc": "Boundary digits extracted via division \u2022 FLOW004",
+        "desc": "Boundary digits extracted via division • FLOW004",
         "url": "https://www.codechef.com/problems/FLOW004",
         "btnClass": "btn-cc"
       },
@@ -1394,9 +1269,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "18.2",
         "title": "Xor Palindrome",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 890",
+        "badgeText": "CC ★ 890",
         "badgeClass": "rate-cc",
-        "desc": "Parity balance verification \u2022 XOR_PAL",
+        "desc": "Parity balance verification • XOR_PAL",
         "url": "https://www.codechef.com/problems/XOR_PAL",
         "btnClass": "btn-cc"
       },
@@ -1407,7 +1282,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Parity division of weight value \u2022 4A",
+        "desc": "Parity division of weight value • 4A",
         "url": "https://codeforces.com/problemset/problem/4/A",
         "btnClass": "btn-cf"
       },
@@ -1418,7 +1293,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Area coverage via integer division \u2022 50A",
+        "desc": "Area coverage via integer division • 50A",
         "url": "https://codeforces.com/problemset/problem/50/A",
         "btnClass": "btn-cf"
       },
@@ -1429,7 +1304,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Ceiling division for grid tiling \u2022 1A",
+        "desc": "Ceiling division for grid tiling • 1A",
         "url": "https://codeforces.com/problemset/problem/1/A",
         "btnClass": "btn-cf"
       }
@@ -1439,7 +1314,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 19,
     "module": 4,
     "moduleName": "Module 4: Division Mechanics & 1D Arrays",
-    "title": "Day 19 \u2014 1D Arrays Part 1: Declaration, Indexing & Sequential I/O",
+    "title": "Day 19 — 1D Arrays Part 1: Declaration, Indexing & Sequential I/O",
     "tagline": "Array allocation in memory, zero-based indexing, reading N elements into array, and sequential traversal.",
     "theme": "theme-d7",
     "bct": [
@@ -1462,9 +1337,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "19.1",
         "title": "Search an Element in an Array",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 600",
+        "badgeText": "CC ★ 600",
         "badgeClass": "rate-cc",
-        "desc": "Linear search for target value in list \u2022 SEARCHINARR",
+        "desc": "Linear search for target value in list • SEARCHINARR",
         "url": "https://www.codechef.com/problems/SEARCHINARR",
         "btnClass": "btn-cc"
       },
@@ -1473,9 +1348,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "19.2",
         "title": "Chef and Dolls",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 820",
+        "badgeText": "CC ★ 820",
         "badgeClass": "rate-cc",
-        "desc": "Identifying unmatched doll in inventory \u2022 MISSP",
+        "desc": "Identifying unmatched doll in inventory • MISSP",
         "url": "https://www.codechef.com/problems/MISSP",
         "btnClass": "btn-cc"
       },
@@ -1486,7 +1361,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Contest advancement threshold evaluation \u2022 158A",
+        "desc": "Contest advancement threshold evaluation • 158A",
         "url": "https://codeforces.com/problemset/problem/158/A",
         "btnClass": "btn-cf"
       },
@@ -1497,7 +1372,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Tracking officer availability in event queue \u2022 427A",
+        "desc": "Tracking officer availability in event queue • 427A",
         "url": "https://codeforces.com/problemset/problem/427/A",
         "btnClass": "btn-cf"
       },
@@ -1508,7 +1383,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Identifying polarity groups in sequence \u2022 344A",
+        "desc": "Identifying polarity groups in sequence • 344A",
         "url": "https://codeforces.com/problemset/problem/344/A",
         "btnClass": "btn-cf"
       }
@@ -1518,7 +1393,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 20,
     "module": 4,
     "moduleName": "Module 4: Division Mechanics & 1D Arrays",
-    "title": "Day 20 \u2014 1D Arrays Part 2: Traversals, Extremum (Min/Max) & Linear Search",
+    "title": "Day 20 — 1D Arrays Part 2: Traversals, Extremum (Min/Max) & Linear Search",
     "tagline": "Finding minimum and maximum elements, tracking index of extremum, and single-pass linear scanning.",
     "theme": "theme-d8",
     "bct": [
@@ -1528,22 +1403,16 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/cLl2BRl0oeI"
       }
     ],
-    "ac": [
-      {
-        "id": "8wmn7k1TTcI",
-        "title": "Lec 6: Min-Max in Arrays",
-        "url": "https://youtu.be/8wmn7k1TTcI"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_20_1",
         "numId": "20.1",
         "title": "Min-Max Range",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 750",
+        "badgeText": "CC ★ 750",
         "badgeClass": "rate-cc",
-        "desc": "Finding extreme boundary elements in array \u2022 MINMAX",
+        "desc": "Finding extreme boundary elements in array • MINMAX",
         "url": "https://www.codechef.com/problems/MINMAX",
         "btnClass": "btn-cc"
       },
@@ -1552,9 +1421,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "20.2",
         "title": "The Smallest Pair",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 800",
+        "badgeText": "CC ★ 800",
         "badgeClass": "rate-cc",
-        "desc": "Locating two smallest values in list \u2022 SMPAIR",
+        "desc": "Locating two smallest values in list • SMPAIR",
         "url": "https://www.codechef.com/problems/SMPAIR",
         "btnClass": "btn-cc"
       },
@@ -1563,9 +1432,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "20.3",
         "title": "The Lead Game",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 850",
+        "badgeText": "CC ★ 850",
         "badgeClass": "rate-cc",
-        "desc": "Maximum cumulative lead detection \u2022 TLG",
+        "desc": "Maximum cumulative lead detection • TLG",
         "url": "https://www.codechef.com/problems/TLG",
         "btnClass": "btn-cc"
       },
@@ -1576,7 +1445,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Counting duplicate colors in shoe collection \u2022 228A",
+        "desc": "Counting duplicate colors in shoe collection • 228A",
         "url": "https://codeforces.com/problemset/problem/228/A",
         "btnClass": "btn-cf"
       },
@@ -1587,7 +1456,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Checking coverage of all stage levels \u2022 469A",
+        "desc": "Checking coverage of all stage levels • 469A",
         "url": "https://codeforces.com/problemset/problem/469/A",
         "btnClass": "btn-cf"
       }
@@ -1597,23 +1466,11 @@ export const curriculumData: DayCurriculum[] = [
     "day": 21,
     "module": 4,
     "moduleName": "Module 4: Division Mechanics & 1D Arrays",
-    "title": "Day 21 \u2014 1D Arrays Part 3: In-Place Reversal, Element Shifting & Parity",
+    "title": "Day 21 — 1D Arrays Part 3: In-Place Reversal, Element Shifting & Parity",
     "tagline": "Two-pointer array reversal, adjacent element swaps, cyclic shifts, and parity reordering.",
     "theme": "theme-d9",
-    "bct": [
-      {
-        "id": "cLl2BRl0oeI",
-        "title": "Ep 18: Array Practice",
-        "url": "https://youtu.be/cLl2BRl0oeI"
-      }
-    ],
-    "ac": [
-      {
-        "id": "8wmn7k1TTcI",
-        "title": "Lec 6: Reverse an Array",
-        "url": "https://youtu.be/8wmn7k1TTcI"
-      }
-    ],
+    "bct": [],
+    "ac": [],
     "problems": [
       {
         "id": "p_21_1",
@@ -1622,7 +1479,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Parity matching through element swaps \u2022 1367B",
+        "desc": "Parity matching through element swaps • 1367B",
         "url": "https://codeforces.com/problemset/problem/1367/B",
         "btnClass": "btn-cf"
       },
@@ -1631,9 +1488,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "21.2",
         "title": "Chef and Easy Problem",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 890",
+        "badgeText": "CC ★ 890",
         "badgeClass": "rate-cc",
-        "desc": "Turn-based pile collection strategy \u2022 CHEFA",
+        "desc": "Turn-based pile collection strategy • CHEFA",
         "url": "https://www.codechef.com/problems/CHEFA",
         "btnClass": "btn-cc"
       },
@@ -1644,7 +1501,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Permutation array inverse indexing \u2022 136A",
+        "desc": "Permutation array inverse indexing • 136A",
         "url": "https://codeforces.com/problemset/problem/136/A",
         "btnClass": "btn-cf"
       },
@@ -1655,7 +1512,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Adjacent element position transitions \u2022 266B",
+        "desc": "Adjacent element position transitions • 266B",
         "url": "https://codeforces.com/problemset/problem/266/B",
         "btnClass": "btn-cf"
       },
@@ -1666,7 +1523,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Sorting column box heights \u2022 405A",
+        "desc": "Sorting column box heights • 405A",
         "url": "https://codeforces.com/problemset/problem/405/A",
         "btnClass": "btn-cf"
       }
@@ -1676,26 +1533,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 22,
     "module": 4,
     "moduleName": "Module 4: Division Mechanics & 1D Arrays",
-    "title": "Day 22 \u2014 1D Arrays Part 4: Running Totals & Prefix Sums",
+    "title": "Day 22 — 1D Arrays Part 4: Running Totals & Prefix Sums",
     "tagline": "Prefix sum array construction pref[i] = pref[i-1] + arr[i], range queries, and cumulative totals.",
     "theme": "theme-d10",
     "bct": [],
-    "ac": [
-      {
-        "id": "8wmn7k1TTcI",
-        "title": "Lec 6: Prefix Sums Intro",
-        "url": "https://youtu.be/8wmn7k1TTcI"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_22_1",
         "numId": "22.1",
         "title": "Count Substrings",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 950",
+        "badgeText": "CC ★ 950",
         "badgeClass": "rate-cc",
-        "desc": "Pair combination count from running totals \u2022 CSUB",
+        "desc": "Pair combination count from running totals • CSUB",
         "url": "https://www.codechef.com/problems/CSUB",
         "btnClass": "btn-cc"
       },
@@ -1706,7 +1557,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Adjacent color matching removal count \u2022 266A",
+        "desc": "Adjacent color matching removal count • 266A",
         "url": "https://codeforces.com/problemset/problem/266/A",
         "btnClass": "btn-cf"
       },
@@ -1717,7 +1568,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Greedy card selection from ends of list \u2022 381A",
+        "desc": "Greedy card selection from ends of list • 381A",
         "url": "https://codeforces.com/problemset/problem/381/A",
         "btnClass": "btn-cf"
       },
@@ -1728,7 +1579,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Total face count summation across shapes \u2022 785A",
+        "desc": "Total face count summation across shapes • 785A",
         "url": "https://codeforces.com/problemset/problem/785/A",
         "btnClass": "btn-cf"
       },
@@ -1737,9 +1588,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "22.5",
         "title": "Maximum Weight Difference",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 940",
+        "badgeText": "CC ★ 940",
         "badgeClass": "rate-cc",
-        "desc": "Partitioning items to maximize group difference \u2022 MAXDIFF",
+        "desc": "Partitioning items to maximize group difference • MAXDIFF",
         "url": "https://www.codechef.com/problems/MAXDIFF",
         "btnClass": "btn-cc"
       }
@@ -1749,26 +1600,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 23,
     "module": 4,
     "moduleName": "Module 4: Division Mechanics & 1D Arrays",
-    "title": "Day 23 \u2014 1D Arrays Part 5: Frequency Arrays & Hash Buckets",
+    "title": "Day 23 — 1D Arrays Part 5: Frequency Arrays & Hash Buckets",
     "tagline": "Counting array indices freq[arr[i]]++, duplicate detection, and direct-address hashing in C.",
     "theme": "theme-d11",
     "bct": [],
-    "ac": [
-      {
-        "id": "8wmn7k1TTcI",
-        "title": "Lec 6: Frequency Counting",
-        "url": "https://youtu.be/8wmn7k1TTcI"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_23_1",
         "numId": "23.1",
         "title": "Chef and Dolls (Frequency)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 820",
+        "badgeText": "CC ★ 820",
         "badgeClass": "rate-cc",
-        "desc": "Odd occurrence identification in bucket \u2022 MISSP",
+        "desc": "Odd occurrence identification in bucket • MISSP",
         "url": "https://www.codechef.com/problems/MISSP",
         "btnClass": "btn-cc"
       },
@@ -1779,7 +1624,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Unique character count in username \u2022 236A",
+        "desc": "Unique character count in username • 236A",
         "url": "https://codeforces.com/problemset/problem/236/A",
         "btnClass": "btn-cf"
       },
@@ -1790,7 +1635,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Finding next year with distinct digits \u2022 271A",
+        "desc": "Finding next year with distinct digits • 271A",
         "url": "https://codeforces.com/problemset/problem/271/A",
         "btnClass": "btn-cf"
       },
@@ -1799,9 +1644,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "23.4",
         "title": "Version Control System",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 910",
+        "badgeText": "CC ★ 910",
         "badgeClass": "rate-cc",
-        "desc": "Counting tracked and ignored file states \u2022 VCS",
+        "desc": "Counting tracked and ignored file states • VCS",
         "url": "https://www.codechef.com/problems/VCS",
         "btnClass": "btn-cc"
       },
@@ -1810,9 +1655,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "23.5",
         "title": "Make all equal using Pairs",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 920",
+        "badgeText": "CC ★ 920",
         "badgeClass": "rate-cc",
-        "desc": "Most frequent element in sequence \u2022 PAIREQ",
+        "desc": "Most frequent element in sequence • PAIREQ",
         "url": "https://www.codechef.com/problems/PAIREQ",
         "btnClass": "btn-cc"
       }
@@ -1822,26 +1667,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 24,
     "module": 4,
     "moduleName": "Module 4: Division Mechanics & 1D Arrays",
-    "title": "Day 24 \u2014 1D Arrays Part 6: Subarrays, Segments & Array Problem Solving",
+    "title": "Day 24 — 1D Arrays Part 6: Subarrays, Segments & Array Problem Solving",
     "tagline": "Generating contiguous segments, checking subarray criteria, and sliding segment analysis.",
     "theme": "theme-d12",
     "bct": [],
-    "ac": [
-      {
-        "id": "8wmn7k1TTcI",
-        "title": "Lec 6: Subarray Basics",
-        "url": "https://youtu.be/8wmn7k1TTcI"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_24_1",
         "numId": "24.1",
         "title": "Chef and Subarrays",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 920",
+        "badgeText": "CC ★ 920",
         "badgeClass": "rate-cc",
-        "desc": "Contiguous segments with matching properties \u2022 SUBARRAY",
+        "desc": "Contiguous segments with matching properties • SUBARRAY",
         "url": "https://www.codechef.com/problems/SUBARRAY",
         "btnClass": "btn-cc"
       },
@@ -1850,9 +1689,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "24.2",
         "title": "Count Subarrays (Increasing)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 930",
+        "badgeText": "CC ★ 930",
         "badgeClass": "rate-cc",
-        "desc": "Non-decreasing contiguous subarray count \u2022 SUBINC",
+        "desc": "Non-decreasing contiguous subarray count • SUBINC",
         "url": "https://www.codechef.com/problems/SUBINC",
         "btnClass": "btn-cc"
       },
@@ -1861,9 +1700,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "24.3",
         "title": "Bomb the Base",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 940",
+        "badgeText": "CC ★ 940",
         "badgeClass": "rate-cc",
-        "desc": "Highest index house destroyed by defense \u2022 BOMBTHEBASE",
+        "desc": "Highest index house destroyed by defense • BOMBTHEBASE",
         "url": "https://www.codechef.com/problems/BOMBTHEBASE",
         "btnClass": "btn-cc"
       },
@@ -1872,9 +1711,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "24.4",
         "title": "Cops and the Thief Devu",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 950",
+        "badgeText": "CC ★ 950",
         "badgeClass": "rate-cc",
-        "desc": "Segment coverage by police officers \u2022 COPS",
+        "desc": "Segment coverage by police officers • COPS",
         "url": "https://www.codechef.com/problems/COPS",
         "btnClass": "btn-cc"
       },
@@ -1883,9 +1722,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "24.5",
         "title": "Sums in a Triangle",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 960",
+        "badgeText": "CC ★ 960",
         "badgeClass": "rate-cc",
-        "desc": "Dynamic path collection through array \u2022 SUMTRAIN",
+        "desc": "Dynamic path collection through array • SUMTRAIN",
         "url": "https://www.codechef.com/problems/SUMTRAIN",
         "btnClass": "btn-cc"
       }
@@ -1895,7 +1734,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 25,
     "module": 5,
     "moduleName": "Module 5: 2D Arrays, Matrices & Multidimensional Grids",
-    "title": "Day 25 \u2014 2D Arrays Part 1: Row-Major Layout & Matrix I/O",
+    "title": "Day 25 — 2D Arrays Part 1: Row-Major Layout & Matrix I/O",
     "tagline": "int arr[N][M], row-major memory arrangement, nested loops for 2D input/output, and coordinate indexing.",
     "theme": "theme-d1",
     "bct": [
@@ -1918,9 +1757,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "25.1",
         "title": "Matrix XOR",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 950",
+        "badgeText": "CC ★ 950",
         "badgeClass": "rate-cc",
-        "desc": "Bitwise calculation across grid coordinates \u2022 MATXOR",
+        "desc": "Bitwise calculation across grid coordinates • MATXOR",
         "url": "https://www.codechef.com/problems/MATXOR",
         "btnClass": "btn-cc"
       },
@@ -1931,7 +1770,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Grid navigation to center coordinate \u2022 263A",
+        "desc": "Grid navigation to center coordinate • 263A",
         "url": "https://codeforces.com/problemset/problem/263/A",
         "btnClass": "btn-cf"
       },
@@ -1942,7 +1781,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "Matrix column equilibrium check \u2022 69A",
+        "desc": "Matrix column equilibrium check • 69A",
         "url": "https://codeforces.com/problemset/problem/69/A",
         "btnClass": "btn-cf"
       },
@@ -1951,9 +1790,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "25.4",
         "title": "Candies (2xN Grid)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 960",
+        "badgeText": "CC ★ 960",
         "badgeClass": "rate-cc",
-        "desc": "Candy frequency check in two rows \u2022 CNDY",
+        "desc": "Candy frequency check in two rows • CNDY",
         "url": "https://www.codechef.com/problems/CNDY",
         "btnClass": "btn-cc"
       },
@@ -1964,7 +1803,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Grid intersection analysis \u2022 451A",
+        "desc": "Grid intersection analysis • 451A",
         "url": "https://codeforces.com/problemset/problem/451/A",
         "btnClass": "btn-cf"
       }
@@ -1974,26 +1813,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 26,
     "module": 5,
     "moduleName": "Module 5: 2D Arrays, Matrices & Multidimensional Grids",
-    "title": "Day 26 \u2014 2D Arrays Part 2: Matrix Row/Column Sums & Cell Counting",
+    "title": "Day 26 — 2D Arrays Part 2: Matrix Row/Column Sums & Cell Counting",
     "tagline": "Row-wise totals, column-wise accumulators, boundary element scanning, and 2D grid searches.",
     "theme": "theme-d2",
     "bct": [],
-    "ac": [
-      {
-        "id": "lBL8327gq8I",
-        "title": "Lec 7: Matrix Operations",
-        "url": "https://youtu.be/lBL8327gq8I"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_26_1",
         "numId": "26.1",
         "title": "Chef and Operators (Matrix)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 580",
+        "badgeText": "CC ★ 580",
         "badgeClass": "rate-cc",
-        "desc": "Comparing cell values in matrix \u2022 CHOPRT",
+        "desc": "Comparing cell values in matrix • CHOPRT",
         "url": "https://www.codechef.com/problems/CHOPRT",
         "btnClass": "btn-cc"
       },
@@ -2002,9 +1835,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "26.2",
         "title": "Candies (Row Operations)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 960",
+        "badgeText": "CC ★ 960",
         "badgeClass": "rate-cc",
-        "desc": "Distribution across row cells \u2022 CNDY",
+        "desc": "Distribution across row cells • CNDY",
         "url": "https://www.codechef.com/problems/CNDY",
         "btnClass": "btn-cc"
       },
@@ -2015,7 +1848,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Row and column shift counting \u2022 263A",
+        "desc": "Row and column shift counting • 263A",
         "url": "https://codeforces.com/problemset/problem/263/A",
         "btnClass": "btn-cf"
       },
@@ -2026,7 +1859,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "Vector column sum checking \u2022 69A",
+        "desc": "Vector column sum checking • 69A",
         "url": "https://codeforces.com/problemset/problem/69/A",
         "btnClass": "btn-cf"
       },
@@ -2035,9 +1868,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "26.5",
         "title": "Matrix XOR (Row Iteration)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 950",
+        "badgeText": "CC ★ 950",
         "badgeClass": "rate-cc",
-        "desc": "Cumulative row property checks \u2022 MATXOR",
+        "desc": "Cumulative row property checks • MATXOR",
         "url": "https://www.codechef.com/problems/MATXOR",
         "btnClass": "btn-cc"
       }
@@ -2047,26 +1880,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 27,
     "module": 5,
     "moduleName": "Module 5: 2D Arrays, Matrices & Multidimensional Grids",
-    "title": "Day 27 \u2014 2D Arrays Part 3: Square Matrices: Diagonals, Transpose & Symmetry",
+    "title": "Day 27 — 2D Arrays Part 3: Square Matrices: Diagonals, Transpose & Symmetry",
     "tagline": "Main diagonal (i == j), anti-diagonal (i + j == N - 1), matrix transposition, and symmetry tests.",
     "theme": "theme-d3",
     "bct": [],
-    "ac": [
-      {
-        "id": "lBL8327gq8I",
-        "title": "Lec 7: Matrix Transpose",
-        "url": "https://youtu.be/lBL8327gq8I"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_27_1",
         "numId": "27.1",
         "title": "Matrix XOR (Diagonal Parity)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 950",
+        "badgeText": "CC ★ 950",
         "badgeClass": "rate-cc",
-        "desc": "Diagonal property analysis \u2022 MATXOR",
+        "desc": "Diagonal property analysis • MATXOR",
         "url": "https://www.codechef.com/problems/MATXOR",
         "btnClass": "btn-cc"
       },
@@ -2075,9 +1902,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "27.2",
         "title": "Candies (Symmetry Check)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 960",
+        "badgeText": "CC ★ 960",
         "badgeClass": "rate-cc",
-        "desc": "Grid distribution symmetry \u2022 CNDY",
+        "desc": "Grid distribution symmetry • CNDY",
         "url": "https://www.codechef.com/problems/CNDY",
         "btnClass": "btn-cc"
       },
@@ -2088,7 +1915,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Coordinate transformation on grid \u2022 263A",
+        "desc": "Coordinate transformation on grid • 263A",
         "url": "https://codeforces.com/problemset/problem/263/A",
         "btnClass": "btn-cf"
       },
@@ -2099,7 +1926,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "Multi-axis component verification \u2022 69A",
+        "desc": "Multi-axis component verification • 69A",
         "url": "https://codeforces.com/problemset/problem/69/A",
         "btnClass": "btn-cf"
       },
@@ -2110,7 +1937,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Boundary reduction on matrix \u2022 451A",
+        "desc": "Boundary reduction on matrix • 451A",
         "url": "https://codeforces.com/problemset/problem/451/A",
         "btnClass": "btn-cf"
       }
@@ -2120,7 +1947,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 28,
     "module": 5,
     "moduleName": "Module 5: 2D Arrays, Matrices & Multidimensional Grids",
-    "title": "Day 28 \u2014 2D Arrays Part 4: Grid Simulation & Direction Vectors",
+    "title": "Day 28 — 2D Arrays Part 4: Grid Simulation & Direction Vectors",
     "tagline": "4-directional movements dx[]/dy[], boundary validations, flood fill concepts, and matrix game rules.",
     "theme": "theme-d4",
     "bct": [],
@@ -2137,9 +1964,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "28.1",
         "title": "Matrix XOR (Grid Simulation)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 950",
+        "badgeText": "CC ★ 950",
         "badgeClass": "rate-cc",
-        "desc": "Grid traversal simulation \u2022 MATXOR",
+        "desc": "Grid traversal simulation • MATXOR",
         "url": "https://www.codechef.com/problems/MATXOR",
         "btnClass": "btn-cc"
       },
@@ -2148,9 +1975,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "28.2",
         "title": "Candies (Matrix Traversal)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 960",
+        "badgeText": "CC ★ 960",
         "badgeClass": "rate-cc",
-        "desc": "Traversing two-row grid structures \u2022 CNDY",
+        "desc": "Traversing two-row grid structures • CNDY",
         "url": "https://www.codechef.com/problems/CNDY",
         "btnClass": "btn-cc"
       },
@@ -2161,7 +1988,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Manhattan distance calculation \u2022 263A",
+        "desc": "Manhattan distance calculation • 263A",
         "url": "https://codeforces.com/problemset/problem/263/A",
         "btnClass": "btn-cf"
       },
@@ -2172,7 +1999,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "3D force equilibrium verification \u2022 69A",
+        "desc": "3D force equilibrium verification • 69A",
         "url": "https://codeforces.com/problemset/problem/69/A",
         "btnClass": "btn-cf"
       },
@@ -2183,7 +2010,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Intersection reduction steps \u2022 451A",
+        "desc": "Intersection reduction steps • 451A",
         "url": "https://codeforces.com/problemset/problem/451/A",
         "btnClass": "btn-cf"
       }
@@ -2193,7 +2020,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 29,
     "module": 6,
     "moduleName": "Module 6: Character Arrays & Strings",
-    "title": "Day 29 \u2014 Character Arrays & ASCII Fundamentals (1D Strings)",
+    "title": "Day 29 — Character Arrays & ASCII Fundamentals (1D Strings)",
     "tagline": "Null terminator \\0, char arrays in C, ASCII character arithmetic, and safe string input.",
     "theme": "theme-d5",
     "bct": [
@@ -2221,9 +2048,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "29.1",
         "title": "Wordle",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 850",
+        "badgeText": "CC ★ 850",
         "badgeClass": "rate-cc",
-        "desc": "Letter match evaluation between strings \u2022 WORDLE",
+        "desc": "Letter match evaluation between strings • WORDLE",
         "url": "https://www.codechef.com/problems/WORDLE",
         "btnClass": "btn-cc"
       },
@@ -2232,9 +2059,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "29.2",
         "title": "DNA Storage",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 870",
+        "badgeText": "CC ★ 870",
         "badgeClass": "rate-cc",
-        "desc": "Encoding binary string into sequence \u2022 DNASTORAGE",
+        "desc": "Encoding binary string into sequence • DNASTORAGE",
         "url": "https://www.codechef.com/problems/DNASTORAGE",
         "btnClass": "btn-cc"
       },
@@ -2243,9 +2070,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "29.3",
         "title": "Different Consecutive Characters",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 880",
+        "badgeText": "CC ★ 880",
         "badgeClass": "rate-cc",
-        "desc": "Consecutive duplicate characters check \u2022 DIFFCONSEC",
+        "desc": "Consecutive duplicate characters check • DIFFCONSEC",
         "url": "https://www.codechef.com/problems/DIFFCONSEC",
         "btnClass": "btn-cc"
       },
@@ -2256,7 +2083,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Capitalizing first letter of string \u2022 281A",
+        "desc": "Capitalizing first letter of string • 281A",
         "url": "https://codeforces.com/problemset/problem/281/A",
         "btnClass": "btn-cf"
       },
@@ -2267,7 +2094,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Abbreviating words longer than ten letters \u2022 71A",
+        "desc": "Abbreviating words longer than ten letters • 71A",
         "url": "https://codeforces.com/problemset/problem/71/A",
         "btnClass": "btn-cf"
       }
@@ -2277,7 +2104,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 30,
     "module": 6,
     "moduleName": "Module 6: Character Arrays & Strings",
-    "title": "Day 30 \u2014 String Functions & Anagram Validation",
+    "title": "Day 30 — String Functions & Anagram Validation",
     "tagline": "strlen, strcpy, strcmp, 26-element character frequency array, and palindrome validation.",
     "theme": "theme-d6",
     "bct": [
@@ -2287,22 +2114,16 @@ export const curriculumData: DayCurriculum[] = [
         "url": "https://youtu.be/lY5KalJGc48"
       }
     ],
-    "ac": [
-      {
-        "id": "dSRFgEs3a6A",
-        "title": "Lec 8: Palindrome & Strings",
-        "url": "https://youtu.be/dSRFgEs3a6A"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_30_1",
         "numId": "30.1",
         "title": "Lapindromes",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 950",
+        "badgeText": "CC ★ 950",
         "badgeClass": "rate-cc",
-        "desc": "Symmetric character frequency validation \u2022 LAPIN",
+        "desc": "Symmetric character frequency validation • LAPIN",
         "url": "https://www.codechef.com/problems/LAPIN",
         "btnClass": "btn-cc"
       },
@@ -2311,9 +2132,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "30.2",
         "title": "Chef and the Wildcard Matching",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 970",
+        "badgeText": "CC ★ 970",
         "badgeClass": "rate-cc",
-        "desc": "Wildcard character pattern matching \u2022 TWOSTR",
+        "desc": "Wildcard character pattern matching • TWOSTR",
         "url": "https://www.codechef.com/problems/TWOSTR",
         "btnClass": "btn-cc"
       },
@@ -2322,9 +2143,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "30.3",
         "title": "Chef and Feedback",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 990",
+        "badgeText": "CC ★ 990",
         "badgeClass": "rate-cc",
-        "desc": "Substring pattern identification \u2022 ERROR",
+        "desc": "Substring pattern identification • ERROR",
         "url": "https://www.codechef.com/problems/ERROR",
         "btnClass": "btn-cc"
       },
@@ -2335,7 +2156,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Original word restoration from remix \u2022 208A",
+        "desc": "Original word restoration from remix • 208A",
         "url": "https://codeforces.com/problemset/problem/208/A",
         "btnClass": "btn-cf"
       },
@@ -2346,7 +2167,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Reverse string identity verification \u2022 41A",
+        "desc": "Reverse string identity verification • 41A",
         "url": "https://codeforces.com/problemset/problem/41/A",
         "btnClass": "btn-cf"
       }
@@ -2356,32 +2177,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 31,
     "module": 6,
     "moduleName": "Module 6: Character Arrays & Strings",
-    "title": "Day 31 \u2014 2D Character Arrays (Array of Strings) & Word Sorting",
+    "title": "Day 31 — 2D Character Arrays (Array of Strings) & Word Sorting",
     "tagline": "char words[N][M], reading multiple words, row string pointers, and lexicographical sorting.",
     "theme": "theme-d7",
-    "bct": [
-      {
-        "id": "SxijtYOqQ00",
-        "title": "Ep 19: 2D Array",
-        "url": "https://youtu.be/SxijtYOqQ00"
-      }
-    ],
-    "ac": [
-      {
-        "id": "dSRFgEs3a6A",
-        "title": "Lec 8: Array of Strings",
-        "url": "https://youtu.be/dSRFgEs3a6A"
-      }
-    ],
+    "bct": [],
+    "ac": [],
     "problems": [
       {
         "id": "p_31_1",
         "numId": "31.1",
         "title": "Name Reduction",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 1020",
+        "badgeText": "CC ★ 1020",
         "badgeClass": "rate-cc",
-        "desc": "Letter bank availability check \u2022 NAME1",
+        "desc": "Letter bank availability check • NAME1",
         "url": "https://www.codechef.com/problems/NAME1",
         "btnClass": "btn-cc"
       },
@@ -2390,9 +2199,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "31.2",
         "title": "Uncle Johny",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 1030",
+        "badgeText": "CC ★ 1030",
         "badgeClass": "rate-cc",
-        "desc": "Tracking song index after sorting \u2022 JOHNY",
+        "desc": "Tracking song index after sorting • JOHNY",
         "url": "https://www.codechef.com/problems/JOHNY",
         "btnClass": "btn-cc"
       },
@@ -2401,9 +2210,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "31.3",
         "title": "Drumpf for President",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 1040",
+        "badgeText": "CC ★ 1040",
         "badgeClass": "rate-cc",
-        "desc": "Tallying student election votes \u2022 STUDVOTE",
+        "desc": "Tallying student election votes • STUDVOTE",
         "url": "https://www.codechef.com/problems/STUDVOTE",
         "btnClass": "btn-cc"
       },
@@ -2414,7 +2223,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Case-insensitive alphabetical comparison \u2022 112A",
+        "desc": "Case-insensitive alphabetical comparison • 112A",
         "url": "https://codeforces.com/problemset/problem/112/A",
         "btnClass": "btn-cf"
       },
@@ -2425,7 +2234,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "Accidental caps lock detection and fix \u2022 131A",
+        "desc": "Accidental caps lock detection and fix • 131A",
         "url": "https://codeforces.com/problemset/problem/131/A",
         "btnClass": "btn-cf"
       }
@@ -2435,26 +2244,20 @@ export const curriculumData: DayCurriculum[] = [
     "day": 32,
     "module": 7,
     "moduleName": "Module 7: Functions, Pointers & Custom Structures",
-    "title": "Day 32 \u2014 3D Arrays & Multi-Dimensional Representation",
+    "title": "Day 32 — 3D Arrays & Multi-Dimensional Representation",
     "tagline": "int arr[layers][rows][cols], 3D coordinate grids, multi-testcase matrices, and layered grids.",
     "theme": "theme-d8",
     "bct": [],
-    "ac": [
-      {
-        "id": "lBL8327gq8I",
-        "title": "Multi-dimensional Structures",
-        "url": "https://youtu.be/lBL8327gq8I"
-      }
-    ],
+    "ac": [],
     "problems": [
       {
         "id": "p_32_1",
         "numId": "32.1",
         "title": "Cleaning Up",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 1050",
+        "badgeText": "CC ★ 1050",
         "badgeClass": "rate-cc",
-        "desc": "Job assignment between two assistants \u2022 CLEANUP",
+        "desc": "Job assignment between two assistants • CLEANUP",
         "url": "https://www.codechef.com/problems/CLEANUP",
         "btnClass": "btn-cc"
       },
@@ -2463,9 +2266,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "32.2",
         "title": "The Minimum Number of Moves",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 1060",
+        "badgeText": "CC ★ 1060",
         "badgeClass": "rate-cc",
-        "desc": "Salary equalization through increments \u2022 SALARY",
+        "desc": "Salary equalization through increments • SALARY",
         "url": "https://www.codechef.com/problems/SALARY",
         "btnClass": "btn-cc"
       },
@@ -2474,9 +2277,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "32.3",
         "title": "Farmer Feb (Multi-Plot)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 821",
+        "badgeText": "CC ★ 821",
         "badgeClass": "rate-cc",
-        "desc": "Square plot division on farmland \u2022 RECTSQ",
+        "desc": "Square plot division on farmland • RECTSQ",
         "url": "https://www.codechef.com/problems/RECTSQ",
         "btnClass": "btn-cc"
       },
@@ -2487,7 +2290,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Reaching divisible multiple of second number \u2022 1328A",
+        "desc": "Reaching divisible multiple of second number • 1328A",
         "url": "https://codeforces.com/problemset/problem/1328/A",
         "btnClass": "btn-cf"
       },
@@ -2498,7 +2301,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Number representation feasibility \u2022 1475B",
+        "desc": "Number representation feasibility • 1475B",
         "url": "https://codeforces.com/problemset/problem/1475/B",
         "btnClass": "btn-cf"
       }
@@ -2508,7 +2311,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 33,
     "module": 7,
     "moduleName": "Module 7: Functions, Pointers & Custom Structures",
-    "title": "Day 33 \u2014 Custom Functions: Declarations, Parameters & Returns",
+    "title": "Day 33 — Custom Functions: Declarations, Parameters & Returns",
     "tagline": "Function prototypes, formal vs actual parameters, return values, pass-by-value, and modular code.",
     "theme": "theme-d9",
     "bct": [
@@ -2536,9 +2339,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "33.1",
         "title": "Primality Test (Function)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 783",
+        "badgeText": "CC ★ 783",
         "badgeClass": "rate-cc",
-        "desc": "Modular primality testing function \u2022 PRB01",
+        "desc": "Modular primality testing function • PRB01",
         "url": "https://www.codechef.com/problems/PRB01",
         "btnClass": "btn-cc"
       },
@@ -2547,9 +2350,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "33.2",
         "title": "GCD and LCM (Function)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 819",
+        "badgeText": "CC ★ 819",
         "badgeClass": "rate-cc",
-        "desc": "Modular greatest common divisor function \u2022 FLOW016",
+        "desc": "Modular greatest common divisor function • FLOW016",
         "url": "https://www.codechef.com/problems/FLOW016",
         "btnClass": "btn-cc"
       },
@@ -2558,9 +2361,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "33.3",
         "title": "Reverse The Number (Function)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 625",
+        "badgeText": "CC ★ 625",
         "badgeClass": "rate-cc",
-        "desc": "Modular integer reversal helper function \u2022 FLOW007",
+        "desc": "Modular integer reversal helper function • FLOW007",
         "url": "https://www.codechef.com/problems/FLOW007",
         "btnClass": "btn-cc"
       },
@@ -2571,7 +2374,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Modular divisibility move calculator \u2022 1328A",
+        "desc": "Modular divisibility move calculator • 1328A",
         "url": "https://codeforces.com/problemset/problem/1328/A",
         "btnClass": "btn-cf"
       },
@@ -2582,7 +2385,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "Modular expression evaluation function \u2022 479A",
+        "desc": "Modular expression evaluation function • 479A",
         "url": "https://codeforces.com/problemset/problem/479/A",
         "btnClass": "btn-cf"
       }
@@ -2592,7 +2395,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 34,
     "module": 7,
     "moduleName": "Module 7: Functions, Pointers & Custom Structures",
-    "title": "Day 34 \u2014 Pointers in C: Address (&), Dereference (*) & Pass-by-Reference",
+    "title": "Day 34 — Pointers in C: Address (&), Dereference (*) & Pass-by-Reference",
     "tagline": "Pointer variables, memory addresses, dereference operator, swap functions, and passing arrays.",
     "theme": "theme-d10",
     "bct": [
@@ -2622,7 +2425,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Pointer swap for misplaced elements \u2022 1367B",
+        "desc": "Pointer swap for misplaced elements • 1367B",
         "url": "https://codeforces.com/problemset/problem/1367/B",
         "btnClass": "btn-cf"
       },
@@ -2631,9 +2434,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "34.2",
         "title": "Swapping Chefs Way (Ptr)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 938",
+        "badgeText": "CC ★ 938",
         "badgeClass": "rate-cc",
-        "desc": "Pass-by-reference character swapping \u2022 SWAPCW",
+        "desc": "Pass-by-reference character swapping • SWAPCW",
         "url": "https://www.codechef.com/problems/SWAPCW",
         "btnClass": "btn-cc"
       },
@@ -2642,9 +2445,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "34.3",
         "title": "ATM Machine (Pointer State)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 780",
+        "badgeText": "CC ★ 780",
         "badgeClass": "rate-cc",
-        "desc": "Modifying balance through pointer references \u2022 ATM2",
+        "desc": "Modifying balance through pointer references • ATM2",
         "url": "https://www.codechef.com/problems/ATM2",
         "btnClass": "btn-cc"
       },
@@ -2655,7 +2458,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Pointer-based queue state adjustment \u2022 266B",
+        "desc": "Pointer-based queue state adjustment • 266B",
         "url": "https://codeforces.com/problemset/problem/266/B",
         "btnClass": "btn-cf"
       },
@@ -2666,7 +2469,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Permutation array redirection \u2022 136A",
+        "desc": "Permutation array redirection • 136A",
         "url": "https://codeforces.com/problemset/problem/136/A",
         "btnClass": "btn-cf"
       }
@@ -2676,7 +2479,7 @@ export const curriculumData: DayCurriculum[] = [
     "day": 35,
     "module": 7,
     "moduleName": "Module 7: Functions, Pointers & Custom Structures",
-    "title": "Day 35 \u2014 Dynamic Memory (malloc/free) & Structures (struct) in C",
+    "title": "Day 35 — Dynamic Memory (malloc/free) & Structures (struct) in C",
     "tagline": "struct declaration, member access, array of structures, and dynamic memory with malloc and free.",
     "theme": "theme-d11",
     "bct": [
@@ -2700,7 +2503,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 1000",
         "badgeClass": "rate-cf",
-        "desc": "Modeling dragons as composite structs \u2022 230A",
+        "desc": "Modeling dragons as composite structs • 230A",
         "url": "https://codeforces.com/problemset/problem/230/A",
         "btnClass": "btn-cf"
       },
@@ -2709,9 +2512,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "35.2",
         "title": "Airline Restrictions (Struct)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 854",
+        "badgeText": "CC ★ 854",
         "badgeClass": "rate-cc",
-        "desc": "Modeling luggage items using structs \u2022 AIRLINE",
+        "desc": "Modeling luggage items using structs • AIRLINE",
         "url": "https://www.codechef.com/problems/AIRLINE",
         "btnClass": "btn-cc"
       },
@@ -2720,9 +2523,9 @@ export const curriculumData: DayCurriculum[] = [
         "numId": "35.3",
         "title": "Judging Delay (Struct Time)",
         "platform": "CodeChef",
-        "badgeText": "CC \u2605 693",
+        "badgeText": "CC ★ 693",
         "badgeClass": "rate-cc",
-        "desc": "Submission timestamp struct modeling \u2022 JDELAY",
+        "desc": "Submission timestamp struct modeling • JDELAY",
         "url": "https://www.codechef.com/problems/JDELAY",
         "btnClass": "btn-cc"
       },
@@ -2733,7 +2536,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 900",
         "badgeClass": "rate-cf",
-        "desc": "Grid dimensions struct modeling \u2022 451A",
+        "desc": "Grid dimensions struct modeling • 451A",
         "url": "https://codeforces.com/problemset/problem/451/A",
         "btnClass": "btn-cf"
       },
@@ -2744,7 +2547,7 @@ export const curriculumData: DayCurriculum[] = [
         "platform": "Codeforces",
         "badgeText": "CF 800",
         "badgeClass": "rate-cf",
-        "desc": "Stop event tracking using struct \u2022 116A",
+        "desc": "Stop event tracking using struct • 116A",
         "url": "https://codeforces.com/problemset/problem/116/A",
         "btnClass": "btn-cf"
       }
