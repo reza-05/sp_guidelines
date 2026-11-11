@@ -1,8 +1,6 @@
-/**
- * SP Guidelines — 35-Day C Programming & Problem Solving Data
- * Total: 35 Days, 175 Problems (500+ Rating)
- */
-window.CURRICULUM_DATA = [
+import { DayCurriculum } from "../types/curriculum";
+
+export const curriculumData: DayCurriculum[] = [
   {
     "day": 1,
     "week": 1,

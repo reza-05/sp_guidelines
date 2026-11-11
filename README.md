@@ -1,30 +1,34 @@
 # SP Guidelines — C Programming & Problem Solving Bootcamp
 
 [![Live Website](https://img.shields.io/badge/Live_Site-GitHub_Pages-2ea44f?style=for-the-badge&logo=github)](https://reza-05.github.io/sp_guidelines/)
-[![Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Problems](https://img.shields.io/badge/Problems-175_Curated-blueviolet?style=for-the-badge)](https://reza-05.github.io/sp_guidelines/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-A structured, beginner-to-intermediate 35-day curriculum designed for competitive programmers learning the C programming language.
+A modern, high-performance web application built with **React 19**, **TypeScript**, **Vite**, and **Tailwind CSS**. Designed for beginners and university students transitioning from syntax learning to competitive problem solving in C.
 
-Every day features focused video lessons paired with exactly **5 non-trivial practice problems** ($35 \times 5 = 175$ problems total) starting from **CodeChef 500+ rating** (up to 1150) and **Codeforces 800–1100 rating**.
+Every day features targeted video lectures paired with exactly **5 practice problems** ($35 \times 5 = 175$ problems total) starting from **CodeChef 500+ rating** (up to 1150) and **Codeforces 800–1100 rating**.
 
 ---
 
 ## 🌟 Key Features
 
-* **Interactive Problem Tracker:** Checkboxes save your progress in browser `localStorage` automatically—progress persists across refreshes.
-* **Live Search & Multi-Level Filtering:**
-  * Instant search by problem name, problem code (e.g. `SPEEDTEST`, `1A`, `LAPIN`), topic, or platform.
+* **Interactive Problem Tracker:** Checkboxes save your progress in browser `localStorage` automatically with real-time percentage indicators.
+* **Celebration Confetti:** Milestones (every 25 problems solved and 100% completion) trigger confetti animations.
+* **Instant Search & Multi-Filter:**
+  * Search by problem name or platform code (e.g. `SPEEDTEST`, `1A`, `LAPIN`, `MISSP`).
   * Filter by **Week** (Weeks 1 to 5).
-  * Filter by **Platform** (CodeChef vs. Codeforces).
+  * Filter by **Platform** (CodeChef 500+ vs. Codeforces 800–1100).
   * Filter by **Status** (Solved vs. Unsolved).
-* **Balanced Daily Video Pacing:** Each day assigns 15–30 minutes of targeted video, avoiding cognitive overload.
+* **Balanced Daily Video Pacing:** Each day assigns 15–30 minutes of targeted video to prevent cognitive overload.
 * **Dual Channel Curation:**
   * [Bangla Coding Tutor C Programming Playlist](https://youtube.com/playlist?list=PLdl6zXgLsy3zwNjSMiYlOZOr20sykTfgo) (Language syntax & fundamentals).
   * [Apna College C++ DSA Playlist](https://youtube.com/playlist?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt) (Algorithmic problem-solving logic).
 * **Spoiler-Free Descriptions:** No mathematical formula leaks or code hints—students must think through problem statements themselves.
-* **Modern Accessible Web App:** Semantic HTML5, container query responsive tables, dark & light mode toggle, and print-to-PDF support.
+* **Modern Developer Experience:** Full TypeScript typing (`types/curriculum.ts`), modular React components, Lucide icons, Dark/Light mode, and print-to-PDF support.
 
 ---
 
@@ -79,32 +83,35 @@ Every day features focused video lessons paired with exactly **5 non-trivial pra
 
 ## 🚀 Local Development
 
-No package manager, compiler, or build step is required! You can open `index.html` directly in any modern browser, or run a local static server:
-
 ```bash
-# Using Python
-python3 -m http.server 8080
+# Clone the repository
+git clone https://github.com/reza-05/sp_guidelines.git
+cd sp_guidelines
 
-# Or using Node.js npx
-npx serve .
+# Install dependencies
+npm install
+
+# Start local dev server with HMR
+npm run dev
+
+# Build for production
+npm run build
 ```
-
-Then navigate to `http://localhost:8080` in your web browser.
 
 ---
 
 ## 🌐 Deploying to GitHub Pages
 
-1. Push this repository to GitHub:
+1. Push your changes to the `main` branch on GitHub:
    ```bash
    git add .
-   git commit -m "feat: initial release of 35-day C problem solving roadmap"
+   git commit -m "feat: complete Vite + React + TS + Tailwind app"
    git push -u origin main
    ```
 2. In your GitHub repository:
    * Go to **Settings** > **Pages**.
    * Under **Build and deployment** > **Source**, select **GitHub Actions**.
-3. The included workflow (`.github/workflows/deploy.yml`) will automatically build and publish the live site at:
+3. The included workflow (`.github/workflows/deploy.yml`) will automatically install dependencies, build the Vite app, and publish the live site at:
    ```
    https://reza-05.github.io/sp_guidelines/
    ```

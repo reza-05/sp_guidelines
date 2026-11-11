@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Day Themes */
+  --c-d1: #0284c7; --c-d1-border: #bae6fd; --c-d1-bg: #f0f9ff;
+  --c-d2: #e11d48; --c-d2-border: #fecdd3; --c-d2-bg: #fff1f2;
+  --c-d3: #7c3aed; --c-d3-border: #ddd6fe; --c-d3-bg: #f5f3ff;
+  --c-d4: #d97706; --c-d4-border: #fde68a; --c-d4-bg: #fffbeb;
+  --c-d5: #0d9488; --c-d5-border: #99f6e4; --c-d5-bg: #f0fdfa;
+  --c-d6: #16a34a; --c-d6-border: #bbf7d0; --c-d6-bg: #f0fdf4;
+  --c-d7: #4f46e5; --c-d7-border: #c7d2fe; --c-d7-bg: #eef2ff;
+  --c-d8: #0891b2; --c-d8-border: #a5f3fc; --c-d8-bg: #ecfeff;
+  --c-d9: #c026d3; --c-d9-border: #f5d0fe; --c-d9-bg: #fdf4ff;
+  --c-d10: #dc2626; --c-d10-border: #fecaca; --c-d10-bg: #fef2f2;
+  --c-d11: #2563eb; --c-d11-border: #bfdbfe; --c-d11-bg: #eff6ff;
+  --c-d12: #ea580c; --c-d12-border: #fed7aa; --c-d12-bg: #fff7ed;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Day Themes Mapping */
+.theme-d1 .day-badge { background-color: var(--c-d1); }
+.theme-d1 .day-title { color: var(--c-d1); }
+
+.theme-d2 .day-badge { background-color: var(--c-d2); }
+.theme-d2 .day-title { color: var(--c-d2); }
+
+.theme-d3 .day-badge { background-color: var(--c-d3); }
+.theme-d3 .day-title { color: var(--c-d3); }
+
+.theme-d4 .day-badge { background-color: var(--c-d4); }
+.theme-d4 .day-title { color: var(--c-d4); }
+
+.theme-d5 .day-badge { background-color: var(--c-d5); }
+.theme-d5 .day-title { color: var(--c-d5); }
+
+.theme-d6 .day-badge { background-color: var(--c-d6); }
+.theme-d6 .day-title { color: var(--c-d6); }
+
+.theme-d7 .day-badge { background-color: var(--c-d7); }
+.theme-d7 .day-title { color: var(--c-d7); }
+
+.theme-d8 .day-badge { background-color: var(--c-d8); }
+.theme-d8 .day-title { color: var(--c-d8); }
+
+.theme-d9 .day-badge { background-color: var(--c-d9); }
+.theme-d9 .day-title { color: var(--c-d9); }
+
+.theme-d10 .day-badge { background-color: var(--c-d10); }
+.theme-d10 .day-title { color: var(--c-d10); }
+
+.theme-d11 .day-badge { background-color: var(--c-d11); }
+.theme-d11 .day-title { color: var(--c-d11); }
+
+.theme-d12 .day-badge { background-color: var(--c-d12); }
+.theme-d12 .day-title { color: var(--c-d12); }
+
+/* Custom YouTube Watch Button matching reference */
+.watch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background-color: #ff0000;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.25);
+  transition: all 0.15s ease;
+}
+
+.watch-btn:hover {
+  background-color: #cc0000;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.38);
+  transform: translateY(-1px);
+}
+
+.watch-btn:active {
+  transform: translateY(0);
+}
+
+.watch-btn svg {
+  width: 10px;
+  height: 10px;
+  fill: #ffffff;
+  flex-shrink: 0;
+}
+
+@media print {
+  body { background: #ffffff !important; color: #000000 !important; }
+  .no-print { display: none !important; }
+  .document-card { box-shadow: none !important; border: none !important; max-width: 100% !important; padding: 0 !important; }
+  .day-card { page-break-inside: avoid; }
+}
